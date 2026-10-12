@@ -30,7 +30,7 @@ CONTACT_EMAIL = 'hello@workhourmath.com'
 AUTHOR_NAME = 'Daniel'
 # Ads stay off until AdSense approves the site.
 ADSENSE_CLIENT = None
-GA_ID = None
+GA_ID = 'G-CFG1L4ENQ3'
 # Pinterest "claim website" code (the content of its p:domain_verify meta tag); added to the home page.
 PINTEREST_VERIFY = None
 
