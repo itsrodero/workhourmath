@@ -27,6 +27,21 @@ Domain workhourmath.com (Namecheap, bought 2026-10-12), hosted on GitHub Pages f
   - Overtime rules modelled: federal 40/week, California (8/12 daily, 7th day), Alaska (8 daily), Colorado (12 daily).
   - Every calculator tested in the browser against its worked example; no horizontal overflow at 375 px.
 
+## Launch (2026-10-12, same evening the domain was bought)
+- GitHub repo itsrodero/workhourmath (public), Pages from main / root; domain verified for the account
+  (TXT `_github-pages-challenge-itsrodero`); HTTPS certificate issued and Enforce HTTPS on; http and www
+  redirect to https://workhourmath.com/.
+- Namecheap DNS: 4 A records for `@`, CNAME `www` → itsrodero.github.io, TXT for GitHub and for Google.
+  Parking CNAME and URL redirect removed. WHOIS privacy (WithheldForPrivacy) on; domain auto-renew on.
+- Email: `hello@workhourmath.com` forwards to the roderolabs Gmail inbox (Namecheap Redirect Email).
+- Search Console: Domain property `sc-domain:workhourmath.com` (Google account of Chrome authuser 2), verified
+  by DNS; sitemap submitted. Indexing requested for 10 URLs: home, time card, hours, minutes to decimal,
+  overtime, hourly to salary, military time, biweekly time card, calculators hub, add time.
+- Analytics: property "WorkHourMath" (ID 558618157) in the same GA account, web stream measurement ID
+  G-CFG1L4ENQ3; event retention 14 months; consent mode as on the other sites.
+- Bing Webmaster Tools: added manually (GSC import didn't list it yet), verified with the msvalidate.01 meta
+  tag (`BING_VERIFY` in build.py); sitemap submitted. IndexNow: whole sitemap submitted (202).
+
 ## Rules to keep
 - No tax / net-pay calculators (YMYL, dominated by ADP/SmartAsset).
 - Law pages cite DOL / state sources, carry an "updated" date and say "not legal advice". Re-check yearly.
