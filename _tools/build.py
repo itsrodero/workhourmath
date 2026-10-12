@@ -33,6 +33,8 @@ ADSENSE_CLIENT = None
 GA_ID = 'G-CFG1L4ENQ3'
 # Pinterest "claim website" code (the content of its p:domain_verify meta tag); added to the home page.
 PINTEREST_VERIFY = None
+# Bing Webmaster Tools site verification (msvalidate.01), added to the home page.
+BING_VERIFY = 'C8B4759E49EA3ABB3CC5BA404D0E0532'
 
 # EEA + UK + Switzerland: consent is denied by default. Analytics then runs
 # without cookies there until a Google-certified CMP (AdSense > Privacy &
@@ -449,6 +451,8 @@ def head_html(page, title_full, canonical):
         '<meta property="og:image:height" content="630">',
         '<meta name="twitter:card" content="summary_large_image">',
     ]
+    if BING_VERIFY and m['type'] == 'home':
+        lines.append(f'<meta name="msvalidate.01" content="{esc(BING_VERIFY)}">')
     if PINTEREST_VERIFY and m['type'] == 'home':
         lines.append(f'<meta name="p:domain_verify" content="{esc(PINTEREST_VERIFY)}">')
     if GA_ID:
