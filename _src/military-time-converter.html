@@ -1,0 +1,69 @@
+---
+type: calculator
+category: convert
+order: 3
+icon: military
+title: Military Time Converter & 24-Hour Time Chart
+description: Convert military time to standard time and back: 1730 is 5:30 PM. With a printable military time chart and how each time is said.
+h1: Military Time Converter
+lead: Type a standard time or a military time and get the other one instantly — plus how it's said out loud. The full military time chart is below.
+card_title: Military Time Converter
+card_desc: 24-hour military time to AM/PM and back, with a chart.
+crumb: Military Time Converter
+updated: 2026-10-12
+script: military
+related: time-card-calculator, hours-calculator, minutes-to-decimal-calculator, decimal-to-hours-calculator
+---
+<div class="calc">
+  <form class="panel" id="mt-form" novalidate>
+    <h2>Time</h2>
+    <div class="fields">
+      <div class="field"><label for="mt-std">Standard time</label><div class="inp"><input id="mt-std" class="time-in" type="time" data-k="std" value="17:30"></div></div>
+      <div class="field"><label for="mt-mil">Military time</label><div class="inp"><input id="mt-mil" data-k="mil" type="text" inputmode="numeric" maxlength="10" value="1730"><span class="affix">hours</span></div><small>Four digits, like 0745 or 2130</small></div>
+    </div>
+    <div class="calc-actions">
+      <button type="button" class="btn btn-ghost btn-sm js-reset">Reset</button>
+      <button type="button" class="btn btn-ghost btn-sm js-copy">Copy result</button>
+      <button type="button" class="btn btn-ghost btn-sm js-share">Copy link</button>
+      <button type="button" class="btn btn-ghost btn-sm js-print">Print chart</button>
+    </div>
+  </form>
+  <section class="panel results" aria-live="polite" aria-label="Results">
+    <div id="mt-results"><p class="results-empty">Enter a time.</p></div>
+  </section>
+</div>
+<!-- content -->
+<h2>How to convert military time</h2>
+<p>Military time counts the hours of the day from 00 to 23, so there's no AM or PM. It's written as four digits with no colon: the first two are the hour and the last two are the minutes.</p>
+<ul>
+  <li><strong>From 0000 to 1159</strong> (midnight to noon): it's the same as standard time with AM. 0745 is 7:45 AM. For 0000 to 0059, the hour is 12: 0030 is 12:30 AM.</li>
+  <li><strong>From 1200 to 1259:</strong> it's PM with the same digits. 1215 is 12:15 PM.</li>
+  <li><strong>From 1300 to 2359:</strong> subtract 12 from the hour and add PM. 1730 → 17 − 12 = 5, so 5:30 PM.</li>
+</ul>
+<div class="formula">Military → standard: hour 13–23 → hour − 12, PM;  hour 00 → 12, AM
+Standard → military: PM hours 1–11 → hour + 12;  12 AM → 00;  add a leading zero</div>
+
+<h2 id="chart">Military time chart</h2>
+[[chart_military]]
+<p class="table-note">Minutes stay the same: 2:15 PM is 1415 and 9:40 PM is 2140.</p>
+
+<h2>How to say military time</h2>
+<p>Each pair of digits is read as a number, usually followed by "hours". 0600 is "zero six hundred hours", 1430 is "fourteen thirty hours" and 2000 is "twenty hundred hours". Leading zeros are said out loud: 0805 is "zero eight zero five".</p>
+
+<h2>Midnight: 0000 or 2400?</h2>
+<p>Both are used. 0000 is the start of a day and 2400 is the end of the previous one, so a shift that runs "until 2400" ends at the same moment as "until 0000" the next day. Most time clocks and schedules use 0000 to avoid confusion; the converter accepts 2400 too.</p>
+
+<h2>Frequently asked questions</h2>
+<div class="faq">
+  <details><summary>What time is 1600 in military time?</summary><p>4:00 PM.</p></details>
+  <details><summary>What time is 1700 in military time?</summary><p>5:00 PM.</p></details>
+  <details><summary>What time is 1900?</summary><p>7:00 PM.</p></details>
+  <details><summary>What time is 2000?</summary><p>8:00 PM.</p></details>
+  <details><summary>What is 12:30 AM in military time?</summary><p>0030.</p></details>
+  <details><summary>How do I calculate hours worked in military time?</summary><p>Subtract the start from the end as if they were hours and minutes: 1730 − 0900 = 8 hours 30 minutes. If the end is smaller, add 2400 first. The <a href="@hours-calculator">hours calculator</a> does it for you.</p></details>
+</div>
+
+<h2>Sources</h2>
+<ul class="sources">
+  <li>24-hour clock notation (ISO 8601 uses 00:00–23:59, with 24:00 allowed for the end of a day). <a href="@methodology">How we calculate</a>.</li>
+</ul>

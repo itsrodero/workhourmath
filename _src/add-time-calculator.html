@@ -1,0 +1,71 @@
+---
+type: calculator
+category: timecards
+order: 4
+icon: addtime
+title: Add Time Calculator – Add Hours and Minutes
+description: Add up hours and minutes (or subtract them) for timesheets and logs. Get the total in h:mm, decimal hours, total minutes, and days when it passes 24 hours.
+h1: Add Time Calculator
+lead: Add up a list of hours and minutes — shifts, tasks or billable time — or subtract some. The total is shown in hours and minutes, decimal hours and minutes, without the 60-minute carrying mistakes.
+card_title: Add Time Calculator
+card_desc: Add or subtract hours and minutes, totals in h:mm and decimal.
+crumb: Add Time Calculator
+updated: 2026-10-12
+script: addtime
+related: hours-calculator, time-card-calculator, decimal-to-hours-calculator, minutes-to-decimal-calculator
+---
+<div class="calc">
+  <form class="panel" id="at-form" novalidate>
+    <h2>Times to add</h2>
+    <div class="at-head" aria-hidden="true"><span></span><span>Hours</span><span>Minutes</span></div>
+    <div class="at-row"><select class="inp-plain" data-k="s0" aria-label="Line 1 add or subtract"><option value="+" selected>+</option><option value="-">−</option></select><input class="inp-plain" data-k="h0" type="text" inputmode="numeric" value="8" aria-label="Line 1 hours"><input class="inp-plain" data-k="m0" type="text" inputmode="numeric" value="15" aria-label="Line 1 minutes"></div>
+    <div class="at-row"><select class="inp-plain" data-k="s1" aria-label="Line 2 add or subtract"><option value="+" selected>+</option><option value="-">−</option></select><input class="inp-plain" data-k="h1" type="text" inputmode="numeric" value="7" aria-label="Line 2 hours"><input class="inp-plain" data-k="m1" type="text" inputmode="numeric" value="50" aria-label="Line 2 minutes"></div>
+    <div class="at-row"><select class="inp-plain" data-k="s2" aria-label="Line 3 add or subtract"><option value="+" selected>+</option><option value="-">−</option></select><input class="inp-plain" data-k="h2" type="text" inputmode="numeric" value="8" aria-label="Line 3 hours"><input class="inp-plain" data-k="m2" type="text" inputmode="numeric" value="5" aria-label="Line 3 minutes"></div>
+    <div class="at-row"><select class="inp-plain" data-k="s3" aria-label="Line 4 add or subtract"><option value="+" selected>+</option><option value="-">−</option></select><input class="inp-plain" data-k="h3" type="text" inputmode="numeric" aria-label="Line 4 hours"><input class="inp-plain" data-k="m3" type="text" inputmode="numeric" aria-label="Line 4 minutes"></div>
+    <div class="at-row"><select class="inp-plain" data-k="s4" aria-label="Line 5 add or subtract"><option value="+" selected>+</option><option value="-">−</option></select><input class="inp-plain" data-k="h4" type="text" inputmode="numeric" aria-label="Line 5 hours"><input class="inp-plain" data-k="m4" type="text" inputmode="numeric" aria-label="Line 5 minutes"></div>
+    <div class="at-row"><select class="inp-plain" data-k="s5" aria-label="Line 6 add or subtract"><option value="+" selected>+</option><option value="-">−</option></select><input class="inp-plain" data-k="h5" type="text" inputmode="numeric" aria-label="Line 6 hours"><input class="inp-plain" data-k="m5" type="text" inputmode="numeric" aria-label="Line 6 minutes"></div>
+    <div class="at-row"><select class="inp-plain" data-k="s6" aria-label="Line 7 add or subtract"><option value="+" selected>+</option><option value="-">−</option></select><input class="inp-plain" data-k="h6" type="text" inputmode="numeric" aria-label="Line 7 hours"><input class="inp-plain" data-k="m6" type="text" inputmode="numeric" aria-label="Line 7 minutes"></div>
+    <div class="at-row"><select class="inp-plain" data-k="s7" aria-label="Line 8 add or subtract"><option value="+" selected>+</option><option value="-">−</option></select><input class="inp-plain" data-k="h7" type="text" inputmode="numeric" aria-label="Line 8 hours"><input class="inp-plain" data-k="m7" type="text" inputmode="numeric" aria-label="Line 8 minutes"></div>
+    <p class="form-note">Minutes over 59 are fine — 90 minutes counts as 1 hour 30 minutes.</p>
+    <div class="calc-actions">
+      <button type="button" class="btn btn-ghost btn-sm js-reset">Reset</button>
+      <button type="button" class="btn btn-ghost btn-sm js-copy">Copy result</button>
+      <button type="button" class="btn btn-ghost btn-sm js-share">Copy link</button>
+      <button type="button" class="btn btn-ghost btn-sm js-print">Print</button>
+    </div>
+  </form>
+  <section class="panel results" aria-live="polite" aria-label="Results">
+    <div id="at-results"><p class="results-empty">Enter some hours and minutes.</p></div>
+  </section>
+</div>
+<!-- content -->
+<h2>How to add hours and minutes</h2>
+<p>Adding time trips people up because minutes carry over at 60, not 100. The reliable way is to add the hours and the minutes separately, then turn every 60 minutes into an hour:</p>
+<ol>
+  <li><strong>Add the hours:</strong> 8 + 7 + 8 = 23 hours.</li>
+  <li><strong>Add the minutes:</strong> 15 + 50 + 5 = 70 minutes.</li>
+  <li><strong>Carry the minutes:</strong> 70 minutes = 1 hour 10 minutes, so the total is <strong>24 hours 10 minutes</strong>.</li>
+  <li><strong>In decimal hours:</strong> 24 + 10 ÷ 60 = <strong>24.17 hours</strong>.</li>
+</ol>
+<div class="formula">Total minutes = (hours₁ + hours₂ + …) × 60 + (minutes₁ + minutes₂ + …)
+Hours and minutes = total minutes ÷ 60 (whole hours) and the remainder (minutes)
+Decimal hours = total minutes ÷ 60</div>
+<div class="callout"><p><strong>Don't add times as decimals.</strong> 7:50 + 8:15 typed into a regular calculator as 7.50 + 8.15 gives 15.65 — but the right answer is 16 hours 5 minutes, or 16.08 hours.</p></div>
+
+<h2>Subtracting time</h2>
+<p>Switch a line to <strong>−</strong> to take time away, for example to subtract unpaid breaks from a total or to see how many hours you have left. When the minutes don't go, borrow an hour: 10:15 − 3:40 becomes 9:75 − 3:40 = 6 hours 35 minutes.</p>
+
+<h2>When totals pass 24 hours</h2>
+<p>A total of hours worked isn't a clock time, so it can go past 24: 41 hours 30 minutes is a normal weekly total. The calculator also shows it as days, hours and minutes (1 day 17 hours 30 minutes) when that's useful, such as for a total of on-call or travel time.</p>
+
+<h2>Frequently asked questions</h2>
+<div class="faq">
+  <details><summary>How do I add hours and minutes in Excel?</summary><p>Enter times as h:mm (for example 7:50), add them with =SUM(), and format the result cell as [h]:mm so it doesn't reset at 24 hours. Multiply by 24 to get decimal hours.</p></details>
+  <details><summary>What is 7:45 plus 8:30?</summary><p>16 hours 15 minutes: 7 + 8 = 15 hours and 45 + 30 = 75 minutes = 1 hour 15 minutes. In decimal, 16.25 hours.</p></details>
+  <details><summary>Can I add more than eight lines?</summary><p>Add the first eight, note the total, then reset and start the next batch with that total on the first line.</p></details>
+</div>
+
+<h2>Sources</h2>
+<ul class="sources">
+  <li>Base-60 time arithmetic; decimal hours = minutes ÷ 60. <a href="@methodology">How we calculate</a>.</li>
+</ul>

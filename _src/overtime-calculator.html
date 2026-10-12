@@ -1,0 +1,77 @@
+---
+type: calculator
+category: pay
+order: 1
+icon: alarm
+title: Overtime Calculator – Time and a Half & Double Time Pay
+description: Calculate overtime pay from your hourly rate and weekly hours: hours over 40 at time and a half, optional double time, and your total gross pay for the week.
+h1: Overtime Calculator
+lead: Enter your hourly rate and the hours you worked this week to see your overtime hours, your overtime rate and your gross pay — with time and a half, double time, or both.
+card_title: Overtime Calculator
+card_desc: Time and a half and double time pay for the week.
+crumb: Overtime Calculator
+updated: 2026-10-12
+script: overtime
+related: time-card-calculator, guides/overtime-rules-by-state, shift-differential-calculator, biweekly-time-card-calculator
+---
+<div class="calc">
+  <form class="panel" id="ot-form" novalidate>
+    <h2>Pay and hours</h2>
+    <div class="fields">
+      <div class="field"><label for="ot-rate">Hourly rate</label><div class="inp"><span class="affix pre">$</span><input id="ot-rate" data-k="rate" type="text" inputmode="decimal" value="20"></div></div>
+      <div class="field"><label for="ot-hours">Hours worked this week</label><div class="inp"><input id="ot-hours" data-k="hours" type="text" inputmode="decimal" value="46"><span class="affix">hr</span></div></div>
+      <div class="field"><label for="ot-limit">Overtime starts after</label><div class="inp"><input id="ot-limit" data-k="limit" type="text" inputmode="decimal" value="40"><span class="affix">hr</span></div><small>40 under federal law</small></div>
+      <div class="field"><label for="ot-mult">Overtime multiplier</label><select id="ot-mult" class="select" data-k="mult"><option value="1.5" selected>1.5× (time and a half)</option><option value="2">2× (double time)</option><option value="1.25">1.25×</option></select></div>
+      <div class="field full"><label for="ot-dt">Double-time hours, if any</label><div class="inp"><input id="ot-dt" data-k="dt" type="text" inputmode="decimal" placeholder="0"><span class="affix">hr</span></div><small>Part of the hours above that are paid at 2× (for example, over 12 in a day in California)</small></div>
+    </div>
+    <div class="calc-actions">
+      <button type="button" class="btn btn-ghost btn-sm js-reset">Reset</button>
+      <button type="button" class="btn btn-ghost btn-sm js-copy">Copy result</button>
+      <button type="button" class="btn btn-ghost btn-sm js-share">Copy link</button>
+      <button type="button" class="btn btn-ghost btn-sm js-print">Print</button>
+    </div>
+  </form>
+  <section class="panel results" aria-live="polite" aria-label="Results">
+    <div id="ot-results"><p class="results-empty">Enter your hourly rate and the hours you worked.</p></div>
+  </section>
+</div>
+<!-- content -->
+<h2>How overtime pay is calculated</h2>
+<p>Under the federal Fair Labor Standards Act, non-exempt employees must be paid at least one and a half times their regular rate for every hour worked over 40 in a workweek.</p>
+<div class="formula">Regular hours  = hours worked, up to 40
+Overtime hours = hours worked − 40
+Overtime rate  = hourly rate × 1.5
+Gross pay      = regular hours × rate + overtime hours × overtime rate</div>
+<div class="example">
+  <p>Worked example: 46 hours at $20.00 an hour</p>
+  <ol>
+    <li>Regular: 40 × $20.00 = $800.00.</li>
+    <li>Overtime: 6 hours × $30.00 (1.5 × $20) = $180.00.</li>
+    <li>Gross pay: <strong>$980.00</strong> for the week — $60 more than 46 straight-time hours.</li>
+  </ol>
+</div>
+
+<h2>Overtime is per workweek, not per day or pay period</h2>
+<p>Federal law looks at each workweek on its own: a fixed, recurring block of seven consecutive days that your employer sets. A 10-hour day isn't overtime federally if the week stays at 40, and a 50-hour week isn't cancelled out by a 30-hour week after it. States can add daily overtime: California pays overtime after 8 hours in a day and double time after 12, Alaska after 8, Colorado after 12, and Nevada after 8 for lower-paid workers. See <a href="@guides/overtime-rules-by-state">overtime rules by state</a>, or let the <a href="@time-card-calculator">time card calculator</a> apply them shift by shift.</p>
+
+<h2>Your overtime rate may be higher than 1.5 × your base rate</h2>
+<p>Overtime is based on your <em>regular rate</em>, which includes most extra pay you earn in the week — shift differentials, production bonuses, commissions — not just your base hourly wage. If you earned $900 straight-time pay (including a $40 night differential) for 45 hours, your regular rate is $900 ÷ 45 = $20.00, and each overtime hour earns an extra half of that: 5 × $10.00 = $50.00. The <a href="@shift-differential-calculator">shift differential calculator</a> shows the effect. Some payments, like discretionary bonuses, gifts and true holiday premiums, are left out.</p>
+
+<h2>Who gets overtime?</h2>
+<p>Most hourly workers are "non-exempt" and get overtime. Some salaried employees in executive, administrative, professional, computer and outside sales jobs are "exempt" if they're paid a salary above a set threshold and their duties meet the tests in the regulations. Being paid a salary alone doesn't make someone exempt. If you're not sure, the Department of Labor's Wage and Hour Division can help.</p>
+
+<h2>Frequently asked questions</h2>
+<div class="faq">
+  <details><summary>What is time and a half for $15 an hour?</summary><p>$22.50 an hour ($15 × 1.5).</p></details>
+  <details><summary>What is time and a half for $20 an hour?</summary><p>$30.00 an hour.</p></details>
+  <details><summary>What is double time for $18 an hour?</summary><p>$36.00 an hour ($18 × 2).</p></details>
+  <details><summary>Do I get overtime for working on a holiday or weekend?</summary><p>Not under federal law, unless the hours push you over 40 in the workweek. Many employers pay a holiday or weekend premium anyway, by policy or union contract.</p></details>
+  <details><summary>Does paid time off count toward the 40 hours?</summary><p>Not under federal law: overtime is based on hours actually worked, so vacation, holidays and sick days you're paid for but don't work don't count. Some employers count them anyway.</p></details>
+</div>
+
+<h2>Sources</h2>
+<ul class="sources">
+  <li>U.S. Department of Labor, Wage and Hour Division — <em>Fact Sheet #23: Overtime Pay Requirements of the FLSA</em>; 29 CFR Part 778 (regular rate, including 778.207 on shift differentials).</li>
+  <li>California Labor Code §510; Alaska Statutes §23.10.060; Colorado COMPS Order, 7 CCR 1103-1; Nevada Revised Statutes 608.018.</li>
+  <li>For information only, not legal advice. <a href="@methodology">How we calculate</a>.</li>
+</ul>

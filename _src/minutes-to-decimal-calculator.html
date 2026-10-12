@@ -1,0 +1,88 @@
+---
+type: calculator
+category: convert
+order: 1
+icon: decimal
+title: Minutes to Decimal Hours Converter & Chart
+description: Convert hours and minutes to decimal hours for payroll and timesheets, with a printable chart from 1 to 60 minutes. 15 minutes = 0.25, 45 minutes = 0.75.
+h1: Minutes to Decimal Hours Converter
+lead: Turn hours and minutes into decimal hours for payroll, invoices and timesheets. Divide the minutes by 60 — or use the converter and the chart below.
+card_title: Minutes to Decimal
+card_desc: Hours and minutes to decimal hours, with a 1–60 chart.
+crumb: Minutes to Decimal
+updated: 2026-10-12
+script: mintodec
+related: decimal-to-hours-calculator, time-card-calculator, hours-calculator, time-clock-rounding-calculator
+---
+<div class="calc">
+  <form class="panel" id="md-form" novalidate>
+    <h2>Time</h2>
+    <div class="fields">
+      <div class="field"><label for="md-h">Hours</label><div class="inp"><input id="md-h" data-k="h" type="text" inputmode="numeric" value="7"><span class="affix">hr</span></div></div>
+      <div class="field"><label for="md-m">Minutes</label><div class="inp"><input id="md-m" data-k="m" type="text" inputmode="decimal" value="45"><span class="affix">min</span></div></div>
+      <div class="field"><label for="md-s">Seconds (optional)</label><div class="inp"><input id="md-s" data-k="s" type="text" inputmode="numeric" placeholder="0"><span class="affix">sec</span></div></div>
+    </div>
+    <div class="calc-actions">
+      <button type="button" class="btn btn-ghost btn-sm js-reset">Reset</button>
+      <button type="button" class="btn btn-ghost btn-sm js-copy">Copy result</button>
+      <button type="button" class="btn btn-ghost btn-sm js-share">Copy link</button>
+      <button type="button" class="btn btn-ghost btn-sm js-print">Print chart</button>
+    </div>
+  </form>
+  <section class="panel results" aria-live="polite" aria-label="Results">
+    <div id="md-results"><p class="results-empty">Enter hours and minutes.</p></div>
+  </section>
+</div>
+<!-- content -->
+<h2>How to convert minutes to decimal hours</h2>
+<p>Divide the minutes by 60 and add the result to the whole hours.</p>
+<div class="formula">Decimal hours = hours + minutes ÷ 60
+7 hr 45 min = 7 + 45 ÷ 60 = 7 + 0.75 = 7.75 hours</div>
+<div class="example">
+  <p>Worked example: a 38 hour 20 minute week at $17.00 an hour</p>
+  <ol>
+    <li>20 minutes ÷ 60 = 0.333…, so the week is <strong>38.33 hours</strong>.</li>
+    <li>Pay: 38.33 × $17.00 = $651.61. (Using the exact fraction, 38⅓ × $17.00 = $651.67 — payroll systems usually round to two decimal places first.)</li>
+    <li>The common mistake is writing 38.20 hours, which would pay $649.40.</li>
+  </ol>
+</div>
+
+<h2 id="chart">Minutes to decimal hours chart</h2>
+<p>Decimal values are rounded to two places, the way most payroll systems take them.</p>
+[[chart_min_dec]]
+
+<h2>Rounding to tenths or quarter hours</h2>
+<p>Some payroll systems record time in tenths of an hour (6-minute blocks) or quarter hours (15-minute blocks) instead of exact minutes. Federal rules allow rounding to the nearest 5 minutes, tenth or quarter hour as long as it averages out over time and employees are paid for all the time they actually work.</p>
+<div class="table-wrap"><table>
+  <thead><tr><th>Minutes</th><th>Tenths (0.1 hr)</th><th>Minutes</th><th>Quarter hours</th></tr></thead>
+  <tbody>
+    <tr><td>0–2</td><td>.0</td><td>0–7</td><td>.00</td></tr>
+    <tr><td>3–8</td><td>.1</td><td>8–22</td><td>.25</td></tr>
+    <tr><td>9–14</td><td>.2</td><td>23–37</td><td>.50</td></tr>
+    <tr><td>15–20</td><td>.3</td><td>38–52</td><td>.75</td></tr>
+    <tr><td>21–26</td><td>.4</td><td>53–60</td><td>1.00</td></tr>
+    <tr><td>27–32</td><td>.5</td><td></td><td></td></tr>
+    <tr><td>33–38</td><td>.6</td><td></td><td></td></tr>
+    <tr><td>39–44</td><td>.7</td><td></td><td></td></tr>
+    <tr><td>45–50</td><td>.8</td><td></td><td></td></tr>
+    <tr><td>51–56</td><td>.9</td><td></td><td></td></tr>
+    <tr><td>57–60</td><td>1.0</td><td></td><td></td></tr>
+  </tbody>
+</table></div>
+<p class="table-note">Ranges round to the nearest step, with the halfway minute rounded up. Check single punches with the <a href="@time-clock-rounding-calculator">time clock rounding calculator</a>.</p>
+
+<h2>Frequently asked questions</h2>
+<div class="faq">
+  <details><summary>What is 15 minutes in decimal?</summary><p>0.25 hours (15 ÷ 60).</p></details>
+  <details><summary>What is 30 minutes in decimal?</summary><p>0.5 hours.</p></details>
+  <details><summary>What is 45 minutes in decimal?</summary><p>0.75 hours.</p></details>
+  <details><summary>What is 20 minutes in decimal?</summary><p>0.33 hours (20 ÷ 60 = 0.333…).</p></details>
+  <details><summary>What is 40 minutes in decimal?</summary><p>0.67 hours (40 ÷ 60 = 0.666…).</p></details>
+  <details><summary>How do I convert decimal hours back to minutes?</summary><p>Multiply the decimal part by 60: 0.6 × 60 = 36 minutes, so 8.6 hours is 8 hours 36 minutes. Use the <a href="@decimal-to-hours-calculator">decimal to hours converter</a>.</p></details>
+</div>
+
+<h2>Sources</h2>
+<ul class="sources">
+  <li>Decimal hours = minutes ÷ 60, rounded to two decimal places.</li>
+  <li>Rounding to the nearest 5 minutes, tenth or quarter of an hour: 29 CFR 785.48(b), U.S. Department of Labor. <a href="@methodology">How we calculate</a>.</li>
+</ul>

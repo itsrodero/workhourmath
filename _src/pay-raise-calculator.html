@@ -1,0 +1,66 @@
+---
+type: calculator
+category: pay
+order: 4
+icon: trend
+title: Pay Raise Calculator – New Pay From a Percentage
+description: Work out your new hourly or yearly pay after a raise, or the raise percentage from old and new pay, plus the extra per year, month and paycheck.
+h1: Pay Raise Calculator
+lead: See your new pay after a percentage raise — or work out what percentage a new wage or salary really is — and how much extra that means per year, month and paycheck.
+card_title: Pay Raise Calculator
+card_desc: New pay from a % raise, or the % from a new pay.
+crumb: Pay Raise Calculator
+updated: 2026-10-12
+script: raise
+related: hourly-to-salary-calculator, salary-to-hourly-calculator, overtime-calculator, shift-differential-calculator
+---
+<div class="calc">
+  <form class="panel" id="rs-form" novalidate>
+    <h2>Current pay and raise</h2>
+    <div class="fields">
+      <div class="field"><label for="rs-cur">Current pay</label><div class="inp"><span class="affix pre">$</span><input id="rs-cur" data-k="cur" type="text" inputmode="decimal" value="20"></div></div>
+      <div class="field"><label for="rs-per">Paid</label><select id="rs-per" class="select" data-k="per"><option value="hr" selected>Per hour</option><option value="yr">Per year</option></select></div>
+      <div class="field"><label for="rs-how">I know</label><select id="rs-how" class="select" data-k="how"><option value="pct" selected>The raise in %</option><option value="amt">The raise in $</option><option value="new">My new pay</option></select></div>
+      <div class="field"><label for="rs-x"><span data-how="pct">Raise (%)</span><span data-how="amt" hidden>Raise ($)</span><span data-how="new" hidden>New pay ($)</span></label><div class="inp"><input id="rs-x" data-k="x" type="text" inputmode="decimal" value="4"></div></div>
+    </div>
+    <div class="calc-actions">
+      <button type="button" class="btn btn-ghost btn-sm js-reset">Reset</button>
+      <button type="button" class="btn btn-ghost btn-sm js-copy">Copy result</button>
+      <button type="button" class="btn btn-ghost btn-sm js-share">Copy link</button>
+    </div>
+  </form>
+  <section class="panel results" aria-live="polite" aria-label="Results">
+    <div id="rs-results"><p class="results-empty">Enter your current pay and the raise.</p></div>
+  </section>
+</div>
+<!-- content -->
+<h2>How to calculate a raise</h2>
+<div class="formula">New pay        = current pay × (1 + raise % ÷ 100)
+Raise %        = (new pay − current pay) ÷ current pay × 100
+Extra per year = (new hourly − old hourly) × 2,080</div>
+<div class="example">
+  <p>Worked example: a 4% raise on $20.00 an hour</p>
+  <ol>
+    <li>New rate: $20.00 × 1.04 = <strong>$20.80</strong> an hour.</li>
+    <li>That's $0.80 more an hour, or $0.80 × 2,080 = <strong>$1,664</strong> more a year at full time.</li>
+    <li>Per biweekly paycheck: $1,664 ÷ 26 = $64.00 more, before taxes.</li>
+  </ol>
+</div>
+
+<h2>Is my raise keeping up?</h2>
+<p>A raise smaller than inflation means your pay buys a bit less than before, even though the number went up. To compare, look up the latest 12-month change in the Consumer Price Index from the Bureau of Labor Statistics: if prices rose 3% and your raise was 4%, your real pay rose about 1%. Raises at the same job are often in the low single digits, while changing jobs or moving up a level usually brings bigger jumps — which is why it's worth knowing exactly what an offer is worth per hour and per year.</p>
+
+<h2>Raise in dollars or in percent?</h2>
+<p>The same raise can sound very different. $1 an hour is 6.7% on $15 but 3.3% on $30. Switch the calculator to <em>The raise in $</em> or <em>My new pay</em> to see the percentage, which is the fairest way to compare two raises or two offers.</p>
+
+<h2>Frequently asked questions</h2>
+<div class="faq">
+  <details><summary>What is a 3% raise on $18 an hour?</summary><p>$18.54 an hour — 54 cents more, or about $1,123 more a year at full time.</p></details>
+  <details><summary>What is a 5% raise on a $50,000 salary?</summary><p>$52,500 a year: $2,500 more, or about $208 more a month before taxes.</p></details>
+  <details><summary>What percent raise is $15 to $17 an hour?</summary><p>13.3% ($2 ÷ $15).</p></details>
+</div>
+
+<h2>Sources</h2>
+<ul class="sources">
+  <li>Percentage change formula; 2,080-hour full-time year. Inflation: Bureau of Labor Statistics, Consumer Price Index. <a href="@methodology">How we calculate</a>.</li>
+</ul>

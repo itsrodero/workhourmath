@@ -1,0 +1,92 @@
+---
+type: guide
+category: timecards
+order: 1
+title: How to Calculate Hours Worked (With Breaks & Decimals)
+description: Step-by-step: how to calculate hours worked from times in and out, subtract breaks, handle overnight shifts, convert to decimal hours and total a week.
+h1: How to calculate hours worked
+lead: A step-by-step method for working out your hours from clock times — including lunch breaks, shifts past midnight and decimal hours for payroll — with worked examples you can follow.
+card_title: How to calculate hours worked
+card_desc: Times in and out, breaks, overnight shifts and decimal hours, step by step.
+published: 2026-10-12
+updated: 2026-10-12
+related: time-card-calculator, hours-calculator, minutes-to-decimal-calculator, guides/overtime-rules-by-state
+---
+<p>Calculating hours worked comes down to one subtraction per shift — but there are four traps: AM and PM, minutes that carry at 60, shifts that cross midnight, and turning hours and minutes into decimals for payroll. Here's a method that avoids all of them.</p>
+
+<h2>Step 1: Write each time in 24-hour format</h2>
+<p>Converting to the 24-hour clock removes AM and PM from the math. Morning times stay the same; for afternoon and evening times, add 12 to the hour.</p>
+<div class="table-wrap"><table>
+  <thead><tr><th>Standard</th><th>24-hour</th><th>Standard</th><th>24-hour</th></tr></thead>
+  <tbody>
+    <tr><td>7:30 AM</td><td>7:30</td><td>1:15 PM</td><td>13:15</td></tr>
+    <tr><td>11:45 AM</td><td>11:45</td><td>5:30 PM</td><td>17:30</td></tr>
+    <tr><td>12:00 PM (noon)</td><td>12:00</td><td>11:00 PM</td><td>23:00</td></tr>
+    <tr><td>12:30 AM</td><td>0:30</td><td>12:00 AM (midnight)</td><td>0:00</td></tr>
+  </tbody>
+</table></div>
+<p>The <a href="@military-time-converter">military time converter</a> has the full chart.</p>
+
+<h2>Step 2: Subtract the time in from the time out</h2>
+<p>Subtract the hours and the minutes separately. If the minutes come out negative, borrow one hour as 60 minutes.</p>
+<div class="example">
+  <p>Example: in at 8:50 AM, out at 5:20 PM</p>
+  <ol>
+    <li>In 24-hour time: 17:20 − 8:50.</li>
+    <li>20 minutes − 50 minutes doesn't go, so borrow an hour: 16:80 − 8:50.</li>
+    <li>16 − 8 = 8 hours; 80 − 50 = 30 minutes. <strong>8 hours 30 minutes</strong> at work.</li>
+  </ol>
+</div>
+
+<h2>Step 3: Subtract unpaid breaks</h2>
+<p>Take out breaks you're not paid for — usually a meal break of 30 minutes or more. Under federal rules, short rest breaks of about 5 to 20 minutes count as time worked and stay in. In the example, a 30-minute unpaid lunch leaves <strong>8 hours</strong>.</p>
+<p>If you clock out and back in for lunch, you can also work out each part of the day separately and add them: 8:50–12:30 is 3 hours 40 minutes, 1:00–5:20 is 4 hours 20 minutes, together 8 hours.</p>
+
+<h2>Step 4: Handle shifts that cross midnight</h2>
+<p>When the time out is earlier than the time in, the shift ended the next day. Add 24 hours to the time out before subtracting.</p>
+<div class="example">
+  <p>Example: a night shift from 10:00 PM to 6:30 AM</p>
+  <ol>
+    <li>22:00 to 6:30 — the out time is earlier, so use 6:30 + 24:00 = 30:30.</li>
+    <li>30:30 − 22:00 = <strong>8 hours 30 minutes</strong>.</li>
+  </ol>
+</div>
+
+<h2>Step 5: Convert to decimal hours</h2>
+<p>Payroll multiplies hours by a rate, so it needs decimal hours. Divide the minutes by 60 and add them to the hours. Don't just put a decimal point between hours and minutes — 8:30 is 8.5 hours, not 8.30.</p>
+<div class="formula">Decimal hours = hours + minutes ÷ 60
+8 hr 30 min = 8.50     7 hr 45 min = 7.75     6 hr 20 min = 6.33</div>
+<p>See every value from 1 to 60 minutes in the <a href="@minutes-to-decimal-calculator#chart">minutes to decimal chart</a>.</p>
+
+<h2>Step 6: Add up the week</h2>
+<p>Add the daily totals in hours and minutes (carrying every 60 minutes into an hour) or in decimals. Both give the same answer if you're careful.</p>
+<div class="table-wrap"><table>
+  <thead><tr><th>Day</th><th>In</th><th>Out</th><th>Break</th><th>Hours</th><th>Decimal</th></tr></thead>
+  <tbody>
+    <tr><td>Mon</td><td>8:50 AM</td><td>5:20 PM</td><td>30 min</td><td>8:00</td><td>8.00</td></tr>
+    <tr><td>Tue</td><td>9:00 AM</td><td>5:45 PM</td><td>30 min</td><td>8:15</td><td>8.25</td></tr>
+    <tr><td>Wed</td><td>9:05 AM</td><td>5:30 PM</td><td>30 min</td><td>7:55</td><td>7.92</td></tr>
+    <tr><td>Thu</td><td>8:45 AM</td><td>6:15 PM</td><td>45 min</td><td>8:45</td><td>8.75</td></tr>
+    <tr><td>Fri</td><td>9:00 AM</td><td>4:00 PM</td><td>30 min</td><td>6:30</td><td>6.50</td></tr>
+    <tr><td><strong>Total</strong></td><td></td><td></td><td></td><td><strong>39:25</strong></td><td><strong>39.42</strong></td></tr>
+  </tbody>
+</table></div>
+<p class="table-note">The decimals add up to 39.42 here; adding the rounded daily decimals can differ by a hundredth or two from converting the exact total, which is why payroll usually converts the weekly total in minutes.</p>
+
+<h2>Step 7: Work out overtime and pay</h2>
+<p>Under federal law, hours over 40 in the workweek are overtime at time and a half. The week above has none. If you'd worked 44 hours at $20 an hour, you'd earn 40 × $20 + 4 × $30 = $920. Some states also have daily overtime — see <a href="@guides/overtime-rules-by-state">overtime rules by state</a>.</p>
+
+<div class="callout"><p><strong>Skip the arithmetic:</strong> the <a href="@time-card-calculator">time card calculator</a> does every step above for a full week, including overnight shifts, rounding and state overtime rules, and saves your times for next week.</p></div>
+
+<h2>Frequently asked questions</h2>
+<div class="faq">
+  <details><summary>How do I calculate hours worked in Excel?</summary><p>Enter times as times (8:50 AM), subtract the start from the end (=C2-B2), subtract the break as a time (=C2-B2-TIME(0,30,0)), and multiply by 24 to get decimal hours. For overnight shifts use =MOD(C2-B2,1).</p></details>
+  <details><summary>Should I round my hours?</summary><p>Only if your employer rounds. Federal rules allow rounding to the nearest 5 minutes, tenth or quarter hour if it averages out over time. Otherwise use exact minutes.</p></details>
+  <details><summary>Do paid breaks count as hours worked?</summary><p>Yes. Short rest breaks of about 5 to 20 minutes are work time under federal rules. Only unpaid meal periods are subtracted.</p></details>
+</div>
+
+<h2>Sources</h2>
+<ul class="sources">
+  <li>29 CFR 785.18 (rest), 785.19 (meal periods) and 785.48(b) (rounding), U.S. Department of Labor.</li>
+  <li>U.S. Department of Labor, <em>Fact Sheet #23: Overtime Pay Requirements of the FLSA</em>.</li>
+</ul>

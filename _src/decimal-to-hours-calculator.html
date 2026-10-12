@@ -1,0 +1,68 @@
+---
+type: calculator
+category: convert
+order: 2
+icon: clock
+title: Decimal Hours to Hours and Minutes Converter
+description: Convert decimal hours to hours and minutes: 7.75 hours = 7 hours 45 minutes. Multiply the decimal part by 60, or use the converter and the chart.
+h1: Decimal Hours to Hours and Minutes
+lead: Turn decimal hours from a paystub, timesheet or payroll report back into hours and minutes. 8.6 hours isn't 8 hours 60 minutes — it's 8 hours 36 minutes.
+card_title: Decimal to Hours & Minutes
+card_desc: 7.75 hours → 7 hours 45 minutes, with a chart.
+crumb: Decimal to Hours and Minutes
+updated: 2026-10-12
+script: dectohm
+related: minutes-to-decimal-calculator, add-time-calculator, time-card-calculator, hours-calculator
+---
+<div class="calc">
+  <form class="panel" id="dh-form" novalidate>
+    <h2>Decimal hours</h2>
+    <div class="fields">
+      <div class="field full"><label for="dh-d">Hours (decimal)</label><div class="inp"><input id="dh-d" data-k="d" type="text" inputmode="decimal" value="7.75"><span class="affix">hours</span></div><small>For example 38.4 or 0.15</small></div>
+    </div>
+    <div class="calc-actions">
+      <button type="button" class="btn btn-ghost btn-sm js-reset">Reset</button>
+      <button type="button" class="btn btn-ghost btn-sm js-copy">Copy result</button>
+      <button type="button" class="btn btn-ghost btn-sm js-share">Copy link</button>
+      <button type="button" class="btn btn-ghost btn-sm js-print">Print chart</button>
+    </div>
+  </form>
+  <section class="panel results" aria-live="polite" aria-label="Results">
+    <div id="dh-results"><p class="results-empty">Enter a number of hours, like 7.75.</p></div>
+  </section>
+</div>
+<!-- content -->
+<h2>How to convert decimal hours to minutes</h2>
+<p>Keep the whole number as hours, then multiply the decimal part by 60 to get the minutes.</p>
+<div class="formula">Minutes = decimal part × 60
+7.75 hours → 7 hours + 0.75 × 60 = 7 hours 45 minutes
+8.6 hours  → 8 hours + 0.6 × 60  = 8 hours 36 minutes</div>
+<div class="example">
+  <p>Worked example: a paystub shows 76.35 regular hours for two weeks</p>
+  <ol>
+    <li>Whole hours: 76.</li>
+    <li>0.35 × 60 = 21 minutes.</li>
+    <li>So 76.35 hours is <strong>76 hours 21 minutes</strong> — not 76 hours 35 minutes.</li>
+  </ol>
+</div>
+
+<h2 id="chart">Decimal hours to minutes chart</h2>
+[[chart_dec_min]]
+<p class="table-note">Values in between follow the same rule: 0.01 hour = 0.6 minutes (36 seconds), 0.1 hour = 6 minutes.</p>
+
+<h2>Why payroll uses decimal hours</h2>
+<p>Pay is a rate per hour, so it's easiest to multiply by a single number: 7.75 hours × $20 = $155. Hours and minutes like 7:45 have to be converted first. That's why timesheets and paystubs show decimals — and why it's worth converting them back when you want to check your hours against your own records. To go the other way, use the <a href="@minutes-to-decimal-calculator">minutes to decimal converter</a>.</p>
+
+<h2>Frequently asked questions</h2>
+<div class="faq">
+  <details><summary>What is 0.25 hours in minutes?</summary><p>15 minutes (0.25 × 60).</p></details>
+  <details><summary>What is 0.1 hours in minutes?</summary><p>6 minutes. That's why tenth-of-an-hour rounding uses 6-minute blocks.</p></details>
+  <details><summary>What is 1.2 hours in hours and minutes?</summary><p>1 hour 12 minutes (0.2 × 60 = 12).</p></details>
+  <details><summary>What is 2.5 hours?</summary><p>2 hours 30 minutes.</p></details>
+  <details><summary>What is 0.15 hours?</summary><p>9 minutes (0.15 × 60).</p></details>
+</div>
+
+<h2>Sources</h2>
+<ul class="sources">
+  <li>Minutes = decimal hours × 60. <a href="@methodology">How we calculate</a>.</li>
+</ul>

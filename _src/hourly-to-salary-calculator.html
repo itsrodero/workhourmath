@@ -1,0 +1,78 @@
+---
+type: calculator
+category: pay
+order: 2
+icon: dollar
+title: Hourly to Salary Calculator – Annual, Monthly & Weekly Pay
+description: Convert an hourly wage to a yearly salary, plus monthly, biweekly, weekly and daily pay. $20 an hour is $41,600 a year at 40 hours a week.
+h1: Hourly to Salary Calculator
+lead: Find out what an hourly wage adds up to over a year, a month, a paycheck and a week — based on the hours you actually work.
+card_title: Hourly to Salary
+card_desc: Hourly wage to yearly, monthly and paycheck amounts.
+crumb: Hourly to Salary Calculator
+updated: 2026-10-12
+script: salary
+related: salary-to-hourly-calculator, pay-raise-calculator, overtime-calculator, guides/how-many-work-hours-in-a-year
+---
+<div class="calc">
+  <form class="panel" id="sal-form" data-mode="h2s" novalidate>
+    <h2>Your pay</h2>
+    <div class="fields">
+      <div class="field"><label for="sal-amount">Hourly wage</label><div class="inp"><span class="affix pre">$</span><input id="sal-amount" data-k="amount" type="text" inputmode="decimal" value="20"><span class="affix">/hr</span></div></div>
+      <div class="field"><label for="sal-hpw">Hours a week</label><div class="inp"><input id="sal-hpw" data-k="hpw" type="text" inputmode="decimal" value="40"><span class="affix">hr</span></div></div>
+      <div class="field"><label for="sal-weeks">Paid weeks a year</label><div class="inp"><input id="sal-weeks" data-k="weeks" type="text" inputmode="decimal" value="52"><span class="affix">weeks</span></div><small>52 if vacation is paid</small></div>
+      <div class="field"><label for="sal-dpw">Days a week</label><div class="inp"><input id="sal-dpw" data-k="dpw" type="text" inputmode="decimal" value="5"><span class="affix">days</span></div></div>
+    </div>
+    <div class="calc-actions">
+      <button type="button" class="btn btn-ghost btn-sm js-reset">Reset</button>
+      <button type="button" class="btn btn-ghost btn-sm js-copy">Copy result</button>
+      <button type="button" class="btn btn-ghost btn-sm js-share">Copy link</button>
+      <button type="button" class="btn btn-ghost btn-sm js-print">Print</button>
+    </div>
+  </form>
+  <section class="panel results" aria-live="polite" aria-label="Results">
+    <div id="sal-results"><p class="results-empty">Enter an hourly rate.</p></div>
+  </section>
+</div>
+<!-- content -->
+<h2>How to convert hourly pay to a salary</h2>
+<p>Multiply the hourly wage by the hours you work in a year. Full time is usually 40 hours a week for 52 weeks — 2,080 hours.</p>
+<div class="formula">Yearly pay  = hourly wage × hours a week × paid weeks a year
+Full time   = hourly wage × 2,080
+Monthly     = yearly ÷ 12      Biweekly = yearly ÷ 26
+Weekly      = hourly wage × hours a week</div>
+<div class="example">
+  <p>Worked example: $22.50 an hour, 40 hours a week</p>
+  <ol>
+    <li>Yearly: $22.50 × 2,080 = <strong>$46,800</strong>.</li>
+    <li>Monthly: $46,800 ÷ 12 = $3,900. Biweekly: $46,800 ÷ 26 = $1,800.</li>
+    <li>Quick check: every $1 an hour is about $2,000 a year at full time.</li>
+  </ol>
+</div>
+
+<h2>Hourly to yearly salary table</h2>
+<p>Full time, 40 hours a week, 52 paid weeks, before taxes.</p>
+[[table_h2s]]
+
+<h2>When to change the hours and weeks</h2>
+<ul>
+  <li><strong>Unpaid time off:</strong> if you take two unpaid weeks a year, use 50 weeks.</li>
+  <li><strong>Part time or variable hours:</strong> use your average hours a week. 30 hours at $18 is $28,080 a year.</li>
+  <li><strong>Regular overtime:</strong> overtime hours earn 1.5 times your rate, so add them separately with the <a href="@overtime-calculator">overtime calculator</a> rather than adding them to the hours here.</li>
+</ul>
+<p>Comparing an hourly job with a salaried offer? Benefits matter too — health insurance, retirement matching and paid time off can be worth thousands a year. Convert the other way with the <a href="@salary-to-hourly-calculator">salary to hourly calculator</a>.</p>
+
+<h2>Frequently asked questions</h2>
+<div class="faq">
+  <details><summary>$15 an hour is how much a year?</summary><p>$31,200 a year at 40 hours a week for 52 weeks.</p></details>
+  <details><summary>$20 an hour is how much a year?</summary><p>$41,600 a year full time, or $3,466.67 a month.</p></details>
+  <details><summary>$25 an hour is how much a year?</summary><p>$52,000 a year at 40 hours a week.</p></details>
+  <details><summary>How many work hours are in a year?</summary><p>2,080 is the standard figure (40 × 52). The actual number of weekdays varies a little by year — see <a href="@guides/how-many-work-hours-in-a-year">how many work hours are in a year</a>.</p></details>
+  <details><summary>Is this before or after taxes?</summary><p>Before. Federal and state income tax, Social Security and Medicare are taken out of these amounts.</p></details>
+</div>
+
+<h2>Sources</h2>
+<ul class="sources">
+  <li>Standard full-time year of 2,080 hours (40 hours × 52 weeks), the figure most employers and payroll systems use. The federal government uses 2,087 hours for its own employees to even out leap years (5 U.S.C. 5504).</li>
+  <li><a href="@methodology">How we calculate</a>.</li>
+</ul>

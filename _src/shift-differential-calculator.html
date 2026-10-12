@@ -1,0 +1,76 @@
+---
+type: calculator
+category: pay
+order: 5
+icon: moon
+title: Shift Differential Calculator – Night & Weekend Pay
+description: Calculate shift differential pay for night, evening or weekend hours, in dollars or as a percentage of your base rate, and your total pay for the week.
+h1: Shift Differential Calculator
+lead: Add a night, evening or weekend shift differential to your base rate — as dollars per hour or a percentage — and see the rate for those hours and your total pay.
+card_title: Shift Differential
+card_desc: Extra pay for nights and weekends, in $ or %.
+crumb: Shift Differential Calculator
+updated: 2026-10-12
+script: shiftdiff
+related: overtime-calculator, time-card-calculator, pay-raise-calculator, hourly-to-salary-calculator
+---
+<div class="calc">
+  <form class="panel" id="sd-form" novalidate>
+    <h2>Rates and hours</h2>
+    <div class="fields">
+      <div class="field"><label for="sd-base">Base hourly rate</label><div class="inp"><span class="affix pre">$</span><input id="sd-base" data-k="base" type="text" inputmode="decimal" value="18"></div></div>
+      <div class="field"><label for="sd-type">Differential is</label><select id="sd-type" class="select" data-k="type"><option value="amt" selected>Dollars per hour</option><option value="pct">Percent of base rate</option></select></div>
+      <div class="field"><label for="sd-diff">Differential</label><div class="inp"><input id="sd-diff" data-k="diff" type="text" inputmode="decimal" value="2"></div><small>e.g. 2 for $2/hr, or 10 for 10%</small></div>
+      <div class="field"><label for="sd-dh">Hours with the differential</label><div class="inp"><input id="sd-dh" data-k="dh" type="text" inputmode="decimal" value="16"><span class="affix">hr</span></div></div>
+      <div class="field full"><label for="sd-rh">Other hours at the base rate</label><div class="inp"><input id="sd-rh" data-k="rh" type="text" inputmode="decimal" value="24"><span class="affix">hr</span></div></div>
+    </div>
+    <div class="calc-actions">
+      <button type="button" class="btn btn-ghost btn-sm js-reset">Reset</button>
+      <button type="button" class="btn btn-ghost btn-sm js-copy">Copy result</button>
+      <button type="button" class="btn btn-ghost btn-sm js-share">Copy link</button>
+    </div>
+  </form>
+  <section class="panel results" aria-live="polite" aria-label="Results">
+    <div id="sd-results"><p class="results-empty">Enter your base rate and the differential.</p></div>
+  </section>
+</div>
+<!-- content -->
+<h2>What a shift differential is</h2>
+<p>A shift differential is extra pay for working less popular hours — evenings, nights, weekends or holidays. It's set by your employer or union contract, as a flat amount (such as $2 an hour for nights) or a percentage of your base rate (such as 10% for weekends). Federal law doesn't require one; it's common in healthcare, manufacturing, warehouses, retail and call centers.</p>
+<div class="formula">Differential ($)    = flat amount, or base rate × percent ÷ 100
+Rate for those hours = base rate + differential
+Pay                  = base hours × base rate + differential hours × (base rate + differential)</div>
+<div class="example">
+  <p>Worked example: $18.00 base, $2.00 night differential, 16 night hours and 24 day hours</p>
+  <ol>
+    <li>Night rate: $18.00 + $2.00 = $20.00 an hour.</li>
+    <li>Pay: 24 × $18.00 + 16 × $20.00 = $432.00 + $320.00 = <strong>$752.00</strong>.</li>
+    <li>The differential added 16 × $2.00 = $32.00.</li>
+  </ol>
+</div>
+
+<h2>Shift differentials and overtime</h2>
+<p>Under federal rules, shift differentials are part of your <em>regular rate</em> — the rate overtime is based on. So when you work over 40 hours, overtime isn't just 1.5 × your base rate:</p>
+<div class="example">
+  <p>Worked example: 45 hours at $20.00, 15 of them on nights at +$2.00</p>
+  <ol>
+    <li>Straight-time pay: 45 × $20.00 + 15 × $2.00 = $930.00.</li>
+    <li>Regular rate: $930.00 ÷ 45 = $20.67 an hour.</li>
+    <li>Overtime premium: 5 hours × ½ × $20.67 = $51.67.</li>
+    <li>Total: <strong>$981.67</strong> — a little more than if overtime were based on $20.00 alone ($980.00).</li>
+  </ol>
+</div>
+<p>Use the <a href="@overtime-calculator">overtime calculator</a> for the basic overtime split.</p>
+
+<h2>Frequently asked questions</h2>
+<div class="faq">
+  <details><summary>What is a typical night shift differential?</summary><p>It varies a lot by industry and employer. Flat differentials of a dollar or a few dollars an hour, or percentages around 5% to 15%, are common; some healthcare jobs pay more for nights and weekends.</p></details>
+  <details><summary>Is a shift differential required by law?</summary><p>Not under federal law. It's paid when your employer's policy or your union contract says so.</p></details>
+  <details><summary>Does the differential apply to the whole shift?</summary><p>That depends on the policy: some pay it for the whole shift if most of it falls in the evening or night, others only for the hours inside the differential window.</p></details>
+</div>
+
+<h2>Sources</h2>
+<ul class="sources">
+  <li>29 CFR 778.207(b): shift differentials are included in the regular rate for overtime (U.S. Department of Labor).</li>
+  <li>For information only, not legal or payroll advice. <a href="@methodology">How we calculate</a>.</li>
+</ul>

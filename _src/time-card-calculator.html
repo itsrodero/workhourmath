@@ -1,0 +1,85 @@
+---
+type: calculator
+category: timecards
+order: 1
+icon: card
+title: Time Card Calculator – Hours, Breaks & Overtime Pay
+description: Add up a weekly time card: enter times in and out with unpaid breaks to get daily and weekly hours, overtime by federal or state rules, and gross pay.
+h1: Time Card Calculator
+lead: Enter when you clocked in and out each day and any unpaid break. You'll get the hours for every day, the weekly total in hours and minutes and in decimal hours, your overtime and your gross pay.
+card_title: Time Card Calculator
+card_desc: Weekly hours from in and out times, breaks, overtime and pay.
+crumb: Time Card Calculator
+updated: 2026-10-12
+script: timecard
+related: biweekly-time-card-calculator, overtime-calculator, minutes-to-decimal-calculator, guides/how-to-calculate-hours-worked
+---
+[[timecard 7]]
+<!-- content -->
+<h2>How to use the time card calculator</h2>
+<ol>
+  <li><strong>Enter your time in and time out</strong> for each day you worked. Leave days off empty. If a shift runs past midnight, just enter the out time — an out time earlier than the in time counts into the next day.</li>
+  <li><strong>Add your unpaid break</strong> in minutes, usually your lunch. Leave paid breaks out (see below).</li>
+  <li><strong>Add your hourly rate</strong> if you want to see your gross pay.</li>
+  <li><strong>Pick the overtime rule</strong> that applies where you work, and the day your workweek starts.</li>
+  <li><strong>Copy, download or print</strong> the result. Your times are saved in this browser, so next week you only need to change what's different.</li>
+</ol>
+
+<h2>How the hours are calculated</h2>
+<div class="formula">Hours for a day   = time out − time in − unpaid break
+Overnight shift   = add 24 hours when the time out is earlier than the time in
+Decimal hours     = hours + minutes ÷ 60   (8 hr 45 min = 8.75)
+Gross pay         = regular hours × rate + overtime hours × rate × 1.5 (+ double time × rate × 2)</div>
+<div class="example">
+  <p>Worked example: Monday to Friday 8:45 AM – 5:15 PM with a 30-minute lunch, plus Saturday 8:00 AM – 12:30 PM, at $18.50 an hour</p>
+  <ol>
+    <li>Each weekday: 8 hr 30 min at work − 30 min lunch = <strong>8:00</strong> hours. Five days = 40:00.</li>
+    <li>Saturday: 4 hr 30 min = 4.5 hours, so the week totals <strong>44.5 hours</strong>.</li>
+    <li>Under the federal rule the 4.5 hours over 40 are overtime at 1.5 × $18.50 = $27.75 an hour.</li>
+    <li>Gross pay: 40 × $18.50 + 4.5 × $27.75 = $740.00 + $124.88 = <strong>$864.88</strong>.</li>
+  </ol>
+</div>
+
+<h2>Overtime rules in the calculator</h2>
+<p>Under the federal Fair Labor Standards Act (FLSA), non-exempt employees get at least time and a half for hours worked over 40 in a workweek. There's no federal overtime for long days, weekends or holidays as such. A few states add daily overtime on top of the weekly rule:</p>
+<div class="table-wrap"><table>
+  <thead><tr><th>Rule</th><th>Overtime (1.5×)</th><th>Double time (2×)</th></tr></thead>
+  <tbody>
+    <tr><td>Federal (FLSA)</td><td>Over 40 hours in the workweek</td><td>—</td></tr>
+    <tr><td>California</td><td>Over 8 hours in a workday or 40 in the workweek; the first 8 hours on the 7th consecutive day of work in the workweek</td><td>Over 12 hours in a workday; over 8 hours on the 7th consecutive day</td></tr>
+    <tr><td>Alaska</td><td>Over 8 hours in a day or 40 in the week (employers with four or more employees)</td><td>—</td></tr>
+    <tr><td>Colorado</td><td>Over 12 hours in a workday or 40 in the workweek</td><td>—</td></tr>
+  </tbody>
+</table></div>
+<p>Nevada also has daily overtime after 8 hours, but only for employees paid less than one and a half times the state minimum wage; if that's you, the Alaska setting gives the same result. Daily and weekly overtime aren't counted twice: once an hour is paid as daily overtime, it doesn't count toward the 40 regular hours. Read more in our guide to <a href="@guides/overtime-rules-by-state">overtime rules by state</a>.</p>
+
+<h2>Which breaks to enter</h2>
+<p>Only enter <strong>unpaid</strong> breaks. Under federal rules, short rest breaks of about 5 to 20 minutes count as hours worked and must be paid, so they stay in your hours. A real meal period — normally 30 minutes or more, when you're completely relieved from duty — doesn't have to be paid, so that's the time to subtract. Many states have their own meal and rest break rules, and your employer's policy decides whether your lunch is paid.</p>
+
+<h2>Rounding punches to 5, 6 or 15 minutes</h2>
+<p>Some employers round clock punches. Federal rules accept rounding starting and stopping times to the nearest 5 minutes, tenth of an hour (6 minutes) or quarter hour, as long as it averages out over time so employees are paid for all the time they actually work. With 15-minute rounding this is the "7-minute rule": 1 to 7 minutes past a quarter hour round down, 8 to 14 round up. Use the <em>Round punches to</em> option to see the hours your employer's system will show. Try the <a href="@time-clock-rounding-calculator">time clock rounding calculator</a> to check single punches.</p>
+
+<h2>Hours and minutes vs decimal hours</h2>
+<p>Payroll systems usually want decimal hours, not hours and minutes. 7 hours 45 minutes is 7.75 hours, not 7.45. The calculator shows both. The common ones:</p>
+<div class="table-wrap"><table>
+  <thead><tr><th>Minutes</th><th>5</th><th>10</th><th>15</th><th>20</th><th>30</th><th>40</th><th>45</th><th>50</th></tr></thead>
+  <tbody><tr><td>Decimal hours</td><td>0.08</td><td>0.17</td><td>0.25</td><td>0.33</td><td>0.50</td><td>0.67</td><td>0.75</td><td>0.83</td></tr></tbody>
+</table></div>
+<p>See the full chart in the <a href="@minutes-to-decimal-calculator">minutes to decimal converter</a>.</p>
+
+<h2>Frequently asked questions</h2>
+<div class="faq">
+  <details><summary>How do I calculate hours worked with a lunch break?</summary><p>Subtract the time in from the time out, then subtract the unpaid lunch. 8:00 AM to 4:30 PM is 8 hours 30 minutes; minus a 30-minute lunch, that's 8 hours worked.</p></details>
+  <details><summary>Do I get overtime for working more than 8 hours in a day?</summary><p>Not under federal law, which only counts hours over 40 in the workweek. California, Alaska and (for lower-paid workers) Nevada pay overtime after 8 hours in a day, and Colorado after 12. Your employer can also choose to pay more than the law requires.</p></details>
+  <details><summary>Is overtime calculated per week or per pay period?</summary><p>Per workweek — a fixed, recurring period of seven consecutive days. Hours can't be averaged over two weeks, so on a biweekly paycheck 45 hours one week and 35 the next still means 5 hours of overtime. Use the <a href="@biweekly-time-card-calculator">biweekly time card calculator</a> for two weeks at once.</p></details>
+  <details><summary>Where are my times saved?</summary><p>Only in your own browser, so they're there when you come back. Nothing is sent to us. Use Reset to clear them.</p></details>
+  <details><summary>Does the gross pay include taxes?</summary><p>No. Gross pay is before taxes and deductions such as Social Security, Medicare, income tax and benefits. Your paycheck will be lower.</p></details>
+</div>
+
+<h2>Sources</h2>
+<ul class="sources">
+  <li>U.S. Department of Labor, Wage and Hour Division — <em>Fact Sheet #23: Overtime Pay Requirements of the FLSA</em> (40-hour workweek, time and one-half, no averaging between weeks).</li>
+  <li>29 CFR 785.18 and 785.19 (rest and meal periods) and 785.48(b) (rounding to 5 minutes, a tenth or a quarter of an hour).</li>
+  <li>California Labor Code §510; Alaska Statutes §23.10.060; Colorado Overtime and Minimum Pay Standards (COMPS) Order, 7 CCR 1103-1; Nevada Revised Statutes 608.018.</li>
+  <li>This calculator gives estimates for information only and isn't legal or payroll advice. <a href="@methodology">How we calculate</a>.</li>
+</ul>

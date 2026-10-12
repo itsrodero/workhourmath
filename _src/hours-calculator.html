@@ -1,0 +1,86 @@
+---
+type: calculator
+category: timecards
+order: 3
+icon: hourglass
+title: Hours Calculator – Time Between Two Times, Minus Breaks
+description: Calculate the hours and minutes between two times, minus an unpaid break, in h:mm and decimal hours. Works for overnight shifts and can show your pay.
+h1: Hours Calculator
+lead: Enter a start time and an end time to see exactly how many hours and minutes are in between — minus any unpaid break — in hours and minutes, decimal hours and total minutes.
+card_title: Hours Calculator
+card_desc: Hours and minutes between two times, minus a break.
+crumb: Hours Calculator
+updated: 2026-10-12
+script: hours
+related: time-card-calculator, add-time-calculator, minutes-to-decimal-calculator, guides/how-to-calculate-hours-worked
+---
+<div class="calc">
+  <form class="panel" id="hr-form" novalidate>
+    <h2>Times</h2>
+    <div class="fields">
+      <div class="field"><label for="hr-start">Start time</label><div class="inp"><input id="hr-start" class="time-in" type="time" data-k="start" value="09:00"></div></div>
+      <div class="field"><label for="hr-end">End time</label><div class="inp"><input id="hr-end" class="time-in" type="time" data-k="end" value="17:30"></div><small>Earlier than the start? It counts as the next day.</small></div>
+      <div class="field"><label for="hr-brk">Unpaid break</label><div class="inp"><input id="hr-brk" data-k="brk" type="text" inputmode="numeric" value="30"><span class="affix">min</span></div></div>
+      <div class="field"><label for="hr-rate">Hourly rate (optional)</label><div class="inp"><span class="affix pre">$</span><input id="hr-rate" data-k="rate" type="text" inputmode="decimal" placeholder="e.g. 18.50"></div></div>
+    </div>
+    <div class="calc-actions">
+      <button type="button" class="btn btn-ghost btn-sm js-reset">Reset</button>
+      <button type="button" class="btn btn-ghost btn-sm js-copy">Copy result</button>
+      <button type="button" class="btn btn-ghost btn-sm js-share">Copy link</button>
+      <button type="button" class="btn btn-ghost btn-sm js-print">Print</button>
+    </div>
+  </form>
+  <section class="panel results" aria-live="polite" aria-label="Results">
+    <div id="hr-results"><p class="results-empty">Enter a start time and an end time.</p></div>
+  </section>
+</div>
+<!-- content -->
+<h2>How to calculate the hours between two times</h2>
+<ol>
+  <li><strong>Convert both times to the 24-hour clock.</strong> 9:00 AM is 9:00 and 5:30 PM is 17:30.</li>
+  <li><strong>Subtract the start from the end.</strong> 17:30 − 9:00 = 8 hours 30 minutes. If you have to borrow, take 1 hour as 60 minutes: 17:15 − 9:40 is 16:75 − 9:40 = 7 hours 35 minutes.</li>
+  <li><strong>If the end is earlier than the start, add 24 hours.</strong> A shift from 10:00 PM to 6:30 AM is 6:30 + 24:00 − 22:00 = 8 hours 30 minutes.</li>
+  <li><strong>Subtract unpaid breaks.</strong> 8 hours 30 minutes minus a 30-minute lunch = 8 hours.</li>
+  <li><strong>Convert to decimal hours if you need to</strong> by dividing the minutes by 60: 7 hours 35 minutes = 7 + 35 ÷ 60 = 7.58 hours.</li>
+</ol>
+<div class="formula">Hours = (end time − start time) − unpaid break
+If end &lt; start: add 24 hours (overnight)
+Decimal hours = hours + minutes ÷ 60</div>
+<div class="example">
+  <p>Worked example: a night shift from 10:45 PM to 7:15 AM with a 45-minute unpaid meal break</p>
+  <ol>
+    <li>In 24-hour time: 22:45 to 7:15. The end is earlier, so add 24 hours: 31:15 − 22:45 = 8 hours 30 minutes.</li>
+    <li>Minus the 45-minute break: <strong>7 hours 45 minutes</strong>.</li>
+    <li>In decimal: 7 + 45 ÷ 60 = <strong>7.75 hours</strong>.</li>
+  </ol>
+</div>
+
+<h2>Common shift lengths</h2>
+<div class="table-wrap"><table>
+  <thead><tr><th>Shift</th><th>Unpaid break</th><th>Hours worked</th><th>Decimal</th></tr></thead>
+  <tbody>
+    <tr><td>9:00 AM – 5:00 PM</td><td>none</td><td>8:00</td><td>8.00</td></tr>
+    <tr><td>9:00 AM – 5:00 PM</td><td>30 min</td><td>7:30</td><td>7.50</td></tr>
+    <tr><td>8:00 AM – 4:30 PM</td><td>30 min</td><td>8:00</td><td>8.00</td></tr>
+    <tr><td>8:00 AM – 5:00 PM</td><td>60 min</td><td>8:00</td><td>8.00</td></tr>
+    <tr><td>7:00 AM – 3:30 PM</td><td>30 min</td><td>8:00</td><td>8.00</td></tr>
+    <tr><td>7:00 AM – 7:00 PM</td><td>30 min</td><td>11:30</td><td>11.50</td></tr>
+    <tr><td>3:00 PM – 11:30 PM</td><td>30 min</td><td>8:00</td><td>8.00</td></tr>
+    <tr><td>7:00 PM – 7:00 AM</td><td>none</td><td>12:00</td><td>12.00</td></tr>
+  </tbody>
+</table></div>
+<p>To add up several shifts or a whole week, use the <a href="@time-card-calculator">time card calculator</a>. To add durations that aren't tied to a clock time, use the <a href="@add-time-calculator">add time calculator</a>.</p>
+
+<h2>Frequently asked questions</h2>
+<div class="faq">
+  <details><summary>How many hours is 9 to 5?</summary><p>8 hours. With a 30-minute unpaid lunch it's 7.5 hours worked; with a paid lunch it's still 8.</p></details>
+  <details><summary>How many hours is 7 AM to 3:30 PM?</summary><p>8 hours 30 minutes, or 8 hours worked after a 30-minute unpaid break.</p></details>
+  <details><summary>How do I calculate hours that go past midnight?</summary><p>Add 24 hours to the end time before subtracting. From 11:00 PM to 7:00 AM: 31:00 − 23:00 = 8 hours. The calculator does this automatically when the end time is earlier than the start time.</p></details>
+  <details><summary>Why is 7 hours 30 minutes 7.5 and not 7.30?</summary><p>Because there are 60 minutes in an hour, not 100. 30 minutes is half an hour, so it's 0.5 in decimal hours. See the <a href="@minutes-to-decimal-calculator">minutes to decimal chart</a>.</p></details>
+</div>
+
+<h2>Sources</h2>
+<ul class="sources">
+  <li>Time arithmetic based on the 24-hour clock; decimal hours = minutes ÷ 60.</li>
+  <li>Which breaks are paid: 29 CFR 785.18 and 785.19 (U.S. Department of Labor). <a href="@methodology">How we calculate</a>.</li>
+</ul>

@@ -1,0 +1,35 @@
+---
+type: page
+title: How We Calculate
+description: The time arithmetic, overtime rules, rounding and data sources behind every WorkHourMath calculator, and how we keep the rules up to date.
+h1: How we calculate
+lead: Every result on this site comes from simple time arithmetic and published rules. Here's exactly what we use, so you can check it yourself.
+---
+<h2>Time is counted in minutes</h2>
+<p>Every calculator converts times to minutes first, does the math, and only converts back at the end. That avoids the classic mistake of treating 7:45 as 7.45. Hours worked in a day are the time out minus the time in minus unpaid breaks; when the time out is earlier than the time in, we add 24 hours because the shift ran past midnight.</p>
+<div class="formula">Minutes worked  = (time out − time in) − unpaid break   (+ 1,440 if it crosses midnight)
+Decimal hours   = minutes ÷ 60, shown to 2 decimal places
+Hours : minutes = whole hours and the remaining minutes</div>
+<p>Decimal hours are rounded to two places for display, the way most payroll systems take them. Pay is calculated from the exact minutes, then rounded to the cent.</p>
+
+<h2>Overtime</h2>
+<p>The default is the federal Fair Labor Standards Act rule: hours worked over 40 in a workweek are paid at one and a half times the regular rate, and each workweek stands alone. The time card calculators can also apply the daily overtime rules of California (over 8 and 12 hours a day, plus the seventh consecutive day), Alaska (over 8 a day) and Colorado (over 12 a day). Hours paid as daily overtime aren't counted again toward the weekly 40. Our <a href="@guides/overtime-rules-by-state">overtime rules by state</a> guide explains each rule and the law behind it.</p>
+<p>Our pay figures assume your regular rate is your hourly wage. If you also earn shift differentials, bonuses or commissions, your legal overtime rate is higher — the overtime and shift differential pages show how.</p>
+
+<h2>Rounding</h2>
+<p>When you choose to round punches, each time in and time out is rounded to the nearest 5 minutes, 6 minutes (a tenth of an hour) or 15 minutes before the hours are added up, with the halfway minute rounded up. That matches the rounding practices described in federal regulation 29 CFR 785.48(b).</p>
+
+<h2>Dates and holidays</h2>
+<p>Working-day counts leave out Saturdays, Sundays and — if you choose — the 11 US federal holidays in 5 U.S.C. 6103, on the date they're observed: a holiday that falls on a Saturday is observed on the Friday before, and one on a Sunday on the Monday after. Pay conversions use the standard 2,080-hour work year (40 hours × 52 weeks) unless you change the hours or weeks.</p>
+
+<h2>Where our rules come from</h2>
+<ul>
+  <li><strong>U.S. Department of Labor</strong>, Wage and Hour Division: FLSA fact sheets and the regulations in Title 29 of the Code of Federal Regulations.</li>
+  <li><strong>State law</strong>: the statutes and wage orders of the states with daily overtime, listed on each page that uses them.</li>
+  <li><strong>U.S. Office of Personnel Management</strong> for federal holiday dates.</li>
+</ul>
+<p>Each page lists its sources and the date it was last updated. We check the rules at least once a year and whenever a law changes.</p>
+
+<h2>What our calculators don't do</h2>
+<p>They don't calculate taxes or net pay, and they don't know your employer's policies or your union contract. They aren't legal advice. If your paycheck doesn't match, your employer's payroll department or the Wage and Hour Division can help.</p>
+<p>Found an error or have a better source? Email [[email]] — we correct mistakes quickly and note what changed.</p>

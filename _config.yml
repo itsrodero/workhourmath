@@ -1,0 +1,4 @@
+exclude:
+  - README.md
+  - WIP.md
+  - LAUNCH.md

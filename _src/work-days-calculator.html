@@ -1,0 +1,68 @@
+---
+type: calculator
+category: dates
+order: 1
+icon: calendar
+title: Work Days Calculator – Business Days Between Dates
+description: Count the working days between two dates, without weekends and US federal holidays, and the work hours they add up to. Includes the 2026 and 2027 holiday lists.
+h1: Work Days Calculator
+lead: Count the business days between two dates — leaving out weekends and, if you want, US federal holidays — and see how many work hours that is.
+card_title: Work Days Calculator
+card_desc: Business days between dates, minus weekends and holidays.
+crumb: Work Days Calculator
+updated: 2026-10-12
+script: workdays
+related: pto-accrual-calculator, guides/how-many-work-hours-in-a-year, hourly-to-salary-calculator, time-card-calculator
+---
+<div class="calc">
+  <form class="panel" id="wd-form" novalidate>
+    <h2>Dates</h2>
+    <div class="fields">
+      <div class="field"><label for="wd-from">Start date</label><div class="inp"><input id="wd-from" class="time-in" type="date" data-k="from"></div></div>
+      <div class="field"><label for="wd-to">End date</label><div class="inp"><input id="wd-to" class="time-in" type="date" data-k="to"></div></div>
+      <div class="field"><label for="wd-hpd">Hours in a workday</label><div class="inp"><input id="wd-hpd" data-k="hpd" type="text" inputmode="decimal" value="8"><span class="affix">hr</span></div></div>
+      <div class="field"><span class="label">Options</span>
+        <label class="check"><input type="checkbox" data-k="incl" checked> Include the end date</label>
+        <label class="check"><input type="checkbox" data-k="hol" checked> Skip US federal holidays</label></div>
+    </div>
+    <div class="calc-actions">
+      <button type="button" class="btn btn-ghost btn-sm js-reset">Reset</button>
+      <button type="button" class="btn btn-ghost btn-sm js-copy">Copy result</button>
+      <button type="button" class="btn btn-ghost btn-sm js-share">Copy link</button>
+    </div>
+  </form>
+  <section class="panel results" aria-live="polite" aria-label="Results">
+    <div id="wd-results"><p class="results-empty">Pick a start date and an end date.</p></div>
+  </section>
+</div>
+<!-- content -->
+<h2>How working days are counted</h2>
+<ol>
+  <li>Count every calendar day from the start date to the end date (including the end date, unless you untick it).</li>
+  <li>Take out Saturdays and Sundays.</li>
+  <li>Take out US federal holidays that fall on a weekday, using the day they're observed.</li>
+  <li>Multiply by the hours in your workday to get work hours.</li>
+</ol>
+<p>Your employer may observe a different set of holidays — many private companies close on New Year's Day, Memorial Day, Independence Day, Labor Day, Thanksgiving and Christmas but stay open on the others. If that's you, untick the holiday option and subtract your company's holidays yourself.</p>
+
+<h2 id="holidays-2026">US federal holidays 2026</h2>
+[[table_holidays 2026]]
+<h2 id="holidays-2027">US federal holidays 2027</h2>
+[[table_holidays 2027]]
+<p class="table-note">When a holiday falls on a Saturday, it's observed on the Friday before; on a Sunday, the Monday after. New Year's Day 2028 falls on a Saturday, so it's observed on Friday, December 31, 2027.</p>
+
+<h2>Working days in a year</h2>
+<p>A year has 260 or 261 weekdays (262 in a few leap years). Take out the 11 federal holidays and most years have about 250 working days — 2,000 hours at 8 hours a day, compared with the 2,080 hours often used for salary math. See the table in <a href="@guides/how-many-work-hours-in-a-year">how many work hours are in a year</a>.</p>
+
+<h2>Frequently asked questions</h2>
+<div class="faq">
+  <details><summary>What's the difference between business days and calendar days?</summary><p>Calendar days count every day. Business days count only Monday to Friday and usually leave out public holidays. "5 business days" from a Thursday ends on the next Thursday.</p></details>
+  <details><summary>Does the count include the start date?</summary><p>Yes. The start date is always counted; the end date is counted unless you untick the option.</p></details>
+  <details><summary>How many working days are in a month?</summary><p>Usually 20 to 23, depending on the month and how many holidays fall in it.</p></details>
+</div>
+
+<h2>Sources</h2>
+<ul class="sources">
+  <li>5 U.S.C. 6103 (federal holidays) and the U.S. Office of Personnel Management's rules for holidays that fall on a weekend.</li>
+  <li><a href="@methodology">How we calculate</a>.</li>
+</ul>

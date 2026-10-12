@@ -1,0 +1,77 @@
+---
+type: calculator
+category: timecards
+order: 5
+icon: timer
+title: Time Clock Rounding Calculator – 7-Minute Rule
+description: Round clock-in and clock-out punches to the nearest 15, 6 or 5 minutes and see how many minutes rounding adds or takes away. Explains the 7-minute rule.
+h1: Time Clock Rounding Calculator
+lead: See how a time clock rounds your punches — to the nearest quarter hour (the 7-minute rule), tenth of an hour or 5 minutes — and how much it changes the time you're paid for.
+card_title: Time Clock Rounding
+card_desc: Round punches to 15, 6 or 5 minutes — the 7-minute rule.
+crumb: Time Clock Rounding Calculator
+updated: 2026-10-12
+script: rounding
+related: time-card-calculator, minutes-to-decimal-calculator, hours-calculator, guides/how-to-calculate-hours-worked
+---
+<div class="calc">
+  <form class="panel" id="rd-form" novalidate>
+    <h2>Punches</h2>
+    <div class="fields">
+      <div class="field"><label for="rd-in">Clock in</label><div class="inp"><input id="rd-in" class="time-in" type="time" data-k="in" value="08:07"></div></div>
+      <div class="field"><label for="rd-out">Clock out (optional)</label><div class="inp"><input id="rd-out" class="time-in" type="time" data-k="out" value="16:53"></div></div>
+      <div class="field full"><label for="rd-inc">Round to the nearest</label>
+        <select id="rd-inc" class="select" data-k="inc"><option value="15" selected>15 minutes (quarter hour, 7-minute rule)</option><option value="6">6 minutes (tenth of an hour)</option><option value="5">5 minutes</option></select></div>
+    </div>
+    <div class="calc-actions">
+      <button type="button" class="btn btn-ghost btn-sm js-reset">Reset</button>
+      <button type="button" class="btn btn-ghost btn-sm js-copy">Copy result</button>
+      <button type="button" class="btn btn-ghost btn-sm js-share">Copy link</button>
+    </div>
+  </form>
+  <section class="panel results" aria-live="polite" aria-label="Results">
+    <div id="rd-results"><p class="results-empty">Enter a clock-in time.</p></div>
+  </section>
+</div>
+<!-- content -->
+<h2>What the 7-minute rule means</h2>
+<p>When a time clock rounds to the nearest quarter hour, each punch moves to the closest :00, :15, :30 or :45. The halfway point is 7½ minutes, so:</p>
+<ul>
+  <li><strong>1 to 7 minutes</strong> after a quarter hour round <strong>down</strong>: 8:07 becomes 8:00.</li>
+  <li><strong>8 to 14 minutes</strong> after a quarter hour round <strong>up</strong>: 8:08 becomes 8:15.</li>
+</ul>
+<div class="table-wrap"><table>
+  <thead><tr><th>Punch</th><th>Rounds to</th><th>Punch</th><th>Rounds to</th></tr></thead>
+  <tbody>
+    <tr><td>8:00 – 8:07</td><td>8:00</td><td>8:30 – 8:37</td><td>8:30</td></tr>
+    <tr><td>8:08 – 8:22</td><td>8:15</td><td>8:38 – 8:52</td><td>8:45</td></tr>
+    <tr><td>8:23 – 8:37</td><td>8:30</td><td>8:53 – 9:07</td><td>9:00</td></tr>
+  </tbody>
+</table></div>
+<p>Tenth-of-an-hour rounding works the same way with 6-minute blocks (1–2 minutes round down, 3–5 round up), and 5-minute rounding with 5-minute blocks (1–2 down, 3–4 up).</p>
+
+<h2>Is time clock rounding legal?</h2>
+<p>Under federal rules, yes — if it's neutral. The Department of Labor accepts recording start and stop times to the nearest 5 minutes, tenth of an hour or quarter hour, as long as it averages out so employees are paid for all the time they actually work over a period of time. A system that only ever rounds in the employer's favor — down at clock-in for early arrivals but never up — doesn't meet that test.</p>
+<p>Some states are stricter. In California, for example, courts have said employers can't round meal-period punches and have questioned rounding where exact times are recorded anyway. If your hours look consistently short, compare the exact times with what you were paid.</p>
+<div class="example">
+  <p>Worked example: clock in 8:07 AM, clock out 4:53 PM, quarter-hour rounding</p>
+  <ol>
+    <li>8:07 rounds down to 8:00; 4:53 rounds up to 5:00.</li>
+    <li>Exact time: 8 hours 46 minutes. Rounded time: <strong>9 hours</strong> — 14 minutes in the employee's favor this time.</li>
+    <li>Clocking in at 8:08 and out at 4:52 would round the other way, to 8:15 and 4:45: 8 hours 30 minutes for 8 hours 44 minutes worked.</li>
+  </ol>
+</div>
+
+<h2>Frequently asked questions</h2>
+<div class="faq">
+  <details><summary>Does 8 minutes late round to 15 minutes late?</summary><p>With quarter-hour rounding, yes: a punch 8 minutes past the quarter hour rounds up to the next quarter. Many employers also have separate attendance rules about lateness.</p></details>
+  <details><summary>Should my employer round or use exact minutes?</summary><p>Either is allowed under federal rules if rounding is neutral. Exact minutes avoid disputes, and most modern time-tracking systems record them.</p></details>
+  <details><summary>Does rounding apply to breaks?</summary><p>It can, but in some states — including California for meal periods — rounding break punches has been ruled out. Check your state's rules.</p></details>
+</div>
+
+<h2>Sources</h2>
+<ul class="sources">
+  <li>29 CFR 785.48(b), "Rounding" practices (U.S. Department of Labor, Wage and Hour Division).</li>
+  <li><em>Donohue v. AMN Services</em> (Cal. Supreme Court, 2021) on rounding meal periods in California.</li>
+  <li>For information only, not legal advice. <a href="@methodology">How we calculate</a>.</li>
+</ul>

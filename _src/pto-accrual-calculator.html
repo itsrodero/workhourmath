@@ -1,0 +1,81 @@
+---
+type: calculator
+category: dates
+order: 2
+icon: sun
+title: PTO Accrual Calculator – Paid Time Off Per Hour & Paycheck
+description: Calculate how much paid time off you earn per hour worked, per paycheck and per year, and what your PTO balance will be after a number of weeks, with a cap.
+h1: PTO Accrual Calculator
+lead: Find out how fast your paid time off builds up — per hour, per paycheck and per year — and how many hours you'll have saved by a future date, including any cap your employer sets.
+card_title: PTO Accrual Calculator
+card_desc: PTO earned per hour, paycheck and year, and your future balance.
+crumb: PTO Accrual Calculator
+updated: 2026-10-12
+script: pto
+related: work-days-calculator, hourly-to-salary-calculator, guides/how-many-work-hours-in-a-year, time-card-calculator
+---
+<div class="calc">
+  <form class="panel" id="pto-form" novalidate>
+    <h2>How you earn PTO</h2>
+    <div class="fields">
+      <div class="field full"><label for="pto-method">Accrual method</label><select id="pto-method" class="select" data-k="method"><option value="hours" selected>Hours per hours worked (e.g. 1 hr per 30)</option><option value="period">Hours per pay period</option><option value="year">Days or hours per year</option></select></div>
+      <div class="field" data-method="hours"><label for="pto-earn">PTO hours earned</label><div class="inp"><input id="pto-earn" data-k="earn" type="text" inputmode="decimal" value="1"><span class="affix">hr</span></div></div>
+      <div class="field" data-method="hours"><label for="pto-per">For every</label><div class="inp"><input id="pto-per" data-k="per" type="text" inputmode="decimal" value="30"><span class="affix">hr worked</span></div></div>
+      <div class="field" data-method="period" hidden><label for="pto-amt">PTO hours per pay period</label><div class="inp"><input id="pto-amt" data-k="amt" type="text" inputmode="decimal" value="4"><span class="affix">hr</span></div></div>
+      <div class="field" data-method="period" hidden><label for="pto-period">Pay period</label><select id="pto-period" class="select" data-k="period"><option value="w">Weekly</option><option value="b" selected>Biweekly</option><option value="s">Semimonthly</option><option value="m">Monthly</option></select></div>
+      <div class="field" data-method="year" hidden><label for="pto-yr">PTO per year</label><div class="inp"><input id="pto-yr" data-k="yr" type="text" inputmode="decimal" value="15"></div></div>
+      <div class="field" data-method="year" hidden><label for="pto-yrunit">In</label><select id="pto-yrunit" class="select" data-k="yrunit"><option value="d" selected>Days</option><option value="h">Hours</option></select></div>
+      <div class="field"><label for="pto-hpw">Hours worked a week</label><div class="inp"><input id="pto-hpw" data-k="hpw" type="text" inputmode="decimal" value="40"><span class="affix">hr</span></div></div>
+      <div class="field"><label for="pto-day">Hours in a PTO day</label><div class="inp"><input id="pto-day" data-k="day" type="text" inputmode="decimal" value="8"><span class="affix">hr</span></div></div>
+    </div>
+    <h2 style="margin-top:20px">Your balance</h2>
+    <div class="fields">
+      <div class="field"><label for="pto-bal">Current balance</label><div class="inp"><input id="pto-bal" data-k="bal" type="text" inputmode="decimal" value="0"><span class="affix">hr</span></div></div>
+      <div class="field"><label for="pto-weeks">Weeks from now</label><div class="inp"><input id="pto-weeks" data-k="weeks" type="text" inputmode="decimal" value="26"><span class="affix">weeks</span></div></div>
+      <div class="field"><label for="pto-use">Hours you'll use by then</label><div class="inp"><input id="pto-use" data-k="use" type="text" inputmode="decimal" placeholder="0"><span class="affix">hr</span></div></div>
+      <div class="field"><label for="pto-cap">Cap (optional)</label><div class="inp"><input id="pto-cap" data-k="cap" type="text" inputmode="decimal" placeholder="none"><span class="affix">hr</span></div></div>
+    </div>
+    <div class="calc-actions">
+      <button type="button" class="btn btn-ghost btn-sm js-reset">Reset</button>
+      <button type="button" class="btn btn-ghost btn-sm js-copy">Copy result</button>
+      <button type="button" class="btn btn-ghost btn-sm js-share">Copy link</button>
+    </div>
+  </form>
+  <section class="panel results" aria-live="polite" aria-label="Results">
+    <div id="pto-results"><p class="results-empty">Enter how you earn PTO.</p></div>
+  </section>
+</div>
+<!-- content -->
+<h2>The three common ways PTO accrues</h2>
+<ul>
+  <li><strong>Per hour worked:</strong> for example 1 hour of PTO for every 30 hours worked. Part-time and full-time employees earn at the same rate, in proportion to their hours.</li>
+  <li><strong>Per pay period:</strong> a fixed number of hours on each paycheck, such as 4 hours every two weeks (104 hours a year).</li>
+  <li><strong>Per year:</strong> a yearly allowance like 15 days, either given up front or spread across the year. Spread out, it accrues at 1/52 per week.</li>
+</ul>
+<div class="formula">Per hour worked:  PTO a week = hours worked a week × earned ÷ per hours
+Per pay period:   PTO a week = hours per period × periods a year ÷ 52
+Per year:         PTO a week = yearly hours ÷ 52   (days × hours in a day)
+Balance later  = current balance + PTO a week × weeks − hours used (up to the cap)</div>
+<div class="example">
+  <p>Worked example: 1 hour of PTO for every 30 hours worked, 40 hours a week</p>
+  <ol>
+    <li>Per week: 40 ÷ 30 = 1.333 hours.</li>
+    <li>Per biweekly paycheck: 2.67 hours.</li>
+    <li>Per year: 1.333 × 52 = <strong>69.3 hours</strong>, or about 8.7 eight-hour days.</li>
+  </ol>
+</div>
+
+<h2>Caps, carryover and "use it or lose it"</h2>
+<p>Many employers stop accrual once your balance reaches a cap — often one to two times your yearly accrual — so you don't build up an unlimited amount. Some states don't allow "use it or lose it" policies that take away earned vacation, and some require earned vacation to be paid out when you leave; California is the best-known example. Paid sick leave laws in many states and cities set their own minimum accrual, such as 1 hour for every 30 hours worked. Your employee handbook has the rules that apply to you.</p>
+
+<h2>Frequently asked questions</h2>
+<div class="faq">
+  <details><summary>How much PTO is 1 hour for every 30 hours worked?</summary><p>About 69 hours a year at 40 hours a week — just under 9 eight-hour days.</p></details>
+  <details><summary>How many hours is 15 days of PTO?</summary><p>120 hours at 8 hours a day. Spread over the year that's 2.31 hours a week or 4.62 hours per biweekly paycheck.</p></details>
+  <details><summary>Do I earn PTO on overtime hours?</summary><p>If you accrue per hour worked, many policies count every hour worked, including overtime, but some cap accrual at 40 hours a week. Check your policy.</p></details>
+</div>
+
+<h2>Sources</h2>
+<ul class="sources">
+  <li>Accrual arithmetic; 52 weeks a year. State paid sick leave and vacation payout rules vary — check your state labor department. <a href="@methodology">How we calculate</a>.</li>
+</ul>

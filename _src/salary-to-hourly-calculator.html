@@ -1,0 +1,71 @@
+---
+type: calculator
+category: pay
+order: 3
+icon: swap
+title: Salary to Hourly Calculator – What's My Hourly Rate?
+description: Convert a yearly salary to an hourly rate, plus monthly, biweekly and weekly pay. A $60,000 salary is $28.85 an hour at 40 hours a week.
+h1: Salary to Hourly Calculator
+lead: Turn a yearly salary into an hourly rate — and see what it means per paycheck, per month and per week. Change the hours to see what you really earn if you work more than 40.
+card_title: Salary to Hourly
+card_desc: Yearly salary to hourly rate and paycheck amounts.
+crumb: Salary to Hourly Calculator
+updated: 2026-10-12
+script: salary
+related: hourly-to-salary-calculator, pay-raise-calculator, overtime-calculator, guides/how-many-work-hours-in-a-year
+---
+<div class="calc">
+  <form class="panel" id="sal-form" data-mode="s2h" novalidate>
+    <h2>Your salary</h2>
+    <div class="fields">
+      <div class="field"><label for="sal-amount">Yearly salary</label><div class="inp"><span class="affix pre">$</span><input id="sal-amount" data-k="amount" type="text" inputmode="decimal" value="60000"><span class="affix">/yr</span></div></div>
+      <div class="field"><label for="sal-hpw">Hours a week</label><div class="inp"><input id="sal-hpw" data-k="hpw" type="text" inputmode="decimal" value="40"><span class="affix">hr</span></div></div>
+      <div class="field"><label for="sal-weeks">Weeks a year</label><div class="inp"><input id="sal-weeks" data-k="weeks" type="text" inputmode="decimal" value="52"><span class="affix">weeks</span></div></div>
+      <div class="field"><label for="sal-dpw">Days a week</label><div class="inp"><input id="sal-dpw" data-k="dpw" type="text" inputmode="decimal" value="5"><span class="affix">days</span></div></div>
+    </div>
+    <div class="calc-actions">
+      <button type="button" class="btn btn-ghost btn-sm js-reset">Reset</button>
+      <button type="button" class="btn btn-ghost btn-sm js-copy">Copy result</button>
+      <button type="button" class="btn btn-ghost btn-sm js-share">Copy link</button>
+      <button type="button" class="btn btn-ghost btn-sm js-print">Print</button>
+    </div>
+  </form>
+  <section class="panel results" aria-live="polite" aria-label="Results">
+    <div id="sal-results"><p class="results-empty">Enter an annual salary.</p></div>
+  </section>
+</div>
+<!-- content -->
+<h2>How to convert a salary to an hourly rate</h2>
+<p>Divide the yearly salary by the number of hours you work in a year. For a standard full-time job that's 2,080 hours (40 hours × 52 weeks).</p>
+<div class="formula">Hourly rate = yearly salary ÷ (hours a week × weeks a year)
+Full time   = yearly salary ÷ 2,080
+Quick check: halve the salary and drop the thousands → $60,000 ≈ $30 an hour</div>
+<div class="example">
+  <p>Worked example: a $60,000 salary</p>
+  <ol>
+    <li>At 40 hours a week: $60,000 ÷ 2,080 = <strong>$28.85 an hour</strong>.</li>
+    <li>At 50 hours a week: $60,000 ÷ 2,600 = $23.08 an hour — the real rate drops when salaried hours go up.</li>
+    <li>Per paycheck: $60,000 ÷ 26 = $2,307.69 biweekly, or $5,000 a month.</li>
+  </ol>
+</div>
+
+<h2>Salary to hourly table</h2>
+<p>Full time, 2,080 hours a year, before taxes.</p>
+[[table_s2h]]
+
+<h2>Salaried vs hourly: what changes</h2>
+<p>Hourly employees are paid for every hour they work, plus overtime over 40 a week if they're non-exempt. Many salaried employees are "exempt" and get the same pay however many hours they work, so working 50 hours instead of 40 lowers their effective hourly rate by 20%. Being paid a salary doesn't automatically make someone exempt, though: the job also has to meet a salary threshold and the duties tests in the federal rules. Read more in <a href="@overtime-calculator">how overtime works</a>.</p>
+
+<h2>Frequently asked questions</h2>
+<div class="faq">
+  <details><summary>$50,000 a year is how much an hour?</summary><p>$24.04 an hour at 40 hours a week.</p></details>
+  <details><summary>$75,000 a year is how much an hour?</summary><p>$36.06 an hour at 2,080 hours a year.</p></details>
+  <details><summary>$100,000 a year is how much an hour?</summary><p>$48.08 an hour full time.</p></details>
+  <details><summary>Should I use 2,080 or 2,000 hours?</summary><p>2,080 (40 × 52) is the standard. 2,000 is a quick estimate that assumes two unpaid weeks off, and it gives a slightly higher hourly rate.</p></details>
+</div>
+
+<h2>Sources</h2>
+<ul class="sources">
+  <li>2,080-hour work year (40 hours × 52 weeks), the figure most employers use. The federal government divides annual pay by 2,087 hours for its own employees (5 U.S.C. 5504).</li>
+  <li>Exempt status: U.S. Department of Labor, <em>Fact Sheet #17A</em>. <a href="@methodology">How we calculate</a>.</li>
+</ul>
