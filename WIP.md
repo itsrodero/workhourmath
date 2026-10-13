@@ -42,6 +42,11 @@ Domain workhourmath.com (Namecheap, bought 2026-10-12), hosted on GitHub Pages f
 - Bing Webmaster Tools: added manually (GSC import didn't list it yet), verified with the msvalidate.01 meta
   tag (`BING_VERIFY` in build.py); sitemap submitted. IndexNow: whole sitemap submitted (202).
 
+- Indexing 2026-10-13 (15:00): /decimal-to-hours-calculator.html OK, then "Cuota superada" — the quota is per
+  Google account (shared with the other sites), roughly 10 per rolling 24 h; yesterday's 10 (~20:30) free up tonight.
+  Still to request (16): time clock rounding, salary to hourly, pay raise, shift differential, PTO, work days,
+  the 4 guides, guides hub, about, methodology, contact, privacy, terms (sitemap page low priority).
+
 ## Rules to keep
 - No tax / net-pay calculators (YMYL, dominated by ADP/SmartAsset).
 - Law pages cite DOL / state sources, carry an "updated" date and say "not legal advice". Re-check yearly.
