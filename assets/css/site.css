@@ -294,3 +294,24 @@ code { font-family: var(--mono); font-size: .9em; background: var(--soft); paddi
 .at-row { margin-bottom: 8px; }
 select.inp-plain { padding: 8px 6px; cursor: pointer; }
 .check { font-size: .95rem; margin-top: 4px; }
+
+/* Timesheet templates */
+.dl-list { display: flex; flex-wrap: wrap; gap: 10px; margin: 12px 0 4px; }
+.ts-sheet { overflow-x: auto; }
+.ts-title { font-size: 1.3rem; font-weight: 800; margin: 0 0 8px; color: var(--ink); }
+.ts-meta { display: flex; flex-wrap: wrap; gap: 6px 24px; font-size: .9rem; color: var(--ink-2); margin-bottom: 10px; }
+.ts-meta b { display: inline-block; min-width: 120px; border-bottom: 1px solid var(--line-2); font-weight: 600; }
+.ts-table { width: 100%; min-width: 460px; border-collapse: collapse; font-size: .82rem; }
+.ts-table th, .ts-table td { border: 1px solid var(--line-2); padding: 7px 6px; text-align: left; height: 30px; }
+.ts-table thead th { background: var(--soft); font-size: .74rem; text-transform: uppercase; letter-spacing: .03em; }
+.ts-week th { background: var(--brand-soft); color: var(--brand); }
+.ts-total td { font-weight: 700; background: var(--soft); text-align: right; }
+.ts-sign { display: flex; gap: 24px; margin-top: 28px; font-size: .8rem; color: var(--muted); }
+.ts-sign span { flex: 1; border-top: 1px solid var(--ink-2); padding-top: 4px; }
+@media print {
+  body.print-sheet .site-header, body.print-sheet .site-footer, body.print-sheet .calc-hero, body.print-sheet .content-wrap, body.print-sheet .related, body.print-sheet .calc > .panel:first-child { display: none !important; }
+  body.print-sheet .calc { display: block; margin: 0; }
+  body.print-sheet .ts-sheet { border: 0; padding: 0; overflow: visible; }
+  body.print-sheet .ts-table { min-width: 0; font-size: 11pt; }
+  body.print-sheet .ts-table th, body.print-sheet .ts-table td { height: 34px; }
+}

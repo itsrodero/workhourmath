@@ -1,0 +1,93 @@
+---
+type: calculator
+category: timecards
+order: 6
+icon: card
+title: Free Timesheet Template – Printable, Excel & Google Sheets
+description: Download a free weekly or biweekly timesheet template for Excel and Google Sheets that adds up hours, lunch and overtime — or print a blank timesheet.
+h1: Free Timesheet Templates
+lead: Download a weekly or biweekly timesheet for Excel or Google Sheets that adds up hours, lunch breaks, overtime and gross pay for you — or print a blank timesheet to fill in by hand.
+card_title: Timesheet Templates
+card_desc: Free Excel timesheets with formulas, and a printable blank one.
+crumb: Timesheet Templates
+updated: 2026-10-14
+script: timesheet
+related: time-card-calculator, biweekly-time-card-calculator, minutes-to-decimal-calculator, guides/how-to-calculate-hours-worked
+---
+<div class="calc">
+  <div class="panel">
+    <h2>Excel and Google Sheets templates</h2>
+    <p class="form-note" style="margin-top:0">Each file has a blank <strong>Timesheet</strong> tab and a filled-in <strong>Example</strong> tab. Enter times like 9:00 AM; hours, overtime over 40 a week and gross pay are calculated for you.</p>
+    <div class="dl-list">
+      <a class="btn btn-primary" href="/assets/files/weekly-timesheet.xlsx" download>Weekly timesheet (.xlsx)</a>
+      <a class="btn btn-primary" href="/assets/files/biweekly-timesheet.xlsx" download>Biweekly timesheet (.xlsx)</a>
+    </div>
+    <p class="form-note">For Google Sheets: open Google Drive, choose <em>New → File upload</em>, then open the file with Google Sheets. The formulas keep working.</p>
+    <h2 style="margin-top:22px">Printable blank timesheet</h2>
+    <form id="ts-form" class="ts-controls" novalidate>
+      <div class="fields">
+        <div class="field"><label for="ts-weeks">Period</label><select id="ts-weeks" class="select" data-k="weeks"><option value="1" selected>One week</option><option value="2">Two weeks</option></select></div>
+        <div class="field"><label for="ts-start">Week starting (optional)</label><div class="inp"><input id="ts-start" class="time-in" type="date" data-k="start"></div></div>
+        <div class="field full"><label for="ts-name">Employee name (optional, not saved)</label><div class="inp"><input id="ts-name" type="text" autocomplete="off"></div></div>
+      </div>
+      <div class="calc-actions">
+        <button type="button" class="btn btn-primary btn-sm js-print-sheet">Print timesheet</button>
+        <button type="button" class="btn btn-ghost btn-sm js-reset">Reset</button>
+      </div>
+    </form>
+  </div>
+  <section class="panel ts-sheet" id="ts-sheet" aria-label="Printable timesheet">
+    <p class="ts-title">Weekly Timesheet</p>
+    <div class="ts-meta"><span>Employee: <b class="ts-emp"></b></span><span>Week of: <b class="ts-start"></b></span></div>
+    <table class="ts-table">
+      <thead><tr><th scope="col">Day</th><th scope="col">Date</th><th scope="col">Time in</th><th scope="col">Lunch out</th><th scope="col">Lunch in</th><th scope="col">Time out</th><th scope="col">Hours</th></tr></thead>
+      <tbody></tbody>
+    </table>
+    <div class="ts-sign"><span>Employee signature</span><span>Supervisor signature</span></div>
+  </section>
+</div>
+<!-- content -->
+<h2>What's in the Excel timesheet</h2>
+<ul>
+  <li><strong>Time in, lunch out, lunch in and time out</strong> for each day. Leave the lunch columns empty if you don't take an unpaid break.</li>
+  <li><strong>Hours per day in decimal</strong>, ready for payroll: 8 hours 15 minutes shows as 8.25.</li>
+  <li><strong>Overnight shifts</strong> work: an out time earlier than the in time is counted into the next day.</li>
+  <li><strong>Regular and overtime hours</strong> using the federal rule — over 40 hours in a workweek is overtime — and, in the biweekly file, counted <strong>separately for each week</strong>, as the law requires.</li>
+  <li><strong>Gross pay</strong> when you enter an hourly rate: regular hours × rate + overtime hours × rate × 1.5.</li>
+  <li><strong>Dates fill in automatically</strong> from the week-starting date, and the sheet prints on one landscape page with signature lines.</li>
+</ul>
+
+<h2>The formula behind the hours</h2>
+<p>If you'd rather build your own spreadsheet, this is the formula the template uses for each day (time in in C, lunch out in D, lunch in in E, time out in F):</p>
+<div class="formula">=ROUND((MOD(F2-C2,1) - IF(OR(D2="",E2=""),0,MOD(E2-D2,1))) * 24, 2)</div>
+<p>Excel stores times as fractions of a day, so subtracting two times gives a fraction; <code>MOD(…,1)</code> handles shifts that pass midnight, and multiplying by 24 turns it into hours. Overtime for the week is <code>=MAX(0, total − 40)</code>.</p>
+<div class="example">
+  <p>Worked example from the Example tab: 8:45 AM – 5:15 PM with a 12:30–1:00 PM lunch, Monday to Friday, plus Saturday 8:00 AM – 12:30 PM at $18.50 an hour</p>
+  <ol>
+    <li>Each weekday: 8.5 hours at work − 0.5 hours lunch = 8.00 hours; Saturday 4.50 hours.</li>
+    <li>Total 44.50 hours: 40 regular and 4.50 overtime.</li>
+    <li>Gross pay: 40 × $18.50 + 4.5 × $27.75 = <strong>$864.88</strong> — the same answer as the <a href="@time-card-calculator">time card calculator</a>.</li>
+  </ol>
+</div>
+
+<h2>Tips for filling in a timesheet</h2>
+<ul>
+  <li><strong>Write times as they happen,</strong> not from memory at the end of the week. Small daily errors add up.</li>
+  <li><strong>Record unpaid breaks only.</strong> Short rest breaks of about 5 to 20 minutes are paid work time under federal rules.</li>
+  <li><strong>Keep a copy.</strong> If your paycheck doesn't match, your own record is the starting point. Employers must keep time records too.</li>
+  <li><strong>Check your state's rules.</strong> California, Alaska, Nevada and Colorado have daily overtime — see <a href="@guides/overtime-rules-by-state">overtime rules by state</a>.</li>
+</ul>
+
+<h2>Frequently asked questions</h2>
+<div class="faq">
+  <details><summary>Does the timesheet work in Google Sheets?</summary><p>Yes. Upload the .xlsx file to Google Drive and open it with Google Sheets; the formulas and formatting carry over.</p></details>
+  <details><summary>How do I enter times in Excel?</summary><p>Type them with AM or PM, like 9:00 AM or 5:30 PM, or in 24-hour time like 17:30. The cells are already formatted as times.</p></details>
+  <details><summary>Can I change the overtime threshold?</summary><p>Yes. The "Overtime after" cell is set to 40 hours a week; change it if your employer or contract uses a different number.</p></details>
+  <details><summary>Is my name saved when I print?</summary><p>No. The name field on this page only appears on the printout; it isn't stored or sent anywhere.</p></details>
+</div>
+
+<h2>Sources</h2>
+<ul class="sources">
+  <li>U.S. Department of Labor, <em>Fact Sheet #23</em> (overtime over 40 hours per workweek) and 29 CFR 785.18 (short breaks are work time).</li>
+  <li>Formulas checked against the worked examples on this site. <a href="@methodology">How we calculate</a>.</li>
+</ul>
