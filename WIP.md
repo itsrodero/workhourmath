@@ -53,6 +53,10 @@ Domain workhourmath.com (Namecheap, bought 2026-10-12), hosted on GitHub Pages f
   with openpyxl into assets/files/, formulas verified with pycel: 44.5 h → $864.88; biweekly 89 h → $1,729.75)
   and a printable blank weekly/biweekly timesheet (dates from a start date; name field not saved). 16 tools.
 
+- Indexing 2026-10-14 (~21:20): guides hub, about, methodology, contact; 2026-10-15 (21:22): privacy, terms.
+  Every URL in the sitemap has now been requested (sitemap page skipped, low priority). First impressions in
+  Search Console reported on 10-15.
+
 ## Rules to keep
 - No tax / net-pay calculators (YMYL, dominated by ADP/SmartAsset).
 - Law pages cite DOL / state sources, carry an "updated" date and say "not legal advice". Re-check yearly.
