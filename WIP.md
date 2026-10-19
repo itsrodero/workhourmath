@@ -78,10 +78,13 @@ Domain workhourmath.com (Namecheap, bought 2026-10-12), hosted on GitHub Pages f
 - `_tools/pinterest-pins.csv`: 3 pins/day at 15:00, 19:00 and 23:00 from 2026-10-21 to 10-28.
 - 4 boards: Time Cards & Timesheets; Overtime, Salary & Pay Calculators; Printable Time Conversion Charts;
   Work Days, Holidays & PTO.
-- To do after the profile exists:
-  1. Claim workhourmath.com: put the `p:domain_verify` content in `PINTEREST_VERIFY` in build.py, build and push.
-  2. Create the 4 boards.
-  3. Upload the CSV (Settings > Import content).
+- 2026-10-19 (evening), all done:
+  - The user created the profile (email hello@workhourmath.com, username `workhourmath`).
+  - I set the bio, website and logo photo.
+  - workhourmath.com claimed ("Conectado"); `PINTEREST_VERIFY` set in build.py.
+  - The 4 boards created.
+  - CSV uploaded (Settings > Import content > Upload .csv): "Carga exitosa". The 24 pins go out from 2026-10-21.
+  - Switch profiles from the avatar menu (top right); both profiles share one Pinterest login.
 
 ## Rules to keep
 - No tax / net-pay calculators (YMYL, dominated by ADP/SmartAsset).
