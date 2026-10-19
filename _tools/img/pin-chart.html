@@ -1,0 +1,55 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+/* WorkHourMath printable-chart pin (1000x1500): the chart itself is the image. Rows come from the hash as JSON
+   [[left, right], ...] and are laid out in columns. */
+html,body{margin:0;width:1000px;height:1500px;overflow:hidden;font-family:"Segoe UI",system-ui,sans-serif}
+body{background:#fff;color:#0f172a;position:relative}
+.top{background:#1d4ed8;color:#fff;padding:56px 70px 44px}
+.logo{display:flex;align-items:center;gap:16px;font-size:34px;font-weight:700;opacity:.95}
+h1{font-size:76px;line-height:1.05;margin:26px 0 0;letter-spacing:-1.5px;font-weight:800}
+.sub{font-size:32px;margin-top:14px;color:#dbeafe}
+.grid{display:grid;gap:0 28px;padding:30px 70px 0}
+table{border-collapse:collapse;width:100%;font-size:27px}
+th{background:#eff6ff;color:#1e3a8a;text-align:left;padding:8px 12px;font-size:22px;text-transform:uppercase;letter-spacing:.5px}
+td{padding:6px 12px;border-bottom:1px solid #e2e8f0;font-variant-numeric:tabular-nums}
+td:last-child{font-weight:700;color:#1d4ed8}
+.foot{position:absolute;left:0;right:0;bottom:0;height:130px;background:#0f172a;color:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 70px;box-sizing:border-box}
+.cta{font-size:40px;font-weight:800}
+.site{font-size:32px;font-weight:600}
+</style></head><body>
+<div class="top">
+  <div class="logo"><svg width="54" height="54" viewBox="0 0 32 32"><rect width="32" height="32" rx="7" fill="#fff"/><circle cx="16" cy="16" r="9" fill="none" stroke="#1d4ed8" stroke-width="2.4"/><path d="M16 10.5V16l3.6 2.2" fill="none" stroke="#1d4ed8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>WorkHourMath</span></div>
+  <h1 id="headline"></h1>
+  <div class="sub" id="sub"></div>
+</div>
+<div class="grid" id="grid"></div>
+<div class="foot"><span class="cta" id="cta"></span><span class="site">workhourmath.com</span></div>
+<script>
+var q = new URLSearchParams(location.hash.slice(1));
+document.getElementById('headline').textContent = q.get('h') || '';
+document.getElementById('sub').textContent = q.get('s') || '';
+document.getElementById('cta').textContent = (q.get('c') || '') + ' →';
+var rows = JSON.parse(q.get('r') || '[]');
+var head = (q.get('l') || '|').split('|');
+var cols = rows.length > 40 ? 3 : 2;
+var per = Math.ceil(rows.length / cols);
+var grid = document.getElementById('grid');
+grid.style.gridTemplateColumns = 'repeat(' + cols + ', 1fr)';
+for (var c = 0; c < cols; c++) {
+  var t = '<table><thead><tr><th>' + head[0] + '</th><th>' + head[1] + '</th></tr></thead><tbody>';
+  rows.slice(c * per, (c + 1) * per).forEach(function (r) { t += '<tr><td>' + r[0] + '</td><td>' + r[1] + '</td></tr>'; });
+  grid.insertAdjacentHTML('beforeend', t + '</tbody></table>');
+}
+// Grow short charts to fill the space, then shrink until the chart fits above the footer.
+var size = 27;
+function setSize(n) {
+  grid.querySelectorAll('table').forEach(function (x) { x.style.fontSize = n + 'px'; });
+  grid.querySelectorAll('td').forEach(function (x) { x.style.padding = Math.max(2, n / 4) + 'px 12px'; });
+}
+while (grid.getBoundingClientRect().bottom < 1250 && size < 44) { size += 1; setSize(size); }
+while (grid.getBoundingClientRect().bottom > 1350 && size > 14) {
+  size -= 1;
+  grid.querySelectorAll('table').forEach(function (x) { x.style.fontSize = size + 'px'; });
+  grid.querySelectorAll('td').forEach(function (x) { x.style.padding = Math.max(2, size / 5) + 'px 10px'; });
+}
+</script>
+</body></html>

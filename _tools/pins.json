@@ -1,0 +1,850 @@
+[
+ {
+  "name": "chart-minutes-to-decimal",
+  "tpl": "pin-chart.html",
+  "out": "assets/img/pins/chart-minutes-to-decimal.jpg",
+  "headline": "Minutes to Decimal Hours Chart",
+  "sub": "1 to 60 minutes, for timesheets and payroll",
+  "label": "Minutes|Decimal",
+  "cta": "Free printable + calculator",
+  "icon": "",
+  "rows": [
+   [
+    "1 min",
+    "0.02"
+   ],
+   [
+    "2 min",
+    "0.03"
+   ],
+   [
+    "3 min",
+    "0.05"
+   ],
+   [
+    "4 min",
+    "0.07"
+   ],
+   [
+    "5 min",
+    "0.08"
+   ],
+   [
+    "6 min",
+    "0.10"
+   ],
+   [
+    "7 min",
+    "0.12"
+   ],
+   [
+    "8 min",
+    "0.13"
+   ],
+   [
+    "9 min",
+    "0.15"
+   ],
+   [
+    "10 min",
+    "0.17"
+   ],
+   [
+    "11 min",
+    "0.18"
+   ],
+   [
+    "12 min",
+    "0.20"
+   ],
+   [
+    "13 min",
+    "0.22"
+   ],
+   [
+    "14 min",
+    "0.23"
+   ],
+   [
+    "15 min",
+    "0.25"
+   ],
+   [
+    "16 min",
+    "0.27"
+   ],
+   [
+    "17 min",
+    "0.28"
+   ],
+   [
+    "18 min",
+    "0.30"
+   ],
+   [
+    "19 min",
+    "0.32"
+   ],
+   [
+    "20 min",
+    "0.33"
+   ],
+   [
+    "21 min",
+    "0.35"
+   ],
+   [
+    "22 min",
+    "0.37"
+   ],
+   [
+    "23 min",
+    "0.38"
+   ],
+   [
+    "24 min",
+    "0.40"
+   ],
+   [
+    "25 min",
+    "0.42"
+   ],
+   [
+    "26 min",
+    "0.43"
+   ],
+   [
+    "27 min",
+    "0.45"
+   ],
+   [
+    "28 min",
+    "0.47"
+   ],
+   [
+    "29 min",
+    "0.48"
+   ],
+   [
+    "30 min",
+    "0.50"
+   ],
+   [
+    "31 min",
+    "0.52"
+   ],
+   [
+    "32 min",
+    "0.53"
+   ],
+   [
+    "33 min",
+    "0.55"
+   ],
+   [
+    "34 min",
+    "0.57"
+   ],
+   [
+    "35 min",
+    "0.58"
+   ],
+   [
+    "36 min",
+    "0.60"
+   ],
+   [
+    "37 min",
+    "0.62"
+   ],
+   [
+    "38 min",
+    "0.63"
+   ],
+   [
+    "39 min",
+    "0.65"
+   ],
+   [
+    "40 min",
+    "0.67"
+   ],
+   [
+    "41 min",
+    "0.68"
+   ],
+   [
+    "42 min",
+    "0.70"
+   ],
+   [
+    "43 min",
+    "0.72"
+   ],
+   [
+    "44 min",
+    "0.73"
+   ],
+   [
+    "45 min",
+    "0.75"
+   ],
+   [
+    "46 min",
+    "0.77"
+   ],
+   [
+    "47 min",
+    "0.78"
+   ],
+   [
+    "48 min",
+    "0.80"
+   ],
+   [
+    "49 min",
+    "0.82"
+   ],
+   [
+    "50 min",
+    "0.83"
+   ],
+   [
+    "51 min",
+    "0.85"
+   ],
+   [
+    "52 min",
+    "0.87"
+   ],
+   [
+    "53 min",
+    "0.88"
+   ],
+   [
+    "54 min",
+    "0.90"
+   ],
+   [
+    "55 min",
+    "0.92"
+   ],
+   [
+    "56 min",
+    "0.93"
+   ],
+   [
+    "57 min",
+    "0.95"
+   ],
+   [
+    "58 min",
+    "0.97"
+   ],
+   [
+    "59 min",
+    "0.98"
+   ],
+   [
+    "60 min",
+    "1.00"
+   ]
+  ],
+  "link": "https://workhourmath.com/minutes-to-decimal-calculator.html",
+  "board": "Printable Time Conversion Charts",
+  "title": "Minutes to Decimal Hours Chart (1–60 minutes) – Free Printable",
+  "description": "Free printable chart converting 1 to 60 minutes into decimal hours for timesheets and payroll — 15 minutes = 0.25, 30 = 0.50, 45 = 0.75. Plus a free minutes-to-decimal calculator. WorkHourMath.",
+  "keywords": "printable chart, minutes to decimal, time conversions, hourly workers, payroll",
+  "publish": "2026-10-21T15:00:00"
+ },
+ {
+  "name": "chart-military-time",
+  "tpl": "pin-chart.html",
+  "out": "assets/img/pins/chart-military-time.jpg",
+  "headline": "Military Time Chart",
+  "sub": "24-hour clock next to regular AM/PM time",
+  "label": "Regular|Military",
+  "cta": "Free printable + calculator",
+  "icon": "",
+  "rows": [
+   [
+    "12:00 AM",
+    "0000"
+   ],
+   [
+    "1:00 AM",
+    "0100"
+   ],
+   [
+    "2:00 AM",
+    "0200"
+   ],
+   [
+    "3:00 AM",
+    "0300"
+   ],
+   [
+    "4:00 AM",
+    "0400"
+   ],
+   [
+    "5:00 AM",
+    "0500"
+   ],
+   [
+    "6:00 AM",
+    "0600"
+   ],
+   [
+    "7:00 AM",
+    "0700"
+   ],
+   [
+    "8:00 AM",
+    "0800"
+   ],
+   [
+    "9:00 AM",
+    "0900"
+   ],
+   [
+    "10:00 AM",
+    "1000"
+   ],
+   [
+    "11:00 AM",
+    "1100"
+   ],
+   [
+    "12:00 PM",
+    "1200"
+   ],
+   [
+    "1:00 PM",
+    "1300"
+   ],
+   [
+    "2:00 PM",
+    "1400"
+   ],
+   [
+    "3:00 PM",
+    "1500"
+   ],
+   [
+    "4:00 PM",
+    "1600"
+   ],
+   [
+    "5:00 PM",
+    "1700"
+   ],
+   [
+    "6:00 PM",
+    "1800"
+   ],
+   [
+    "7:00 PM",
+    "1900"
+   ],
+   [
+    "8:00 PM",
+    "2000"
+   ],
+   [
+    "9:00 PM",
+    "2100"
+   ],
+   [
+    "10:00 PM",
+    "2200"
+   ],
+   [
+    "11:00 PM",
+    "2300"
+   ]
+  ],
+  "link": "https://workhourmath.com/military-time-converter.html",
+  "board": "Printable Time Conversion Charts",
+  "title": "Military Time Chart – 24-Hour Clock Conversion (Free Printable)",
+  "description": "Free printable military time chart: every hour of the day in regular AM/PM time and 24-hour military time — 1:00 PM = 1300, 5:00 PM = 1700, midnight = 0000. Plus a free military time converter. WorkHourMath.",
+  "keywords": "printable chart, military time converter, time conversions, hourly workers, payroll",
+  "publish": "2026-10-21T19:00:00"
+ },
+ {
+  "name": "chart-decimal-to-minutes",
+  "tpl": "pin-chart.html",
+  "out": "assets/img/pins/chart-decimal-to-minutes.jpg",
+  "headline": "Decimal Hours to Minutes Chart",
+  "sub": "Read payroll hours like 7.75 in hours and minutes",
+  "label": "Decimal|Minutes",
+  "cta": "Free printable + calculator",
+  "icon": "",
+  "rows": [
+   [
+    "0.05 hr",
+    "3 min"
+   ],
+   [
+    "0.10 hr",
+    "6 min"
+   ],
+   [
+    "0.15 hr",
+    "9 min"
+   ],
+   [
+    "0.20 hr",
+    "12 min"
+   ],
+   [
+    "0.25 hr",
+    "15 min"
+   ],
+   [
+    "0.30 hr",
+    "18 min"
+   ],
+   [
+    "0.35 hr",
+    "21 min"
+   ],
+   [
+    "0.40 hr",
+    "24 min"
+   ],
+   [
+    "0.45 hr",
+    "27 min"
+   ],
+   [
+    "0.50 hr",
+    "30 min"
+   ],
+   [
+    "0.55 hr",
+    "33 min"
+   ],
+   [
+    "0.60 hr",
+    "36 min"
+   ],
+   [
+    "0.65 hr",
+    "39 min"
+   ],
+   [
+    "0.70 hr",
+    "42 min"
+   ],
+   [
+    "0.75 hr",
+    "45 min"
+   ],
+   [
+    "0.80 hr",
+    "48 min"
+   ],
+   [
+    "0.85 hr",
+    "51 min"
+   ],
+   [
+    "0.90 hr",
+    "54 min"
+   ],
+   [
+    "0.95 hr",
+    "57 min"
+   ],
+   [
+    "1.00 hr",
+    "60 min"
+   ]
+  ],
+  "link": "https://workhourmath.com/decimal-to-hours-calculator.html",
+  "board": "Printable Time Conversion Charts",
+  "title": "Decimal Hours to Minutes Chart – Payroll Time Conversion (Free)",
+  "description": "Free chart converting decimal hours to minutes: 0.25 hr = 15 min, 0.5 = 30 min, 0.75 = 45 min, and every step of 0.05. Read payroll hours at a glance. Plus a free decimal to hours calculator. WorkHourMath.",
+  "keywords": "printable chart, decimal to hours & minutes, time conversions, hourly workers, payroll",
+  "publish": "2026-10-21T23:00:00"
+ },
+ {
+  "name": "time-card-calculator",
+  "tpl": "pin.html",
+  "out": "assets/img/pins/time-card-calculator.jpg",
+  "headline": "How many hours did I work this week?",
+  "sub": "Weekly hours from in and out times, breaks, overtime and pay.",
+  "label": "Time cards & hours",
+  "cta": "Free calculator",
+  "icon": "<rect x=\"4\" y=\"3\" width=\"16\" height=\"18\" rx=\"2\"/><path d=\"M8 8h8M8 12h8M8 16h5\"/>",
+  "link": "https://workhourmath.com/time-card-calculator.html",
+  "board": "Time Cards & Timesheets",
+  "title": "How many hours did I work this week? Free Time Card Calculator",
+  "description": "Add up a weekly time card: enter times in and out with unpaid breaks to get daily and weekly hours, overtime by federal or state rules, and gross pay. Free and no sign-up — WorkHourMath.",
+  "order": 1,
+  "cat": "timecards",
+  "keywords": "time card calculator, time cards, hours, hourly workers, payroll",
+  "publish": "2026-10-22T15:00:00"
+ },
+ {
+  "name": "minutes-to-decimal-calculator",
+  "tpl": "pin.html",
+  "out": "assets/img/pins/minutes-to-decimal-calculator.jpg",
+  "headline": "How do I turn minutes into decimal hours?",
+  "sub": "Hours and minutes to decimal hours, with a 1–60 chart.",
+  "label": "Time conversions",
+  "cta": "Free calculator",
+  "icon": "<circle cx=\"5\" cy=\"18\" r=\"1\"/><rect x=\"9\" y=\"5\" width=\"6\" height=\"14\" rx=\"3\"/><path d=\"M19 5v14\"/>",
+  "link": "https://workhourmath.com/minutes-to-decimal-calculator.html",
+  "board": "Printable Time Conversion Charts",
+  "title": "How do I turn minutes into decimal hours? Free Minutes to Decimal",
+  "description": "Convert hours and minutes to decimal hours for payroll and timesheets, with a printable chart from 1 to 60 minutes. 15 minutes = 0.25, 45 minutes = 0.75. Free and no sign-up — WorkHourMath.",
+  "order": 1,
+  "cat": "convert",
+  "keywords": "minutes to decimal, time conversions, hourly workers, payroll",
+  "publish": "2026-10-22T19:00:00"
+ },
+ {
+  "name": "overtime-calculator",
+  "tpl": "pin.html",
+  "out": "assets/img/pins/overtime-calculator.jpg",
+  "headline": "How much is my overtime pay?",
+  "sub": "Time and a half and double time pay for the week.",
+  "label": "Pay & overtime",
+  "cta": "Free calculator",
+  "icon": "<circle cx=\"12\" cy=\"13\" r=\"8\"/><path d=\"M12 9v4l2.5 1.5\"/><path d=\"M5 3 2 6M19 3l3 3\"/>",
+  "link": "https://workhourmath.com/overtime-calculator.html",
+  "board": "Overtime, Salary & Pay Calculators",
+  "title": "How much is my overtime pay? Free Overtime Calculator",
+  "description": "Calculate overtime pay from your hourly rate and weekly hours: hours over 40 at time and a half, optional double time, and your total gross pay for the week. Free and no sign-up — WorkHourMath.",
+  "order": 1,
+  "cat": "pay",
+  "keywords": "overtime calculator, pay, overtime, hourly workers, payroll",
+  "publish": "2026-10-22T23:00:00"
+ },
+ {
+  "name": "work-days-calculator",
+  "tpl": "pin.html",
+  "out": "assets/img/pins/work-days-calculator.jpg",
+  "headline": "How many work days between two dates?",
+  "sub": "Business days between dates, minus weekends and holidays.",
+  "label": "Workdays & time off",
+  "cta": "Free calculator",
+  "icon": "<rect x=\"3\" y=\"5\" width=\"18\" height=\"16\" rx=\"2\"/><path d=\"M3 10h18M8 3v4M16 3v4\"/>",
+  "link": "https://workhourmath.com/work-days-calculator.html",
+  "board": "Work Days, Holidays & PTO",
+  "title": "How many work days between two dates? Free Work Days Calculator",
+  "description": "Count the working days between two dates, without weekends and US federal holidays, and the work hours they add up to. Includes the 2026 and 2027 holiday lists. Free and no sign-up — WorkHourMath.",
+  "order": 1,
+  "cat": "dates",
+  "keywords": "work days calculator, workdays, time off, hourly workers, payroll",
+  "publish": "2026-10-23T15:00:00"
+ },
+ {
+  "name": "biweekly-time-card-calculator",
+  "tpl": "pin.html",
+  "out": "assets/img/pins/biweekly-time-card-calculator.jpg",
+  "headline": "How many hours on my biweekly paycheck?",
+  "sub": "Two weeks of shifts, overtime per workweek, pay period total.",
+  "label": "Time cards & hours",
+  "cta": "Free calculator",
+  "icon": "<rect x=\"3\" y=\"6\" width=\"13\" height=\"15\" rx=\"2\"/><path d=\"M8 3h11a2 2 0 0 1 2 2v12\"/><path d=\"M6.5 11h6M6.5 15h6\"/>",
+  "link": "https://workhourmath.com/biweekly-time-card-calculator.html",
+  "board": "Time Cards & Timesheets",
+  "title": "How many hours on my biweekly paycheck? Free Biweekly Time Card",
+  "description": "Add up two weeks of time in and out with breaks for a biweekly paycheck. Overtime is counted separately for each workweek, with total hours and gross pay. Free and no sign-up — WorkHourMath.",
+  "order": 2,
+  "cat": "timecards",
+  "keywords": "biweekly time card, time cards, hours, hourly workers, payroll",
+  "publish": "2026-10-23T19:00:00"
+ },
+ {
+  "name": "decimal-to-hours-calculator",
+  "tpl": "pin.html",
+  "out": "assets/img/pins/decimal-to-hours-calculator.jpg",
+  "headline": "What is 7.75 hours in hours and minutes?",
+  "sub": "7.75 hours → 7 hours 45 minutes, with a chart.",
+  "label": "Time conversions",
+  "cta": "Free calculator",
+  "icon": "<circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 7v5l3 2\"/>",
+  "link": "https://workhourmath.com/decimal-to-hours-calculator.html",
+  "board": "Printable Time Conversion Charts",
+  "title": "What is 7.75 hours in hours and minutes? Free Decimal to Hours & Minutes",
+  "description": "Convert decimal hours to hours and minutes: 7.75 hours = 7 hours 45 minutes. Multiply the decimal part by 60, or use the converter and the chart. Free and no sign-up — WorkHourMath.",
+  "order": 2,
+  "cat": "convert",
+  "keywords": "decimal to hours & minutes, time conversions, hourly workers, payroll",
+  "publish": "2026-10-23T23:00:00"
+ },
+ {
+  "name": "hourly-to-salary-calculator",
+  "tpl": "pin.html",
+  "out": "assets/img/pins/hourly-to-salary-calculator.jpg",
+  "headline": "What is $20 an hour per year?",
+  "sub": "Hourly wage to yearly, monthly and paycheck amounts.",
+  "label": "Pay & overtime",
+  "cta": "Free calculator",
+  "icon": "<path d=\"M12 3v18\"/><path d=\"M16.5 7.5C15.8 6 14.2 5 12 5c-2.6 0-4.2 1.3-4.2 3.1 0 4.2 8.9 2.2 8.9 6.7 0 1.9-1.8 3.2-4.7 3.2-2.3 0-4-1-4.8-2.5\"/>",
+  "link": "https://workhourmath.com/hourly-to-salary-calculator.html",
+  "board": "Overtime, Salary & Pay Calculators",
+  "title": "What is $20 an hour per year? Free Hourly to Salary",
+  "description": "Convert an hourly wage to a yearly salary, plus monthly, biweekly, weekly and daily pay. $20 an hour is $41,600 a year at 40 hours a week. Free and no sign-up — WorkHourMath.",
+  "order": 2,
+  "cat": "pay",
+  "keywords": "hourly to salary, pay, overtime, hourly workers, payroll",
+  "publish": "2026-10-24T15:00:00"
+ },
+ {
+  "name": "pto-accrual-calculator",
+  "tpl": "pin.html",
+  "out": "assets/img/pins/pto-accrual-calculator.jpg",
+  "headline": "How much PTO will I earn?",
+  "sub": "PTO earned per hour, paycheck and year, and your future balance.",
+  "label": "Workdays & time off",
+  "cta": "Free calculator",
+  "icon": "<circle cx=\"12\" cy=\"12\" r=\"4\"/><path d=\"M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4\"/>",
+  "link": "https://workhourmath.com/pto-accrual-calculator.html",
+  "board": "Work Days, Holidays & PTO",
+  "title": "How much PTO will I earn? Free PTO Accrual Calculator",
+  "description": "Calculate how much paid time off you earn per hour worked, per paycheck and per year, and what your PTO balance will be after a number of weeks, with a cap. Free and no sign-up — WorkHourMath.",
+  "order": 2,
+  "cat": "dates",
+  "keywords": "pto accrual calculator, workdays, time off, hourly workers, payroll",
+  "publish": "2026-10-24T19:00:00"
+ },
+ {
+  "name": "semi-monthly-time-card-calculator",
+  "tpl": "pin.html",
+  "out": "assets/img/pins/semi-monthly-time-card-calculator.jpg",
+  "headline": "Hours for a 1st–15th pay period?",
+  "sub": "1st–15th or 16th–end, overtime per workweek, split weeks handled.",
+  "label": "Time cards & hours",
+  "cta": "Free calculator",
+  "icon": "<rect x=\"3\" y=\"5\" width=\"18\" height=\"16\" rx=\"2\"/><path d=\"M3 10h18M8 3v4M16 3v4\"/>",
+  "link": "https://workhourmath.com/semi-monthly-time-card-calculator.html",
+  "board": "Time Cards & Timesheets",
+  "title": "Hours for a 1st–15th pay period? Free Semi-Monthly Time Card",
+  "description": "Add up hours for a semi-monthly pay period (1st–15th or 16th–end of month) with breaks, overtime per workweek, weeks split across periods and gross pay. Free and no sign-up — WorkHourMath.",
+  "order": 3,
+  "cat": "timecards",
+  "keywords": "semi-monthly time card, time cards, hours, hourly workers, payroll",
+  "publish": "2026-10-24T23:00:00"
+ },
+ {
+  "name": "military-time-converter",
+  "tpl": "pin.html",
+  "out": "assets/img/pins/military-time-converter.jpg",
+  "headline": "What time is 1700 in military time?",
+  "sub": "24-hour military time to AM/PM and back, with a chart.",
+  "label": "Time conversions",
+  "cta": "Free calculator",
+  "icon": "<circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M7.5 10a1.75 1.75 0 0 1 3.5 0c0 1.6-3.5 2.6-3.5 4.6H11\"/><path d=\"M15.5 9.4 13.5 13.5h3.5M16.2 11v4.6\"/>",
+  "link": "https://workhourmath.com/military-time-converter.html",
+  "board": "Printable Time Conversion Charts",
+  "title": "What time is 1700 in military time? Free Military Time Converter",
+  "description": "Convert military time to standard time and back: 1730 is 5:30 PM. With a printable military time chart and how each time is said. Free and no sign-up — WorkHourMath.",
+  "order": 3,
+  "cat": "convert",
+  "keywords": "military time converter, time conversions, hourly workers, payroll",
+  "publish": "2026-10-25T15:00:00"
+ },
+ {
+  "name": "salary-to-hourly-calculator",
+  "tpl": "pin.html",
+  "out": "assets/img/pins/salary-to-hourly-calculator.jpg",
+  "headline": "What is my salary per hour?",
+  "sub": "Yearly salary to hourly rate and paycheck amounts.",
+  "label": "Pay & overtime",
+  "cta": "Free calculator",
+  "icon": "<path d=\"M7 4 3 8l4 4\"/><path d=\"M3 8h13\"/><path d=\"m17 12 4 4-4 4\"/><path d=\"M21 16H8\"/>",
+  "link": "https://workhourmath.com/salary-to-hourly-calculator.html",
+  "board": "Overtime, Salary & Pay Calculators",
+  "title": "What is my salary per hour? Free Salary to Hourly",
+  "description": "Convert a yearly salary to an hourly rate, plus monthly, biweekly and weekly pay. A $60,000 salary is $28.85 an hour at 40 hours a week. Free and no sign-up — WorkHourMath.",
+  "order": 3,
+  "cat": "pay",
+  "keywords": "salary to hourly, pay, overtime, hourly workers, payroll",
+  "publish": "2026-10-25T19:00:00"
+ },
+ {
+  "name": "hours-calculator",
+  "tpl": "pin.html",
+  "out": "assets/img/pins/hours-calculator.jpg",
+  "headline": "How many hours between two times?",
+  "sub": "Hours and minutes between two times, minus a break.",
+  "label": "Time cards & hours",
+  "cta": "Free calculator",
+  "icon": "<path d=\"M6 3h12M6 21h12\"/><path d=\"M8 3v3.5a4 4 0 0 0 8 0V3M8 21v-3.5a4 4 0 0 1 8 0V21\"/>",
+  "link": "https://workhourmath.com/hours-calculator.html",
+  "board": "Time Cards & Timesheets",
+  "title": "How many hours between two times? Free Hours Calculator",
+  "description": "Calculate the hours and minutes between two times, minus an unpaid break, in h:mm and decimal hours. Works for overnight shifts and can show your pay. Free and no sign-up — WorkHourMath.",
+  "order": 4,
+  "cat": "timecards",
+  "keywords": "hours calculator, time cards, hours, hourly workers, payroll",
+  "publish": "2026-10-25T23:00:00"
+ },
+ {
+  "name": "pay-raise-calculator",
+  "tpl": "pin.html",
+  "out": "assets/img/pins/pay-raise-calculator.jpg",
+  "headline": "What will I earn after a raise?",
+  "sub": "New pay from a % raise, or the % from a new pay.",
+  "label": "Pay & overtime",
+  "cta": "Free calculator",
+  "icon": "<path d=\"M3 17l6-6 4 4 8-8\"/><path d=\"M15 7h6v6\"/>",
+  "link": "https://workhourmath.com/pay-raise-calculator.html",
+  "board": "Overtime, Salary & Pay Calculators",
+  "title": "What will I earn after a raise? Free Pay Raise Calculator",
+  "description": "Work out your new hourly or yearly pay after a raise, or the raise percentage from old and new pay, plus the extra per year, month and paycheck. Free and no sign-up — WorkHourMath.",
+  "order": 4,
+  "cat": "pay",
+  "keywords": "pay raise calculator, pay, overtime, hourly workers, payroll",
+  "publish": "2026-10-26T15:00:00"
+ },
+ {
+  "name": "add-time-calculator",
+  "tpl": "pin.html",
+  "out": "assets/img/pins/add-time-calculator.jpg",
+  "headline": "How do I add up hours and minutes?",
+  "sub": "Add or subtract hours and minutes, totals in h:mm and decimal.",
+  "label": "Time cards & hours",
+  "cta": "Free calculator",
+  "icon": "<circle cx=\"10\" cy=\"13\" r=\"7\"/><path d=\"M10 9.5V13l2.5 1.5\"/><path d=\"M19 3v6M16 6h6\"/>",
+  "link": "https://workhourmath.com/add-time-calculator.html",
+  "board": "Time Cards & Timesheets",
+  "title": "How do I add up hours and minutes? Free Add Time Calculator",
+  "description": "Add up hours and minutes (or subtract them) for timesheets and logs. Get the total in h:mm, decimal hours, total minutes, and days when it passes 24 hours. Free and no sign-up — WorkHourMath.",
+  "order": 5,
+  "cat": "timecards",
+  "keywords": "add time calculator, time cards, hours, hourly workers, payroll",
+  "publish": "2026-10-26T19:00:00"
+ },
+ {
+  "name": "shift-differential-calculator",
+  "tpl": "pin.html",
+  "out": "assets/img/pins/shift-differential-calculator.jpg",
+  "headline": "How much is my night shift differential?",
+  "sub": "Extra pay for nights and weekends, in $ or %.",
+  "label": "Pay & overtime",
+  "cta": "Free calculator",
+  "icon": "<path d=\"M20 14.5A8.5 8.5 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z\"/>",
+  "link": "https://workhourmath.com/shift-differential-calculator.html",
+  "board": "Overtime, Salary & Pay Calculators",
+  "title": "How much is my night shift differential? Free Shift Differential",
+  "description": "Calculate shift differential pay for night, evening or weekend hours, in dollars or as a percentage of your base rate, and your total pay for the week. Free and no sign-up — WorkHourMath.",
+  "order": 5,
+  "cat": "pay",
+  "keywords": "shift differential, pay, overtime, hourly workers, payroll",
+  "publish": "2026-10-26T23:00:00"
+ },
+ {
+  "name": "time-clock-rounding-calculator",
+  "tpl": "pin.html",
+  "out": "assets/img/pins/time-clock-rounding-calculator.jpg",
+  "headline": "How does time clock rounding work?",
+  "sub": "Round punches to 15, 6 or 5 minutes — the 7-minute rule.",
+  "label": "Time cards & hours",
+  "cta": "Free calculator",
+  "icon": "<circle cx=\"12\" cy=\"14\" r=\"8\"/><path d=\"M12 10v4l2 2M10 2h4\"/>",
+  "link": "https://workhourmath.com/time-clock-rounding-calculator.html",
+  "board": "Time Cards & Timesheets",
+  "title": "How does time clock rounding work? Free Time Clock Rounding",
+  "description": "Round clock-in and clock-out punches to the nearest 15, 6 or 5 minutes and see how many minutes rounding adds or takes away. Explains the 7-minute rule. Free and no sign-up — WorkHourMath.",
+  "order": 6,
+  "cat": "timecards",
+  "keywords": "time clock rounding, time cards, hours, hourly workers, payroll",
+  "publish": "2026-10-27T15:00:00"
+ },
+ {
+  "name": "timesheet-template",
+  "tpl": "pin.html",
+  "out": "assets/img/pins/timesheet-template.jpg",
+  "headline": "Free timesheet template: Excel & printable",
+  "sub": "Free Excel timesheets with formulas, and a printable blank one.",
+  "label": "Time cards & hours",
+  "cta": "Free templates",
+  "icon": "<rect x=\"4\" y=\"3\" width=\"16\" height=\"18\" rx=\"2\"/><path d=\"M8 8h8M8 12h8M8 16h5\"/>",
+  "link": "https://workhourmath.com/timesheet-template.html",
+  "board": "Time Cards & Timesheets",
+  "title": "Free timesheet template: Excel & printable Free Timesheet Templates",
+  "description": "Download a free weekly or biweekly timesheet template for Excel and Google Sheets that adds up hours, lunch and overtime — or print a blank timesheet. Free and no sign-up — WorkHourMath.",
+  "order": 7,
+  "cat": "timecards",
+  "keywords": "timesheet templates, time cards, hours, hourly workers, payroll",
+  "publish": "2026-10-27T19:00:00"
+ },
+ {
+  "name": "guides-how-to-calculate-hours-worked",
+  "tpl": "pin.html",
+  "out": "assets/img/pins/guides-how-to-calculate-hours-worked.jpg",
+  "headline": "How to calculate hours worked",
+  "sub": "Times in and out, breaks, overnight shifts and decimal hours, step by step.",
+  "label": "Time cards & hours",
+  "cta": "Read the guide",
+  "icon": "<circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 7v5l3 2\"/>",
+  "link": "https://workhourmath.com/guides/how-to-calculate-hours-worked.html",
+  "board": "Time Cards & Timesheets",
+  "title": "How to calculate hours worked",
+  "description": "Step-by-step: how to calculate hours worked from times in and out, subtract breaks, handle overnight shifts, convert to decimal hours and total a week. Free and no sign-up — WorkHourMath.",
+  "order": 1,
+  "cat": "timecards",
+  "keywords": "how to calculate hours worked, time cards, hours, hourly workers, payroll",
+  "publish": "2026-10-27T23:00:00"
+ },
+ {
+  "name": "guides-overtime-rules-by-state",
+  "tpl": "pin.html",
+  "out": "assets/img/pins/guides-overtime-rules-by-state.jpg",
+  "headline": "Overtime rules by state",
+  "sub": "Federal 40-hour rule plus daily overtime in CA, AK, NV and CO.",
+  "label": "Pay & overtime",
+  "cta": "Read the guide",
+  "icon": "<circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 7v5l3 2\"/>",
+  "link": "https://workhourmath.com/guides/overtime-rules-by-state.html",
+  "board": "Overtime, Salary & Pay Calculators",
+  "title": "Overtime rules by state",
+  "description": "How overtime works under federal law and in states with daily overtime — California, Alaska, Nevada and Colorado — with double time and worked examples. Free and no sign-up — WorkHourMath.",
+  "order": 2,
+  "cat": "pay",
+  "keywords": "overtime rules by state, pay, overtime, hourly workers, payroll",
+  "publish": "2026-10-28T15:00:00"
+ },
+ {
+  "name": "guides-how-many-work-hours-in-a-year",
+  "tpl": "pin.html",
+  "out": "assets/img/pins/guides-how-many-work-hours-in-a-year.jpg",
+  "headline": "How many work hours are in a year?",
+  "sub": "2,080 hours, actual weekdays and holidays by year, hours per month.",
+  "label": "Workdays & time off",
+  "cta": "Read the guide",
+  "icon": "<rect x=\"3\" y=\"5\" width=\"18\" height=\"16\" rx=\"2\"/><path d=\"M3 10h18M8 3v4M16 3v4\"/>",
+  "link": "https://workhourmath.com/guides/how-many-work-hours-in-a-year.html",
+  "board": "Work Days, Holidays & PTO",
+  "title": "How many work hours are in a year?",
+  "description": "How many work hours and working days are in a year: 2,080 hours at 40 a week, actual weekdays and federal holidays for 2025–2030, and hours per month. Free and no sign-up — WorkHourMath.",
+  "order": 3,
+  "cat": "dates",
+  "keywords": "how many work hours are in a year?, workdays, time off, hourly workers, payroll",
+  "publish": "2026-10-28T19:00:00"
+ },
+ {
+  "name": "guides-biweekly-vs-semimonthly-pay",
+  "tpl": "pin.html",
+  "out": "assets/img/pins/guides-biweekly-vs-semimonthly-pay.jpg",
+  "headline": "Biweekly vs semimonthly pay",
+  "sub": "26 vs 24 paychecks, paycheck size, three-paycheck months and overtime.",
+  "label": "Pay & overtime",
+  "cta": "Read the guide",
+  "icon": "<circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 7v5l3 2\"/>",
+  "link": "https://workhourmath.com/guides/biweekly-vs-semimonthly-pay.html",
+  "board": "Overtime, Salary & Pay Calculators",
+  "title": "Biweekly vs semimonthly pay",
+  "description": "Biweekly pay is every two weeks (26 paychecks), semimonthly is twice a month (24). How each affects your paycheck amount, budgeting, overtime and hours. Free and no sign-up — WorkHourMath.",
+  "order": 4,
+  "cat": "pay",
+  "keywords": "biweekly vs semimonthly pay, pay, overtime, hourly workers, payroll",
+  "publish": "2026-10-28T23:00:00"
+ }
+]

@@ -67,6 +67,22 @@ Domain workhourmath.com (Namecheap, bought 2026-10-12), hosted on GitHub Pages f
   - Worked example tested in the browser: 88 h, 86 regular + 2 OT, $1,780.
   - Timecards order shifted; linked from the biweekly page and the biweekly vs semimonthly guide.
 
+## Pinterest (prepared 2026-10-19)
+- Own business profile, separate from SizeMyProject's. The user creates it the evening of 10-19 (same Pinterest login,
+  "add account").
+- 24 pins in `assets/img/pins/`:
+  - 3 printable charts (minutes to decimal, military time, decimal to minutes) whose image is the chart itself
+    (template `_tools/img/pin-chart.html`);
+  - 17 calculators and 4 guides (template `_tools/img/pin.html`).
+  - Regenerate with `python _tools/pins.py --start DATE`, then `node _tools/pins.mjs` (`--all` to redo).
+- `_tools/pinterest-pins.csv`: 3 pins/day at 15:00, 19:00 and 23:00 from 2026-10-21 to 10-28.
+- 4 boards: Time Cards & Timesheets; Overtime, Salary & Pay Calculators; Printable Time Conversion Charts;
+  Work Days, Holidays & PTO.
+- To do after the profile exists:
+  1. Claim workhourmath.com: put the `p:domain_verify` content in `PINTEREST_VERIFY` in build.py, build and push.
+  2. Create the 4 boards.
+  3. Upload the CSV (Settings > Import content).
+
 ## Rules to keep
 - No tax / net-pay calculators (YMYL, dominated by ADP/SmartAsset).
 - Law pages cite DOL / state sources, carry an "updated" date and say "not legal advice". Re-check yearly.
