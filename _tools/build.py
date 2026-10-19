@@ -32,7 +32,7 @@ AUTHOR_NAME = 'Daniel'
 ADSENSE_CLIENT = None
 GA_ID = 'G-CFG1L4ENQ3'
 # Pinterest "claim website" code (the content of its p:domain_verify meta tag); added to the home page.
-PINTEREST_VERIFY = None
+PINTEREST_VERIFY = '4d5d5f17c7891409b85c431964b5a710'
 # Bing Webmaster Tools site verification (msvalidate.01), added to the home page.
 BING_VERIFY = 'C8B4759E49EA3ABB3CC5BA404D0E0532'
 
