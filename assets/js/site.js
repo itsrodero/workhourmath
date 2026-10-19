@@ -104,7 +104,8 @@
   // days: minutes worked on each day of ONE workweek, in workweek order.
   // rule: 'federal' (over 40 a week), 'ca', 'ak', 'co' or 'none'.
   // Returns per-day {reg, ot, dt} in minutes and the totals.
-  function overtime(days, rule) {
+  // startRun: regular minutes already worked earlier in the same workweek (e.g. in the previous pay period).
+  function overtime(days, rule, startRun) {
     var allSeven = days.length === 7 && days.every(function (m) { return m > 0; });
     var out = days.map(function (m, i) {
       m = m > 0 ? m : 0;
@@ -118,7 +119,7 @@
     });
     if (rule !== 'none') {
       // Weekly rule: regular hours beyond 40 in the workweek become overtime (daily overtime isn't counted twice).
-      var run = 0;
+      var run = Math.min(startRun || 0, 2400);
       out.forEach(function (d) {
         var room = Math.max(2400 - run, 0);
         if (d.reg > room) { d.ot += d.reg - room; d.reg = room; }

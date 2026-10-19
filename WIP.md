@@ -57,6 +57,16 @@ Domain workhourmath.com (Namecheap, bought 2026-10-12), hosted on GitHub Pages f
   Every URL in the sitemap has now been requested (sitemap page skipped, low priority). First impressions in
   Search Console reported on 10-15.
 
+- 2026-10-19: Semi-Monthly Time Card Calculator (from Search Console: the home page ranked ~5.7 for "semi monthly
+  timesheet calculator" with no page for it).
+  - 1st–15th / 16th–end with dated rows (13–16), and the current period by default.
+  - Overtime per workweek, plus "hours already worked earlier in the first workweek" for weeks split across
+    periods. `WHM.overtime(days, rule, startRun)` takes that starting point.
+  - Notes on weeks that continue into the next period (29 CFR 778.106).
+  - Weekday and hour tables for each half-month of 2027 (and 2026 collapsed); generator `[[table_semimonthly YYYY]]`.
+  - Worked example tested in the browser: 88 h, 86 regular + 2 OT, $1,780.
+  - Timecards order shifted; linked from the biweekly page and the biweekly vs semimonthly guide.
+
 ## Rules to keep
 - No tax / net-pay calculators (YMYL, dominated by ADP/SmartAsset).
 - Law pages cite DOL / state sources, carry an "updated" date and say "not legal advice". Re-check yearly.

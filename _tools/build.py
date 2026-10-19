@@ -408,6 +408,76 @@ def table_holidays(y):
     return table(['Holiday', f'{y} (observed)'], rows)
 
 
+def semimonthly_form():
+    """Semi-monthly time card (1st–15th or 16th–end): up to 16 dated rows, read by assets/js/calc/semimonthly.js.
+    Rows are labelled and shown or hidden by the script, because the dates depend on the month chosen."""
+    rows = []
+    for i in range(16):
+        rows.append(f'''<div class="tc-row" data-row="{i}">
+        <span class="tc-day">Day {i + 1}</span>
+        <span class="tc-cell"><span class="tc-lab" aria-hidden="true">In</span><input type="time" data-k="in{i}" aria-label="Day {i + 1} time in"></span>
+        <span class="tc-cell"><span class="tc-lab" aria-hidden="true">Out</span><input type="time" data-k="out{i}" aria-label="Day {i + 1} time out"></span>
+        <span class="tc-cell"><span class="tc-lab" aria-hidden="true">Break</span><input type="text" inputmode="numeric" data-k="brk{i}" placeholder="0" aria-label="Day {i + 1} unpaid break in minutes"></span>
+        <output class="tc-hrs" data-hrs="{i}">–</output>
+      </div>''')
+    months = ''.join(f'<option value="{m}">{datetime.date(2000, m, 1).strftime("%B")}</option>' for m in range(1, 13))
+    years = ''.join(f'<option value="{y}">{y}</option>' for y in range(2025, 2030))
+    rules = [('federal', 'Federal: over 40 hours a week'), ('ca', 'California: daily 8 / 12, weekly 40, 7th day'),
+             ('ak', 'Alaska: over 8 a day or 40 a week'), ('co', 'Colorado: over 12 a day or 40 a week'), ('none', 'No overtime')]
+    rule_opts = ''.join(f'<option value="{v}"{" selected" if v == "federal" else ""}>{n}</option>' for v, n in rules)
+    return f'''<div class="calc calc-wide">
+  <form class="panel" id="sm-form" data-store="semimonthly" novalidate>
+    <h2>Pay period</h2>
+    <div class="fields">
+      <div class="field"><label for="sm-mon">Month</label><select id="sm-mon" class="select" data-k="mon"><option value="">This month</option>{months}</select></div>
+      <div class="field"><label for="sm-year">Year</label><select id="sm-year" class="select" data-k="year"><option value="">This year</option>{years}</select></div>
+      <div class="field"><label for="sm-half">Period</label><select id="sm-half" class="select" data-k="half"><option value="">Current half</option><option value="1">1st – 15th</option><option value="2">16th – end of month</option></select></div>
+      <div class="field"><label for="sm-start">Workweek starts on</label><select id="sm-start" class="select" data-k="start"><option value="1" selected>Monday</option><option value="0">Sunday</option><option value="6">Saturday</option></select></div>
+    </div>
+    <p class="form-note" id="sm-period"></p>
+    <h2 style="margin-top:18px">Hours</h2>
+    <div class="tc-head" aria-hidden="true"><span>Day</span><span>Time in</span><span>Time out</span><span>Break (min)</span><span>Hours</span></div>
+    {"".join(rows)}
+    <div class="tc-tools"><button type="button" class="btn btn-ghost btn-sm js-fill">Copy first day to Mon–Fri</button><button type="button" class="btn btn-ghost btn-sm js-clear">Clear all times</button></div>
+    <h2 style="margin-top:22px">Pay and rules</h2>
+    <div class="fields">
+      <div class="field"><label for="sm-carry">Hours already worked in the first workweek, before this period</label><div class="inp"><input id="sm-carry" data-k="carry" type="text" inputmode="decimal" placeholder="0"><span class="affix">hrs</span></div><span class="hint" id="sm-carry-hint">Only matters when the period starts mid-week.</span></div>
+      <div class="field"><label for="sm-rate">Hourly rate (optional)</label><div class="inp"><span class="affix pre">$</span><input id="sm-rate" data-k="rate" type="text" inputmode="decimal" placeholder="e.g. 18.50"></div></div>
+      <div class="field"><label for="sm-rule">Overtime rule</label><select id="sm-rule" class="select" data-k="rule">{rule_opts}</select></div>
+      <div class="field"><label for="sm-round">Round punches to</label><select id="sm-round" class="select" data-k="round"><option value="0" selected>Exact minutes</option><option value="5">Nearest 5 minutes</option><option value="6">Nearest 6 minutes (0.1 hr)</option><option value="15">Nearest 15 minutes (7-minute rule)</option></select></div>
+    </div>
+    <p class="form-note">Saved automatically in this browser. Overnight shifts work: an out time earlier than the in time counts into the next day.</p>
+    <div class="calc-actions">
+      <button type="button" class="btn btn-ghost btn-sm js-reset">Reset</button>
+      <button type="button" class="btn btn-ghost btn-sm js-copy">Copy summary</button>
+      <button type="button" class="btn btn-ghost btn-sm js-csv">Download CSV</button>
+      <button type="button" class="btn btn-ghost btn-sm js-share">Copy link</button>
+      <button type="button" class="btn btn-ghost btn-sm js-print">Print</button>
+    </div>
+  </form>
+  <section class="panel results" aria-live="polite" aria-label="Results">
+    <div id="sm-results"><p class="results-empty">Enter your times in and out.</p></div>
+  </section>
+</div>'''
+
+
+def table_semimonthly(y):
+    """Weekdays (Mon–Fri) and hours at 8 per day in each half of every month of year y."""
+    def weekdays(a, b):
+        return sum(1 for d in range(a, b + 1) if datetime.date(y, m, d).weekday() < 5)
+    hol = {x for _, x in us_holidays(y) if x.year == y and x.weekday() < 5}
+    rows = []
+    for m in range(1, 13):
+        last = (datetime.date(y + (m == 12), m % 12 + 1, 1) - datetime.timedelta(days=1)).day
+        cells = []
+        for a, b in ((1, 15), (16, last)):
+            n = weekdays(a, b)
+            h = sum(1 for x in hol if x.month == m and a <= x.day <= b)
+            cells.append(f'{n} days · {n * 8} h' + (f' <small>({h} holiday)</small>' if h else ''))
+        rows.append((datetime.date(y, m, 1).strftime('%B'), cells[0], f'16–{last}: ' + cells[1]))
+    return table(['Month', '1st–15th', '16th–end'], rows)
+
+
 def expand_placeholders(body, page, pages):
     body = re.sub(r'\[\[timecard (\d+)\]\]', lambda m: timecard_form(int(m.group(1))), body)
     for name, fn in (('chart_min_dec', chart_min_dec), ('chart_dec_min', chart_dec_min), ('chart_military', chart_military),
@@ -415,6 +485,8 @@ def expand_placeholders(body, page, pages):
         if f'[[{name}]]' in body:
             body = body.replace(f'[[{name}]]', fn())
     body = re.sub(r'\[\[table_holidays (\d{4})\]\]', lambda m: table_holidays(int(m.group(1))), body)
+    body = re.sub(r'\[\[table_semimonthly (\d{4})\]\]', lambda m: table_semimonthly(int(m.group(1))), body)
+    body = body.replace('[[semimonthly_form]]', semimonthly_form())
     body = body.replace('[[calcs_by_category]]', calcs_by_category(pages))
     body = body.replace('[[calc_grid]]', calc_grid(pages))
     body = re.sub(r'\[\[calc_grid:(\w+)\]\]', lambda m: calc_grid(pages, m.group(1), exclude=page['key']), body)

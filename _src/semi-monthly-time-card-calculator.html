@@ -1,0 +1,71 @@
+---
+type: calculator
+category: timecards
+order: 3
+icon: calendar
+title: Semi-Monthly Time Card Calculator – 1st–15th & 16th–End Hours
+description: Add up hours for a semi-monthly pay period (1st–15th or 16th–end of month) with breaks, overtime per workweek, weeks split across periods and gross pay.
+h1: Semi-Monthly Time Card Calculator
+lead: Pick the month and half, enter each day's time in and out, and get the hours and gross pay for a semi-monthly pay period. Overtime is counted by workweek, including weeks that start in one pay period and end in the next.
+card_title: Semi-Monthly Time Card
+card_desc: 1st–15th or 16th–end, overtime per workweek, split weeks handled.
+crumb: Semi-Monthly Time Card Calculator
+updated: 2026-10-19
+script: semimonthly
+related: biweekly-time-card-calculator, guides/biweekly-vs-semimonthly-pay, time-card-calculator, overtime-calculator
+---
+[[semimonthly_form]]
+<!-- content -->
+<h2>How to use the semi-monthly calculator</h2>
+<ol>
+  <li><strong>Choose the pay period:</strong> the month, the year and the half — the 1st to the 15th, or the 16th to the last day of the month. Left on the defaults, it shows the pay period you're in today.</li>
+  <li><strong>Set the day your workweek starts.</strong> Your employer fixes it; Sunday or Monday is most common.</li>
+  <li><strong>Enter each shift</strong>: time in, time out and any unpaid break in minutes. The days are dated, so you can copy them straight from your schedule. Leave days off empty.</li>
+  <li><strong>If the period starts mid-week,</strong> enter the hours you already worked earlier in that workweek (they were on your previous time card). They aren't paid again; they only decide whether this week reaches overtime.</li>
+  <li><strong>Add your hourly rate</strong> to see gross pay, and choose your state's overtime rule.</li>
+</ol>
+
+<h2>Why semi-monthly overtime is tricky</h2>
+<p>A semi-monthly pay period follows the calendar — the 1st to the 15th and the 16th to the end of the month — but overtime under federal law follows the <strong>workweek</strong>: a fixed, repeating period of 7 days in a row. The two almost never line up, so most semi-monthly periods start in the middle of one workweek and end in the middle of another.</p>
+<p>Overtime is still worked out for each whole workweek. Hours from the end of the previous pay period count toward the 40 hours of the week they belong to, and a week that runs into the next pay period is settled when it ends. The Department of Labor says overtime earned in a workweek must be paid on the regular payday for the pay period in which that workweek ends — or as soon as practicable after, if the hours can't be totaled in time.</p>
+<div class="example">
+  <p>Worked example: October 16–31, 2026, $20.00 an hour, federal rule, workweek Monday to Sunday</p>
+  <ol>
+    <li>The period starts on Friday, October 16, in the middle of the workweek of October 12–18. Monday to Thursday that week (October 12–15), on the previous time card, you worked 34 hours.</li>
+    <li>Friday, October 16: 8 hours. That week now totals 34 + 8 = 42 hours, so <strong>2 of Friday's 8 hours are overtime</strong>.</li>
+    <li>October 19–23: five 8-hour days = 40 regular hours. October 26–30: another 40 regular hours (that week continues into November).</li>
+    <li>Period total: 88 hours — 86 regular and 2 overtime. Gross pay: 86 × $20.00 + 2 × $30.00 = <strong>$1,780.00</strong>.</li>
+  </ol>
+</div>
+<p>Without the 34 earlier hours, the same time card would show no overtime and $1,760.00 — $20.00 less than you're owed. That's why the calculator asks for them.</p>
+<div class="formula">Each workweek:  regular = hours up to 40 (counting hours before the period)   overtime = hours over 40
+Period:         gross = regular hours × rate + overtime hours × rate × 1.5</div>
+<p>States with daily overtime — California, Alaska, Colorado and, for lower-paid workers, Nevada — add overtime for long days on top of this. Choose your state's rule in the calculator, or read <a href="@guides/overtime-rules-by-state">overtime rules by state</a>.</p>
+
+<h2>How many hours are in a semi-monthly pay period?</h2>
+<p>On average, <strong>86.67 hours</strong> for a full-time 40-hour schedule: 2,080 hours a year divided by 24 pay periods. The real number changes from period to period, because a half-month has 13 to 16 days and 9 to 12 weekdays. At 8 hours a day, that's anywhere from 72 to 96 hours.</p>
+<p>Weekdays and hours in each semi-monthly period of 2027 (federal holidays shown in brackets are not subtracted — take off 8 hours for each paid holiday you don't work):</p>
+[[table_semimonthly 2027]]
+<details class="more-table"><summary>Show the semi-monthly periods for 2026</summary>
+[[table_semimonthly 2026]]
+</details>
+<p>If you're salaried and paid semi-monthly, each paycheck is simply your annual salary divided by 24, however many days the period has. To compare that with an hourly wage, use the <a href="@salary-to-hourly-calculator">salary to hourly calculator</a>.</p>
+
+<h2>Semi-monthly or biweekly?</h2>
+<p>Semi-monthly means 24 paychecks a year on fixed dates — often the 15th and the last day of the month. Biweekly means 26 paychecks, every other week, always covering exactly two workweeks. If you're paid biweekly, use the <a href="@biweekly-time-card-calculator">biweekly time card calculator</a> instead; for the differences, see <a href="@guides/biweekly-vs-semimonthly-pay">biweekly vs. semi-monthly pay</a>.</p>
+
+<h2>Frequently asked questions</h2>
+<div class="faq">
+  <details><summary>How many hours are in a semi-monthly pay period?</summary><p>86.67 hours on average for a 40-hour week (2,080 ÷ 24). A specific period has 9 to 12 weekdays, so 72 to 96 hours at 8 hours a day — the table above lists every period of 2027.</p></details>
+  <details><summary>Does overtime reset each pay period?</summary><p>No. Under federal law, overtime is based on the workweek, not the pay period. Hours from the end of the previous pay period still count toward the 40 hours of the workweek they belong to.</p></details>
+  <details><summary>When is overtime from a split workweek paid?</summary><p>On the regular payday for the period in which the workweek ends. If the employer can't total the hours in time, it must pay as soon as practicable after that.</p></details>
+  <details><summary>What dates are semi-monthly paydays?</summary><p>Commonly the 15th and the last day of the month, or the 1st and the 15th. When a payday falls on a weekend or holiday, many employers pay on the business day before; state paycheck laws set the rules for how often and how soon wages must be paid.</p></details>
+  <details><summary>Is my information saved?</summary><p>Your times are saved in this browser only, so they're there next time. Nothing is sent to us.</p></details>
+</div>
+
+<h2>Sources</h2>
+<ul class="sources">
+  <li>U.S. Department of Labor, 29 CFR 778.104 (each workweek stands alone), 778.105 (the fixed workweek) and 778.106 (when overtime must be paid).</li>
+  <li>U.S. Department of Labor, <em>Fact Sheet #23: Overtime Pay Requirements of the FLSA</em>.</li>
+  <li>2,080 hours = 52 weeks × 40 hours. Weekday counts generated from the calendar. <a href="@methodology">How we calculate</a>.</li>
+</ul>
