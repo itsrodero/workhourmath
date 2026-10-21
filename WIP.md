@@ -67,6 +67,13 @@ Domain workhourmath.com (Namecheap, bought 2026-10-12), hosted on GitHub Pages f
   - Worked example tested in the browser: 88 h, 86 regular + 2 OT, $1,780.
   - Timecards order shifted; linked from the biweekly page and the biweekly vs semimonthly guide.
 
+- 2026-10-21: Double Time Calculator. The home page had ranked ~6 for "double time calculator" with no page for it.
+  - Two modes: (a) totals (regular / 1.5x / double-time hours, multiplier 2x, 2.5x or 3x); (b) daily hours with
+    California rules via `WHM.overtime(days, 'ca')` (over 8 = 1.5x, over 12 = 2x, 7th consecutive day).
+  - Both worked examples ($1,200; CA $1,462.50) and the 7th-day case ($1,550) tested in the browser.
+  - Linked from the overtime calculator. Pay pages reordered (double time is 2nd).
+  - The user's own time now goes mostly to Leafpost (separate chat). WHM cadence raised to ~2 pieces a week.
+
 ## Pinterest (prepared 2026-10-19)
 - Own business profile, separate from SizeMyProject's. The user creates it the evening of 10-19 (same Pinterest login,
   "add account").

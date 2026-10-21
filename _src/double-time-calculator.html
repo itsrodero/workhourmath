@@ -1,0 +1,119 @@
+---
+type: calculator
+category: pay
+order: 2
+icon: alarm
+title: Double Time Calculator – 2× Pay, California Rules & Holidays
+description: Calculate double time pay: your 2× rate, pay for double-time hours, and California daily overtime and double time worked out from your hours each day.
+h1: Double Time Calculator
+lead: Find your double time rate and what your double-time hours pay — or enter each day's hours and let the calculator apply California's daily overtime and double time rules for you.
+card_title: Double Time Calculator
+card_desc: 2× pay rate, double-time hours and California daily rules.
+crumb: Double Time Calculator
+updated: 2026-10-21
+script: doubletime
+related: overtime-calculator, guides/overtime-rules-by-state, time-card-calculator, shift-differential-calculator
+---
+<div class="calc">
+  <form class="panel" id="dt-form" novalidate>
+    <h2>Pay rate</h2>
+    <div class="fields">
+      <div class="field"><label for="dt-rate">Hourly rate</label><div class="inp"><span class="affix pre">$</span><input id="dt-rate" data-k="rate" type="text" inputmode="decimal" value="20"></div></div>
+      <div class="field"><label for="dt-mult">Premium for double-time hours</label><select id="dt-mult" class="select" data-k="mult"><option value="2" selected>2× (double time)</option><option value="2.5">2.5× (double time and a half)</option><option value="3">3× (triple time)</option></select></div>
+      <div class="field full"><label for="dt-mode">How do you want to enter hours?</label><select id="dt-mode" class="select" data-k="mode"><option value="totals" selected>I know my regular, overtime and double-time hours</option><option value="daily">Hours per day — apply California rules for me</option></select></div>
+    </div>
+    <div id="dt-totals">
+      <h2 style="margin-top:20px">Hours this week</h2>
+      <div class="fields">
+        <div class="field"><label for="dt-reg">Regular hours (1×)</label><div class="inp"><input id="dt-reg" data-k="reg" type="text" inputmode="decimal" value="40"><span class="affix">hr</span></div></div>
+        <div class="field"><label for="dt-ot">Overtime hours (1.5×)</label><div class="inp"><input id="dt-ot" data-k="ot" type="text" inputmode="decimal" value="8"><span class="affix">hr</span></div></div>
+        <div class="field full"><label for="dt-dt">Double-time hours</label><div class="inp"><input id="dt-dt" data-k="dt" type="text" inputmode="decimal" value="4"><span class="affix">hr</span></div><small>For example holiday hours, or hours over 12 in a day in California</small></div>
+      </div>
+    </div>
+    <div id="dt-daily" hidden>
+      <h2 style="margin-top:20px">Hours worked each day</h2>
+      <p class="form-note" style="margin-top:0">Decimal hours (10.5) or hours and minutes (10:30). Leave days off empty. The week runs Monday to Sunday.</p>
+      <div class="fields dt-days">
+        <div class="field"><label for="dt-d0">Monday</label><div class="inp"><input id="dt-d0" data-k="d0" type="text" inputmode="decimal" value="10"><span class="affix">hr</span></div></div>
+        <div class="field"><label for="dt-d1">Tuesday</label><div class="inp"><input id="dt-d1" data-k="d1" type="text" inputmode="decimal" value="13"><span class="affix">hr</span></div></div>
+        <div class="field"><label for="dt-d2">Wednesday</label><div class="inp"><input id="dt-d2" data-k="d2" type="text" inputmode="decimal" value="8"><span class="affix">hr</span></div></div>
+        <div class="field"><label for="dt-d3">Thursday</label><div class="inp"><input id="dt-d3" data-k="d3" type="text" inputmode="decimal" value="12"><span class="affix">hr</span></div></div>
+        <div class="field"><label for="dt-d4">Friday</label><div class="inp"><input id="dt-d4" data-k="d4" type="text" inputmode="decimal" value="9"><span class="affix">hr</span></div></div>
+        <div class="field"><label for="dt-d5">Saturday</label><div class="inp"><input id="dt-d5" data-k="d5" type="text" inputmode="decimal"><span class="affix">hr</span></div></div>
+        <div class="field"><label for="dt-d6">Sunday</label><div class="inp"><input id="dt-d6" data-k="d6" type="text" inputmode="decimal"><span class="affix">hr</span></div></div>
+      </div>
+    </div>
+    <div class="calc-actions">
+      <button type="button" class="btn btn-ghost btn-sm js-reset">Reset</button>
+      <button type="button" class="btn btn-ghost btn-sm js-copy">Copy result</button>
+      <button type="button" class="btn btn-ghost btn-sm js-share">Copy link</button>
+      <button type="button" class="btn btn-ghost btn-sm js-print">Print</button>
+    </div>
+  </form>
+  <section class="panel results" aria-live="polite" aria-label="Results">
+    <div id="dt-results"><p class="results-empty">Enter your hourly rate and your hours.</p></div>
+  </section>
+</div>
+<!-- content -->
+<h2>How double time pay is calculated</h2>
+<p>Double time means twice your regular rate for each hour it applies to. A $20.00-an-hour job pays $40.00 for a double-time hour, compared with $30.00 for a time-and-a-half hour.</p>
+<div class="formula">Double time rate = regular rate × 2
+Double time pay  = double-time hours × regular rate × 2
+Gross pay        = regular hours × rate + overtime hours × rate × 1.5 + double-time hours × rate × 2</div>
+<div class="example">
+  <p>Worked example: $20.00 an hour, 40 regular hours, 8 overtime hours and 4 double-time hours</p>
+  <ol>
+    <li>Regular: 40 × $20.00 = $800.00.</li>
+    <li>Overtime: 8 × $30.00 = $240.00.</li>
+    <li>Double time: 4 × $40.00 = $160.00.</li>
+    <li>Gross pay: <strong>$1,200.00</strong> for 52 hours of work.</li>
+  </ol>
+</div>
+
+<h2>When is double time required?</h2>
+<ul>
+  <li><strong>Federal law doesn't require double time.</strong> The Fair Labor Standards Act only requires time and a half for hours over 40 in a workweek. It also doesn't require extra pay for working on holidays, weekends or nights.</li>
+  <li><strong>California requires double time</strong> for hours worked over 12 in a workday, and for hours over 8 on the seventh consecutive day of work in a workweek (California Labor Code section 510).</li>
+  <li><strong>Other states:</strong> Alaska, Colorado and Nevada have daily overtime, but at time and a half — no state law outside California requires double time in general. See <a href="@guides/overtime-rules-by-state">overtime rules by state</a>.</li>
+  <li><strong>Employer policies and union contracts</strong> often add double time for holidays, Sundays, a sixth or seventh day, or being called back in. If your contract promises it, that promise is what you're owed.</li>
+</ul>
+
+<h2>California double time, day by day</h2>
+<p>Choose "Hours per day" in the calculator and it applies California's rules for you: hours over 8 in a day are overtime, hours over 12 are double time, regular hours over 40 in the week become overtime, and on a seventh consecutive day of work the first 8 hours are overtime and the rest double time.</p>
+<div class="example">
+  <p>Worked example (California): $25.00 an hour; Monday 10 h, Tuesday 13 h, Wednesday 8 h, Thursday 12 h, Friday 9 h</p>
+  <ol>
+    <li>Monday: 8 regular + 2 overtime. Tuesday: 8 regular + 4 overtime + <strong>1 double time</strong>. Wednesday: 8 regular. Thursday: 8 regular + 4 overtime. Friday: 8 regular + 1 overtime.</li>
+    <li>Week: 40 regular, 11 overtime, 1 double time — 52 hours.</li>
+    <li>Pay: 40 × $25.00 + 11 × $37.50 + 1 × $50.00 = <strong>$1,462.50</strong>.</li>
+  </ol>
+</div>
+<p>Under federal rules only, the same 52 hours would be 40 regular and 12 overtime: $1,450.00. California's daily rules turn the 13th hour on Tuesday into double time.</p>
+
+<h2>Double time, time and a half, and double time and a half</h2>
+<div class="table-wrap"><table>
+  <thead><tr><th>Premium</th><th>Multiplier</th><th>At $20/hr</th><th>Typical use</th></tr></thead>
+  <tbody>
+    <tr><td>Time and a half</td><td>1.5×</td><td>$30.00</td><td>Federal overtime over 40 hours a week</td></tr>
+    <tr><td>Double time</td><td>2×</td><td>$40.00</td><td>California over 12 hours a day; many holiday and union policies</td></tr>
+    <tr><td>Double time and a half</td><td>2.5×</td><td>$50.00</td><td>Some employers and contracts for working on a paid holiday</td></tr>
+    <tr><td>Triple time</td><td>3×</td><td>$60.00</td><td>Rare: some union contracts for holidays or emergencies</td></tr>
+  </tbody>
+</table></div>
+<p>Premiums are based on your <em>regular rate</em>, which can be higher than your base wage when you earn shift differentials or non-discretionary bonuses. The <a href="@shift-differential-calculator">shift differential calculator</a> shows how that works; for overtime over 40 hours a week, use the <a href="@overtime-calculator">overtime calculator</a>.</p>
+
+<h2>Frequently asked questions</h2>
+<div class="faq">
+  <details><summary>Is double time 2 times my base pay?</summary><p>It's 2 times your regular rate. For most hourly workers that's their hourly wage, but if you also earn shift differentials or non-discretionary bonuses, the regular rate — and so your double time — can be a bit higher.</p></details>
+  <details><summary>Do I get double time for working on a holiday?</summary><p>Only if your employer's policy or your contract says so. Federal law doesn't require any extra pay for holidays, and neither does California law on its own — though California's daily and seventh-day rules still apply if your holiday shift triggers them.</p></details>
+  <details><summary>When does California pay double time?</summary><p>For hours over 12 in one workday, and for hours over 8 on the seventh consecutive day worked in a workweek. Some workers, like certain exempt employees and those under special industry orders, follow different rules.</p></details>
+  <details><summary>Is double time taxed at a higher rate?</summary><p>No. Double-time pay is ordinary wages. A bigger paycheck can mean more tax withheld that period, but the hours aren't taxed at a special rate.</p></details>
+  <details><summary>Is my information saved?</summary><p>Your inputs are saved in this browser only, so they're there next time. Nothing is sent to us.</p></details>
+</div>
+
+<h2>Sources</h2>
+<ul class="sources">
+  <li>California Labor Code section 510 (daily overtime and double time) and the California Labor Commissioner's overtime FAQ.</li>
+  <li>U.S. Department of Labor, <em>Fact Sheet #23: Overtime Pay Requirements of the FLSA</em>, and the DOL's holiday pay guidance (no federal requirement for holiday or weekend premiums).</li>
+  <li>Calculations follow the same rules as our <a href="@time-card-calculator">time card calculator</a>. <a href="@methodology">How we calculate</a>.</li>
+</ul>
