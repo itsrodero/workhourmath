@@ -103,6 +103,14 @@ Domain workhourmath.com (Namecheap, bought 2026-10-12), hosted on GitHub Pages f
   - CSV uploaded (Settings > Import content > Upload .csv): "Carga exitosa". The 24 pins go out from 2026-10-21.
   - Switch profiles from the avatar menu (top right); both profiles share one Pinterest login.
 
+- 2026-10-26: Add Time Calculator improved, from GSC queries ("30 minutes from 1241", "59 plus 15",
+  "add minutes seconds"):
+  - new "add time to a clock time" tool on the same page (start time ± hours/minutes, wraps midnight, next/previous
+    day, 24-hour result; plain listeners, not saved);
+  - "adding minutes past the hour" quick chart and a section on adding time to a clock time;
+  - 3 FAQs; title now "... or to a Clock Time".
+  - Tested: 8:45 AM + 8:30 = 5:15 PM; 12:41 + 30 min = 1:11 PM; 10 PM + 8 h = 6 AM next day; 1 AM − 2 h = 11 PM the day before.
+
 ## Pinterest round 2 (2026-10-26)
 - 25 pins from 2026-10-29 to 11-06, 3 a day:
   - 3 new chart pins: common shifts, 2027 federal holidays, 2027 semi-monthly periods;

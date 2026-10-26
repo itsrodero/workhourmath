@@ -30,3 +30,32 @@
   }
   W.calculator(form, compute);
 })();
+
+/* Add or subtract hours and minutes from a clock time (wraps past midnight). */
+(function () {
+  'use strict';
+  var W = window.WHM;
+  var cf = document.getElementById('clk-form');
+  if (!cf) return;
+  var co = document.getElementById('clk-results');
+  function el(k) { return cf.querySelector('[data-c="' + k + '"]'); }
+  function pad(n) { return (n < 10 ? '0' : '') + n; }
+  function run() {
+    var start = W.toMin(el('start').value);
+    var h = parseFloat(el('h').value) || 0, m = parseFloat(el('m').value) || 0;
+    var dur = Math.round(h * 60 + m), sign = el('op').value === '-' ? -1 : 1;
+    if (!isFinite(start)) { co.innerHTML = '<p class="results-empty">Enter a start time.</p>'; return; }
+    var total = start + sign * dur;
+    var shift = Math.floor(total / 1440), r = ((total % 1440) + 1440) % 1440;
+    var when = shift === 0 ? 'same day' : shift === 1 ? 'next day' : shift === -1 ? 'day before'
+      : shift > 1 ? shift + ' days later' : (-shift) + ' days earlier';
+    co.innerHTML = '<div class="result-main"><div class="k">Resulting time</div><div class="v">' + W.clock12(r) + '</div>' +
+      '<div class="sub">' + W.clock12(start) + (sign > 0 ? ' + ' : ' − ') + W.hmLong(dur) + ' · ' + when + '</div></div>' +
+      '<ul class="result-rows"><li><span>24-hour time</span><strong>' + pad(Math.floor(r / 60)) + ':' + pad(r % 60) + '</strong></li>' +
+      '<li><span>Duration</span><strong>' + W.hm(dur) + ' (' + W.dec(dur) + ' hrs)</strong></li></ul>';
+  }
+  cf.addEventListener('input', run);
+  cf.addEventListener('change', run);
+  cf.addEventListener('submit', function (e) { e.preventDefault(); run(); });
+  run();
+})();
