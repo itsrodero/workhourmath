@@ -5,6 +5,8 @@ Pinterest pins for WorkHourMath (its own business profile, separate from SizeMyP
     python _tools/pins.py --start 2026-10-21   # writes _tools/pins.json and _tools/pinterest-pins.csv
     node _tools/pins.mjs                       # renders the missing pin images into assets/img/pins/
     node _tools/pins.mjs --all                 # re-renders every image
+    python _tools/pins.py --round 2 --start 2026-10-29   # second round: pin2.html images in assets/img/pins/r2/,
+    node _tools/pins.mjs --round 2                        # new charts and copy -> pins-r2.json, pinterest-pins-r2.csv
 
 One vertical pin (1000x1500) per calculator and guide (template img/pin.html), plus printable-chart pins whose
 image is the chart itself (img/pin-chart.html). The CSV follows Pinterest's "Bulk upload Pins" help article
@@ -92,6 +94,51 @@ def charts():
     ]
 
 
+ROUND = 2 if '--round' in sys.argv and sys.argv[sys.argv.index('--round') + 1] == '2' else 1
+
+
+def charts_r2():
+    """Second-round charts: data people search for and save — shift lengths, 2027 holidays, 2027 semi-monthly periods."""
+    def clock12(t):
+        h, m = map(int, t.split(':'))
+        return f"{(h % 12) or 12}{f':{m:02d}' if m else ''} {'AM' if h < 12 else 'PM'}"
+
+    def mins(t):
+        h, m = map(int, t.split(':'))
+        return h * 60 + m
+    picks = [('07:00', '15:00'), ('07:00', '15:30'), ('07:00', '16:00'), ('07:00', '19:00'), ('08:00', '16:00'), ('08:00', '16:30'),
+             ('08:00', '17:00'), ('08:30', '17:00'), ('09:00', '17:00'), ('09:00', '17:30'), ('09:00', '18:00'), ('10:00', '18:00'),
+             ('11:00', '19:00'), ('12:00', '20:00'), ('14:00', '22:00'), ('15:00', '23:00'), ('19:00', '07:00'), ('23:00', '07:00')]
+    shift_rows = []
+    for a, b in picks:
+        span = (mins(b) - mins(a)) % 1440
+        shift_rows.append([f'{clock12(a)} – {clock12(b)}', f'{span / 60:g} h · {(span - 30) / 60:g} h'])
+    hol = [[n, x.strftime('%a, %b %d').replace(' 0', ' ')] for n, x in B.us_holidays(2027)]
+    semi = []
+    for mth in range(1, 13):
+        last = (datetime.date(2027 + (mth == 12), mth % 12 + 1, 1) - datetime.timedelta(days=1)).day
+        for a, b in ((1, 15), (16, last)):
+            n = sum(1 for d in range(a, b + 1) if datetime.date(2027, mth, d).weekday() < 5)
+            semi.append([datetime.date(2027, mth, a).strftime('%b ') + f'{a}–{b}', f'{n} days · {n * 8} h'])
+    return [
+        {'name': 'chart-common-shifts', 'page': 'hours-calculator', 'board': 'timecards',
+         'headline': 'How Many Hours Is My Shift?', 'sub': 'Hours with no break · with a 30-minute lunch',
+         'label': 'Shift|Hours', 'rows': shift_rows,
+         'title': 'How Many Hours Is a Shift? 9 to 5, 7 to 3:30, 12-Hour Shifts – Chart',
+         'description': 'Chart of common work shifts and the hours they add up to, with no break and with a 30-minute unpaid lunch: 9 to 5 is 8 hours (7.5 with lunch), 7 to 3:30 is 8.5 (8), 7 PM to 7 AM is 12 (11.5). Plus a free hours calculator. WorkHourMath.'},
+        {'name': 'chart-federal-holidays-2027', 'page': 'work-days-calculator', 'board': 'dates',
+         'headline': '2027 Federal Holidays', 'sub': 'Observed dates for US federal employees and most payrolls',
+         'label': 'Holiday|2027 (observed)', 'rows': hol,
+         'title': '2027 US Federal Holidays – Observed Dates (Printable List)',
+         'description': "All 11 US federal holidays in 2027 with their observed dates — New Year's Day, MLK Day, Presidents Day, Memorial Day, Juneteenth, Independence Day, Labor Day, Columbus Day, Veterans Day, Thanksgiving and Christmas. Plus a free work days calculator. WorkHourMath."},
+        {'name': 'chart-semimonthly-2027', 'page': 'semi-monthly-time-card-calculator', 'board': 'timecards',
+         'headline': '2027 Semi-Monthly Pay Periods', 'sub': 'Weekdays and hours (8 h a day) in every half-month',
+         'label': 'Pay period|Weekdays · hours', 'rows': semi,
+         'title': '2027 Semi-Monthly Pay Periods – Workdays & Hours Chart',
+         'description': 'Every 2027 semi-monthly pay period (1st–15th and 16th–end of month) with its number of weekdays and hours at 8 hours a day — from 72 to 96 hours. Plus a free semi-monthly time card calculator. WorkHourMath.'},
+    ]
+
+
 def main():
     pages = B.load_pages()
     calcs, guides = [], []
@@ -108,26 +155,33 @@ def main():
         else:
             head = B.strip_tags(m['h1']).strip()
             title, cta, ic = head, 'Read the guide', m.get('icon', 'calendar' if cat == 'dates' else 'clock')
+        sub = m['card_desc']
+        if ROUND == 2:
+            # Second round: fresh image and copy for the same pages.
+            parts = B.strip_tags(m['title']).split(' – ', 1)
+            head = parts[0].strip()
+            sub = parts[1].strip() if len(parts) > 1 else m['card_desc']
+            title = f'{head}: {sub}' if len(parts) > 1 else head
         job = {
-            'name': name, 'tpl': 'pin.html',
-            'out': f'assets/img/pins/{name}.jpg',
-            'headline': head, 'sub': m['card_desc'], 'label': B.CATEGORIES[cat][0], 'cta': cta,
+            'name': name, 'tpl': 'pin2.html' if ROUND == 2 else 'pin.html',
+            'out': f'assets/img/pins/r2/{name}.jpg' if ROUND == 2 else f'assets/img/pins/{name}.jpg',
+            'headline': head, 'sub': sub, 'label': B.CATEGORIES[cat][0], 'cta': cta,
             'icon': B.ICONS.get(ic, B.ICONS['calc']),
             'link': B.SITE_URL + p['url'], 'board': BOARDS[cat],
             'title': clip(title, 100),
-            'description': clip(m['description'] + ' Free and no sign-up — WorkHourMath.', 500),
+            'description': clip((m.get('lead') if ROUND == 2 and m.get('lead') else m['description']) + ' Free and no sign-up — WorkHourMath.', 500),
             'order': int(float(m.get('order', 99))), 'cat': cat,
             'keywords': keywords(m, B.CATEGORIES[cat][0]),
         }
         (calcs if m['type'] == 'calculator' else guides).append(job)
 
     chart_jobs = []
-    for c in charts():
+    for c in (charts_r2() if ROUND == 2 else charts()):
         page = pages[c['page']]
         chart_jobs.append({
             'name': c['name'], 'tpl': 'pin-chart.html', 'out': f"assets/img/pins/{c['name']}.jpg",
             'headline': c['headline'], 'sub': c['sub'], 'label': c['label'], 'cta': 'Free printable + calculator',
-            'icon': '', 'rows': c['rows'], 'link': B.SITE_URL + page['url'], 'board': BOARDS['convert'],
+            'icon': '', 'rows': c['rows'], 'link': B.SITE_URL + page['url'], 'board': BOARDS[c.get('board', 'convert')],
             'title': clip(c['title'], 100), 'description': clip(c['description'], 500),
             'keywords': 'printable chart, ' + keywords(page['meta'], B.CATEGORIES['convert'][0]),
         })
@@ -150,9 +204,10 @@ def main():
         j['publish'] = f'{day.isoformat()}T{TIMES[i % PINS_PER_DAY]}:00'
 
     here = os.path.dirname(os.path.abspath(__file__))
-    with open(os.path.join(here, 'pins.json'), 'w', encoding='utf-8', newline='\n') as f:
+    suffix = '-r2' if ROUND == 2 else ''
+    with open(os.path.join(here, f'pins{suffix}.json'), 'w', encoding='utf-8', newline='\n') as f:
         json.dump(jobs, f, ensure_ascii=False, indent=1)
-    with open(os.path.join(here, 'pinterest-pins.csv'), 'w', encoding='utf-8', newline='') as f:
+    with open(os.path.join(here, f'pinterest-pins{suffix}.csv'), 'w', encoding='utf-8', newline='') as f:
         w = csv.writer(f)
         w.writerow(['Title', 'Media URL', 'Pinterest board', 'Thumbnail', 'Description', 'Link', 'Publish date', 'Keywords'])
         for j in jobs:

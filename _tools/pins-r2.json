@@ -1,0 +1,664 @@
+[
+ {
+  "name": "chart-common-shifts",
+  "tpl": "pin-chart.html",
+  "out": "assets/img/pins/chart-common-shifts.jpg",
+  "headline": "How Many Hours Is My Shift?",
+  "sub": "Hours with no break · with a 30-minute lunch",
+  "label": "Shift|Hours",
+  "cta": "Free printable + calculator",
+  "icon": "",
+  "rows": [
+   [
+    "7 AM – 3 PM",
+    "8 h · 7.5 h"
+   ],
+   [
+    "7 AM – 3:30 PM",
+    "8.5 h · 8 h"
+   ],
+   [
+    "7 AM – 4 PM",
+    "9 h · 8.5 h"
+   ],
+   [
+    "7 AM – 7 PM",
+    "12 h · 11.5 h"
+   ],
+   [
+    "8 AM – 4 PM",
+    "8 h · 7.5 h"
+   ],
+   [
+    "8 AM – 4:30 PM",
+    "8.5 h · 8 h"
+   ],
+   [
+    "8 AM – 5 PM",
+    "9 h · 8.5 h"
+   ],
+   [
+    "8:30 AM – 5 PM",
+    "8.5 h · 8 h"
+   ],
+   [
+    "9 AM – 5 PM",
+    "8 h · 7.5 h"
+   ],
+   [
+    "9 AM – 5:30 PM",
+    "8.5 h · 8 h"
+   ],
+   [
+    "9 AM – 6 PM",
+    "9 h · 8.5 h"
+   ],
+   [
+    "10 AM – 6 PM",
+    "8 h · 7.5 h"
+   ],
+   [
+    "11 AM – 7 PM",
+    "8 h · 7.5 h"
+   ],
+   [
+    "12 PM – 8 PM",
+    "8 h · 7.5 h"
+   ],
+   [
+    "2 PM – 10 PM",
+    "8 h · 7.5 h"
+   ],
+   [
+    "3 PM – 11 PM",
+    "8 h · 7.5 h"
+   ],
+   [
+    "7 PM – 7 AM",
+    "12 h · 11.5 h"
+   ],
+   [
+    "11 PM – 7 AM",
+    "8 h · 7.5 h"
+   ]
+  ],
+  "link": "https://workhourmath.com/hours-calculator.html",
+  "board": "Time Cards & Timesheets",
+  "title": "How Many Hours Is a Shift? 9 to 5, 7 to 3:30, 12-Hour Shifts – Chart",
+  "description": "Chart of common work shifts and the hours they add up to, with no break and with a 30-minute unpaid lunch: 9 to 5 is 8 hours (7.5 with lunch), 7 to 3:30 is 8.5 (8), 7 PM to 7 AM is 12 (11.5). Plus a free hours calculator. WorkHourMath.",
+  "keywords": "printable chart, hours calculator, time conversions, hourly workers, payroll",
+  "publish": "2026-10-29T15:00:00"
+ },
+ {
+  "name": "chart-federal-holidays-2027",
+  "tpl": "pin-chart.html",
+  "out": "assets/img/pins/chart-federal-holidays-2027.jpg",
+  "headline": "2027 Federal Holidays",
+  "sub": "Observed dates for US federal employees and most payrolls",
+  "label": "Holiday|2027 (observed)",
+  "cta": "Free printable + calculator",
+  "icon": "",
+  "rows": [
+   [
+    "New Year's Day",
+    "Fri, Jan 1"
+   ],
+   [
+    "Martin Luther King Jr. Day",
+    "Mon, Jan 18"
+   ],
+   [
+    "Washington's Birthday",
+    "Mon, Feb 15"
+   ],
+   [
+    "Memorial Day",
+    "Mon, May 31"
+   ],
+   [
+    "Juneteenth",
+    "Fri, Jun 18"
+   ],
+   [
+    "Independence Day",
+    "Mon, Jul 5"
+   ],
+   [
+    "Labor Day",
+    "Mon, Sep 6"
+   ],
+   [
+    "Columbus Day",
+    "Mon, Oct 11"
+   ],
+   [
+    "Veterans Day",
+    "Thu, Nov 11"
+   ],
+   [
+    "Thanksgiving Day",
+    "Thu, Nov 25"
+   ],
+   [
+    "Christmas Day",
+    "Fri, Dec 24"
+   ]
+  ],
+  "link": "https://workhourmath.com/work-days-calculator.html",
+  "board": "Work Days, Holidays & PTO",
+  "title": "2027 US Federal Holidays – Observed Dates (Printable List)",
+  "description": "All 11 US federal holidays in 2027 with their observed dates — New Year's Day, MLK Day, Presidents Day, Memorial Day, Juneteenth, Independence Day, Labor Day, Columbus Day, Veterans Day, Thanksgiving and Christmas. Plus a free work days calculator. WorkHourMath.",
+  "keywords": "printable chart, work days calculator, time conversions, hourly workers, payroll",
+  "publish": "2026-10-29T19:00:00"
+ },
+ {
+  "name": "chart-semimonthly-2027",
+  "tpl": "pin-chart.html",
+  "out": "assets/img/pins/chart-semimonthly-2027.jpg",
+  "headline": "2027 Semi-Monthly Pay Periods",
+  "sub": "Weekdays and hours (8 h a day) in every half-month",
+  "label": "Pay period|Weekdays · hours",
+  "cta": "Free printable + calculator",
+  "icon": "",
+  "rows": [
+   [
+    "Jan 1–15",
+    "11 days · 88 h"
+   ],
+   [
+    "Jan 16–31",
+    "10 days · 80 h"
+   ],
+   [
+    "Feb 1–15",
+    "11 days · 88 h"
+   ],
+   [
+    "Feb 16–28",
+    "9 days · 72 h"
+   ],
+   [
+    "Mar 1–15",
+    "11 days · 88 h"
+   ],
+   [
+    "Mar 16–31",
+    "12 days · 96 h"
+   ],
+   [
+    "Apr 1–15",
+    "11 days · 88 h"
+   ],
+   [
+    "Apr 16–30",
+    "11 days · 88 h"
+   ],
+   [
+    "May 1–15",
+    "10 days · 80 h"
+   ],
+   [
+    "May 16–31",
+    "11 days · 88 h"
+   ],
+   [
+    "Jun 1–15",
+    "11 days · 88 h"
+   ],
+   [
+    "Jun 16–30",
+    "11 days · 88 h"
+   ],
+   [
+    "Jul 1–15",
+    "11 days · 88 h"
+   ],
+   [
+    "Jul 16–31",
+    "11 days · 88 h"
+   ],
+   [
+    "Aug 1–15",
+    "10 days · 80 h"
+   ],
+   [
+    "Aug 16–31",
+    "12 days · 96 h"
+   ],
+   [
+    "Sep 1–15",
+    "11 days · 88 h"
+   ],
+   [
+    "Sep 16–30",
+    "11 days · 88 h"
+   ],
+   [
+    "Oct 1–15",
+    "11 days · 88 h"
+   ],
+   [
+    "Oct 16–31",
+    "10 days · 80 h"
+   ],
+   [
+    "Nov 1–15",
+    "11 days · 88 h"
+   ],
+   [
+    "Nov 16–30",
+    "11 days · 88 h"
+   ],
+   [
+    "Dec 1–15",
+    "11 days · 88 h"
+   ],
+   [
+    "Dec 16–31",
+    "12 days · 96 h"
+   ]
+  ],
+  "link": "https://workhourmath.com/semi-monthly-time-card-calculator.html",
+  "board": "Time Cards & Timesheets",
+  "title": "2027 Semi-Monthly Pay Periods – Workdays & Hours Chart",
+  "description": "Every 2027 semi-monthly pay period (1st–15th and 16th–end of month) with its number of weekdays and hours at 8 hours a day — from 72 to 96 hours. Plus a free semi-monthly time card calculator. WorkHourMath.",
+  "keywords": "printable chart, semi-monthly time card, time conversions, hourly workers, payroll",
+  "publish": "2026-10-29T23:00:00"
+ },
+ {
+  "name": "time-card-calculator",
+  "tpl": "pin2.html",
+  "out": "assets/img/pins/r2/time-card-calculator.jpg",
+  "headline": "Time Card Calculator",
+  "sub": "Hours, Breaks & Overtime Pay",
+  "label": "Time cards & hours",
+  "cta": "Free calculator",
+  "icon": "<rect x=\"4\" y=\"3\" width=\"16\" height=\"18\" rx=\"2\"/><path d=\"M8 8h8M8 12h8M8 16h5\"/>",
+  "link": "https://workhourmath.com/time-card-calculator.html",
+  "board": "Time Cards & Timesheets",
+  "title": "Time Card Calculator: Hours, Breaks & Overtime Pay",
+  "description": "Enter when you clocked in and out each day and any unpaid break. You'll get the hours for every day, the weekly total in hours and minutes and in decimal hours, your overtime and your gross pay. Free and no sign-up — WorkHourMath.",
+  "order": 1,
+  "cat": "timecards",
+  "keywords": "time card calculator, time cards, hours, hourly workers, payroll",
+  "publish": "2026-10-30T15:00:00"
+ },
+ {
+  "name": "minutes-to-decimal-calculator",
+  "tpl": "pin2.html",
+  "out": "assets/img/pins/r2/minutes-to-decimal-calculator.jpg",
+  "headline": "Minutes to Decimal Hours Converter & Chart",
+  "sub": "Hours and minutes to decimal hours, with a 1–60 chart.",
+  "label": "Time conversions",
+  "cta": "Free calculator",
+  "icon": "<circle cx=\"5\" cy=\"18\" r=\"1\"/><rect x=\"9\" y=\"5\" width=\"6\" height=\"14\" rx=\"3\"/><path d=\"M19 5v14\"/>",
+  "link": "https://workhourmath.com/minutes-to-decimal-calculator.html",
+  "board": "Printable Time Conversion Charts",
+  "title": "Minutes to Decimal Hours Converter & Chart",
+  "description": "Turn hours and minutes into decimal hours for payroll, invoices and timesheets. Divide the minutes by 60 — or use the converter and the chart below. Free and no sign-up — WorkHourMath.",
+  "order": 1,
+  "cat": "convert",
+  "keywords": "minutes to decimal, time conversions, hourly workers, payroll",
+  "publish": "2026-10-30T19:00:00"
+ },
+ {
+  "name": "overtime-calculator",
+  "tpl": "pin2.html",
+  "out": "assets/img/pins/r2/overtime-calculator.jpg",
+  "headline": "Overtime Calculator",
+  "sub": "Time and a Half & Double Time Pay",
+  "label": "Pay & overtime",
+  "cta": "Free calculator",
+  "icon": "<circle cx=\"12\" cy=\"13\" r=\"8\"/><path d=\"M12 9v4l2.5 1.5\"/><path d=\"M5 3 2 6M19 3l3 3\"/>",
+  "link": "https://workhourmath.com/overtime-calculator.html",
+  "board": "Overtime, Salary & Pay Calculators",
+  "title": "Overtime Calculator: Time and a Half & Double Time Pay",
+  "description": "Enter your hourly rate and the hours you worked this week to see your overtime hours, your overtime rate and your gross pay — with time and a half, double time, or both. Free and no sign-up — WorkHourMath.",
+  "order": 1,
+  "cat": "pay",
+  "keywords": "overtime calculator, pay, overtime, hourly workers, payroll",
+  "publish": "2026-10-30T23:00:00"
+ },
+ {
+  "name": "work-days-calculator",
+  "tpl": "pin2.html",
+  "out": "assets/img/pins/r2/work-days-calculator.jpg",
+  "headline": "Work Days Calculator",
+  "sub": "Business Days Between Dates",
+  "label": "Workdays & time off",
+  "cta": "Free calculator",
+  "icon": "<rect x=\"3\" y=\"5\" width=\"18\" height=\"16\" rx=\"2\"/><path d=\"M3 10h18M8 3v4M16 3v4\"/>",
+  "link": "https://workhourmath.com/work-days-calculator.html",
+  "board": "Work Days, Holidays & PTO",
+  "title": "Work Days Calculator: Business Days Between Dates",
+  "description": "Count the business days between two dates — leaving out weekends and, if you want, US federal holidays — and see how many work hours that is. Free and no sign-up — WorkHourMath.",
+  "order": 1,
+  "cat": "dates",
+  "keywords": "work days calculator, workdays, time off, hourly workers, payroll",
+  "publish": "2026-10-31T15:00:00"
+ },
+ {
+  "name": "biweekly-time-card-calculator",
+  "tpl": "pin2.html",
+  "out": "assets/img/pins/r2/biweekly-time-card-calculator.jpg",
+  "headline": "Biweekly Time Card Calculator",
+  "sub": "2-Week Hours & Overtime",
+  "label": "Time cards & hours",
+  "cta": "Free calculator",
+  "icon": "<rect x=\"3\" y=\"6\" width=\"13\" height=\"15\" rx=\"2\"/><path d=\"M8 3h11a2 2 0 0 1 2 2v12\"/><path d=\"M6.5 11h6M6.5 15h6\"/>",
+  "link": "https://workhourmath.com/biweekly-time-card-calculator.html",
+  "board": "Time Cards & Timesheets",
+  "title": "Biweekly Time Card Calculator: 2-Week Hours & Overtime",
+  "description": "Fill in two weeks of shifts for a biweekly pay period. The calculator totals each week, applies overtime week by week as the law requires, and shows your hours and gross pay for the whole period. Free and no sign-up — WorkHourMath.",
+  "order": 2,
+  "cat": "timecards",
+  "keywords": "biweekly time card, time cards, hours, hourly workers, payroll",
+  "publish": "2026-10-31T19:00:00"
+ },
+ {
+  "name": "decimal-to-hours-calculator",
+  "tpl": "pin2.html",
+  "out": "assets/img/pins/r2/decimal-to-hours-calculator.jpg",
+  "headline": "Decimal Hours to Hours and Minutes Converter",
+  "sub": "7.75 hours → 7 hours 45 minutes, with a chart.",
+  "label": "Time conversions",
+  "cta": "Free calculator",
+  "icon": "<circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 7v5l3 2\"/>",
+  "link": "https://workhourmath.com/decimal-to-hours-calculator.html",
+  "board": "Printable Time Conversion Charts",
+  "title": "Decimal Hours to Hours and Minutes Converter",
+  "description": "Turn decimal hours from a paystub, timesheet or payroll report back into hours and minutes. 8.6 hours isn't 8 hours 60 minutes — it's 8 hours 36 minutes. Free and no sign-up — WorkHourMath.",
+  "order": 2,
+  "cat": "convert",
+  "keywords": "decimal to hours & minutes, time conversions, hourly workers, payroll",
+  "publish": "2026-10-31T23:00:00"
+ },
+ {
+  "name": "double-time-calculator",
+  "tpl": "pin2.html",
+  "out": "assets/img/pins/r2/double-time-calculator.jpg",
+  "headline": "Double Time Calculator",
+  "sub": "2× Pay, California Rules & Holidays",
+  "label": "Pay & overtime",
+  "cta": "Free calculator",
+  "icon": "<circle cx=\"12\" cy=\"13\" r=\"8\"/><path d=\"M12 9v4l2.5 1.5\"/><path d=\"M5 3 2 6M19 3l3 3\"/>",
+  "link": "https://workhourmath.com/double-time-calculator.html",
+  "board": "Overtime, Salary & Pay Calculators",
+  "title": "Double Time Calculator: 2× Pay, California Rules & Holidays",
+  "description": "Find your double time rate and what your double-time hours pay — or enter each day's hours and let the calculator apply California's daily overtime and double time rules for you. Free and no sign-up — WorkHourMath.",
+  "order": 2,
+  "cat": "pay",
+  "keywords": "double time calculator, pay, overtime, hourly workers, payroll",
+  "publish": "2026-11-01T15:00:00"
+ },
+ {
+  "name": "pto-accrual-calculator",
+  "tpl": "pin2.html",
+  "out": "assets/img/pins/r2/pto-accrual-calculator.jpg",
+  "headline": "PTO Accrual Calculator",
+  "sub": "Paid Time Off Per Hour & Paycheck",
+  "label": "Workdays & time off",
+  "cta": "Free calculator",
+  "icon": "<circle cx=\"12\" cy=\"12\" r=\"4\"/><path d=\"M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4\"/>",
+  "link": "https://workhourmath.com/pto-accrual-calculator.html",
+  "board": "Work Days, Holidays & PTO",
+  "title": "PTO Accrual Calculator: Paid Time Off Per Hour & Paycheck",
+  "description": "Find out how fast your paid time off builds up — per hour, per paycheck and per year — and how many hours you'll have saved by a future date, including any cap your employer sets. Free and no sign-up — WorkHourMath.",
+  "order": 2,
+  "cat": "dates",
+  "keywords": "pto accrual calculator, workdays, time off, hourly workers, payroll",
+  "publish": "2026-11-01T19:00:00"
+ },
+ {
+  "name": "semi-monthly-time-card-calculator",
+  "tpl": "pin2.html",
+  "out": "assets/img/pins/r2/semi-monthly-time-card-calculator.jpg",
+  "headline": "Semi-Monthly Time Card Calculator",
+  "sub": "1st–15th & 16th–End Hours",
+  "label": "Time cards & hours",
+  "cta": "Free calculator",
+  "icon": "<rect x=\"3\" y=\"5\" width=\"18\" height=\"16\" rx=\"2\"/><path d=\"M3 10h18M8 3v4M16 3v4\"/>",
+  "link": "https://workhourmath.com/semi-monthly-time-card-calculator.html",
+  "board": "Time Cards & Timesheets",
+  "title": "Semi-Monthly Time Card Calculator: 1st–15th & 16th–End Hours",
+  "description": "Pick the month and half, enter each day's time in and out, and get the hours and gross pay for a semi-monthly pay period. Overtime is counted by workweek, including weeks that start in one pay period and end in the next. Free and no sign-up — WorkHourMath.",
+  "order": 3,
+  "cat": "timecards",
+  "keywords": "semi-monthly time card, time cards, hours, hourly workers, payroll",
+  "publish": "2026-11-01T23:00:00"
+ },
+ {
+  "name": "military-time-converter",
+  "tpl": "pin2.html",
+  "out": "assets/img/pins/r2/military-time-converter.jpg",
+  "headline": "Military Time Converter & 24-Hour Time Chart",
+  "sub": "24-hour military time to AM/PM and back, with a chart.",
+  "label": "Time conversions",
+  "cta": "Free calculator",
+  "icon": "<circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M7.5 10a1.75 1.75 0 0 1 3.5 0c0 1.6-3.5 2.6-3.5 4.6H11\"/><path d=\"M15.5 9.4 13.5 13.5h3.5M16.2 11v4.6\"/>",
+  "link": "https://workhourmath.com/military-time-converter.html",
+  "board": "Printable Time Conversion Charts",
+  "title": "Military Time Converter & 24-Hour Time Chart",
+  "description": "Type a standard time or a military time and get the other one instantly — plus how it's said out loud. The full military time chart is below. Free and no sign-up — WorkHourMath.",
+  "order": 3,
+  "cat": "convert",
+  "keywords": "military time converter, time conversions, hourly workers, payroll",
+  "publish": "2026-11-02T15:00:00"
+ },
+ {
+  "name": "hourly-to-salary-calculator",
+  "tpl": "pin2.html",
+  "out": "assets/img/pins/r2/hourly-to-salary-calculator.jpg",
+  "headline": "Hourly to Salary Calculator",
+  "sub": "Annual, Monthly & Weekly Pay",
+  "label": "Pay & overtime",
+  "cta": "Free calculator",
+  "icon": "<path d=\"M12 3v18\"/><path d=\"M16.5 7.5C15.8 6 14.2 5 12 5c-2.6 0-4.2 1.3-4.2 3.1 0 4.2 8.9 2.2 8.9 6.7 0 1.9-1.8 3.2-4.7 3.2-2.3 0-4-1-4.8-2.5\"/>",
+  "link": "https://workhourmath.com/hourly-to-salary-calculator.html",
+  "board": "Overtime, Salary & Pay Calculators",
+  "title": "Hourly to Salary Calculator: Annual, Monthly & Weekly Pay",
+  "description": "Find out what an hourly wage adds up to over a year, a month, a paycheck and a week — based on the hours you actually work. Free and no sign-up — WorkHourMath.",
+  "order": 3,
+  "cat": "pay",
+  "keywords": "hourly to salary, pay, overtime, hourly workers, payroll",
+  "publish": "2026-11-02T19:00:00"
+ },
+ {
+  "name": "hours-calculator",
+  "tpl": "pin2.html",
+  "out": "assets/img/pins/r2/hours-calculator.jpg",
+  "headline": "Hours Calculator",
+  "sub": "Time Between Two Times, Minus Breaks",
+  "label": "Time cards & hours",
+  "cta": "Free calculator",
+  "icon": "<path d=\"M6 3h12M6 21h12\"/><path d=\"M8 3v3.5a4 4 0 0 0 8 0V3M8 21v-3.5a4 4 0 0 1 8 0V21\"/>",
+  "link": "https://workhourmath.com/hours-calculator.html",
+  "board": "Time Cards & Timesheets",
+  "title": "Hours Calculator: Time Between Two Times, Minus Breaks",
+  "description": "Enter a start time and an end time to see exactly how many hours and minutes are in between — minus any unpaid break — in hours and minutes, decimal hours and total minutes. Free and no sign-up — WorkHourMath.",
+  "order": 4,
+  "cat": "timecards",
+  "keywords": "hours calculator, time cards, hours, hourly workers, payroll",
+  "publish": "2026-11-02T23:00:00"
+ },
+ {
+  "name": "salary-to-hourly-calculator",
+  "tpl": "pin2.html",
+  "out": "assets/img/pins/r2/salary-to-hourly-calculator.jpg",
+  "headline": "Salary to Hourly Calculator",
+  "sub": "What's My Hourly Rate?",
+  "label": "Pay & overtime",
+  "cta": "Free calculator",
+  "icon": "<path d=\"M7 4 3 8l4 4\"/><path d=\"M3 8h13\"/><path d=\"m17 12 4 4-4 4\"/><path d=\"M21 16H8\"/>",
+  "link": "https://workhourmath.com/salary-to-hourly-calculator.html",
+  "board": "Overtime, Salary & Pay Calculators",
+  "title": "Salary to Hourly Calculator: What's My Hourly Rate?",
+  "description": "Turn a yearly salary into an hourly rate — and see what it means per paycheck, per month and per week. Change the hours to see what you really earn if you work more than 40. Free and no sign-up — WorkHourMath.",
+  "order": 4,
+  "cat": "pay",
+  "keywords": "salary to hourly, pay, overtime, hourly workers, payroll",
+  "publish": "2026-11-03T15:00:00"
+ },
+ {
+  "name": "add-time-calculator",
+  "tpl": "pin2.html",
+  "out": "assets/img/pins/r2/add-time-calculator.jpg",
+  "headline": "Add Time Calculator",
+  "sub": "Add Hours and Minutes",
+  "label": "Time cards & hours",
+  "cta": "Free calculator",
+  "icon": "<circle cx=\"10\" cy=\"13\" r=\"7\"/><path d=\"M10 9.5V13l2.5 1.5\"/><path d=\"M19 3v6M16 6h6\"/>",
+  "link": "https://workhourmath.com/add-time-calculator.html",
+  "board": "Time Cards & Timesheets",
+  "title": "Add Time Calculator: Add Hours and Minutes",
+  "description": "Add up a list of hours and minutes — shifts, tasks or billable time — or subtract some. The total is shown in hours and minutes, decimal hours and minutes, without the 60-minute carrying mistakes. Free and no sign-up — WorkHourMath.",
+  "order": 5,
+  "cat": "timecards",
+  "keywords": "add time calculator, time cards, hours, hourly workers, payroll",
+  "publish": "2026-11-03T19:00:00"
+ },
+ {
+  "name": "pay-raise-calculator",
+  "tpl": "pin2.html",
+  "out": "assets/img/pins/r2/pay-raise-calculator.jpg",
+  "headline": "Pay Raise Calculator",
+  "sub": "New Pay From a Percentage",
+  "label": "Pay & overtime",
+  "cta": "Free calculator",
+  "icon": "<path d=\"M3 17l6-6 4 4 8-8\"/><path d=\"M15 7h6v6\"/>",
+  "link": "https://workhourmath.com/pay-raise-calculator.html",
+  "board": "Overtime, Salary & Pay Calculators",
+  "title": "Pay Raise Calculator: New Pay From a Percentage",
+  "description": "See your new pay after a percentage raise — or work out what percentage a new wage or salary really is — and how much extra that means per year, month and paycheck. Free and no sign-up — WorkHourMath.",
+  "order": 5,
+  "cat": "pay",
+  "keywords": "pay raise calculator, pay, overtime, hourly workers, payroll",
+  "publish": "2026-11-03T23:00:00"
+ },
+ {
+  "name": "time-clock-rounding-calculator",
+  "tpl": "pin2.html",
+  "out": "assets/img/pins/r2/time-clock-rounding-calculator.jpg",
+  "headline": "Time Clock Rounding Calculator",
+  "sub": "7-Minute Rule",
+  "label": "Time cards & hours",
+  "cta": "Free calculator",
+  "icon": "<circle cx=\"12\" cy=\"14\" r=\"8\"/><path d=\"M12 10v4l2 2M10 2h4\"/>",
+  "link": "https://workhourmath.com/time-clock-rounding-calculator.html",
+  "board": "Time Cards & Timesheets",
+  "title": "Time Clock Rounding Calculator: 7-Minute Rule",
+  "description": "See how a time clock rounds your punches — to the nearest quarter hour (the 7-minute rule), tenth of an hour or 5 minutes — and how much it changes the time you're paid for. Free and no sign-up — WorkHourMath.",
+  "order": 6,
+  "cat": "timecards",
+  "keywords": "time clock rounding, time cards, hours, hourly workers, payroll",
+  "publish": "2026-11-04T15:00:00"
+ },
+ {
+  "name": "shift-differential-calculator",
+  "tpl": "pin2.html",
+  "out": "assets/img/pins/r2/shift-differential-calculator.jpg",
+  "headline": "Shift Differential Calculator",
+  "sub": "Night & Weekend Pay",
+  "label": "Pay & overtime",
+  "cta": "Free calculator",
+  "icon": "<path d=\"M20 14.5A8.5 8.5 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z\"/>",
+  "link": "https://workhourmath.com/shift-differential-calculator.html",
+  "board": "Overtime, Salary & Pay Calculators",
+  "title": "Shift Differential Calculator: Night & Weekend Pay",
+  "description": "Add a night, evening or weekend shift differential to your base rate — as dollars per hour or a percentage — and see the rate for those hours and your total pay. Free and no sign-up — WorkHourMath.",
+  "order": 6,
+  "cat": "pay",
+  "keywords": "shift differential, pay, overtime, hourly workers, payroll",
+  "publish": "2026-11-04T19:00:00"
+ },
+ {
+  "name": "timesheet-template",
+  "tpl": "pin2.html",
+  "out": "assets/img/pins/r2/timesheet-template.jpg",
+  "headline": "Free Timesheet Template",
+  "sub": "Printable, Excel & Google Sheets",
+  "label": "Time cards & hours",
+  "cta": "Free templates",
+  "icon": "<rect x=\"4\" y=\"3\" width=\"16\" height=\"18\" rx=\"2\"/><path d=\"M8 8h8M8 12h8M8 16h5\"/>",
+  "link": "https://workhourmath.com/timesheet-template.html",
+  "board": "Time Cards & Timesheets",
+  "title": "Free Timesheet Template: Printable, Excel & Google Sheets",
+  "description": "Download a weekly or biweekly timesheet for Excel or Google Sheets that adds up hours, lunch breaks, overtime and gross pay for you — or print a blank timesheet to fill in by hand. Free and no sign-up — WorkHourMath.",
+  "order": 7,
+  "cat": "timecards",
+  "keywords": "timesheet templates, time cards, hours, hourly workers, payroll",
+  "publish": "2026-11-04T23:00:00"
+ },
+ {
+  "name": "guides-how-to-calculate-hours-worked",
+  "tpl": "pin2.html",
+  "out": "assets/img/pins/r2/guides-how-to-calculate-hours-worked.jpg",
+  "headline": "How to Calculate Hours Worked (With Breaks & Decimals)",
+  "sub": "Times in and out, breaks, overnight shifts and decimal hours, step by step.",
+  "label": "Time cards & hours",
+  "cta": "Read the guide",
+  "icon": "<circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 7v5l3 2\"/>",
+  "link": "https://workhourmath.com/guides/how-to-calculate-hours-worked.html",
+  "board": "Time Cards & Timesheets",
+  "title": "How to Calculate Hours Worked (With Breaks & Decimals)",
+  "description": "A step-by-step method for working out your hours from clock times — including lunch breaks, shifts past midnight and decimal hours for payroll — with worked examples you can follow. Free and no sign-up — WorkHourMath.",
+  "order": 1,
+  "cat": "timecards",
+  "keywords": "how to calculate hours worked, time cards, hours, hourly workers, payroll",
+  "publish": "2026-11-05T15:00:00"
+ },
+ {
+  "name": "guides-overtime-rules-by-state",
+  "tpl": "pin2.html",
+  "out": "assets/img/pins/r2/guides-overtime-rules-by-state.jpg",
+  "headline": "Overtime Rules by State: Daily & Weekly Overtime Explained",
+  "sub": "Federal 40-hour rule plus daily overtime in CA, AK, NV and CO.",
+  "label": "Pay & overtime",
+  "cta": "Read the guide",
+  "icon": "<circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 7v5l3 2\"/>",
+  "link": "https://workhourmath.com/guides/overtime-rules-by-state.html",
+  "board": "Overtime, Salary & Pay Calculators",
+  "title": "Overtime Rules by State: Daily & Weekly Overtime Explained",
+  "description": "Federal law sets overtime after 40 hours a week. A handful of states go further with daily overtime and double time. Here's how each rule works, with examples. Free and no sign-up — WorkHourMath.",
+  "order": 2,
+  "cat": "pay",
+  "keywords": "overtime rules by state, pay, overtime, hourly workers, payroll",
+  "publish": "2026-11-05T19:00:00"
+ },
+ {
+  "name": "guides-how-many-work-hours-in-a-year",
+  "tpl": "pin2.html",
+  "out": "assets/img/pins/r2/guides-how-many-work-hours-in-a-year.jpg",
+  "headline": "How Many Work Hours Are in a Year? 2026, 2027 & Beyond",
+  "sub": "2,080 hours, actual weekdays and holidays by year, hours per month.",
+  "label": "Workdays & time off",
+  "cta": "Read the guide",
+  "icon": "<rect x=\"3\" y=\"5\" width=\"18\" height=\"16\" rx=\"2\"/><path d=\"M3 10h18M8 3v4M16 3v4\"/>",
+  "link": "https://workhourmath.com/guides/how-many-work-hours-in-a-year.html",
+  "board": "Work Days, Holidays & PTO",
+  "title": "How Many Work Hours Are in a Year? 2026, 2027 & Beyond",
+  "description": "The standard answer is 2,080 hours. The real number depends on the year, holidays and time off — here are the figures for 2025 to 2030 and how to work out your own. Free and no sign-up — WorkHourMath.",
+  "order": 3,
+  "cat": "dates",
+  "keywords": "how many work hours are in a year?, workdays, time off, hourly workers, payroll",
+  "publish": "2026-11-05T23:00:00"
+ },
+ {
+  "name": "guides-biweekly-vs-semimonthly-pay",
+  "tpl": "pin2.html",
+  "out": "assets/img/pins/r2/guides-biweekly-vs-semimonthly-pay.jpg",
+  "headline": "Biweekly vs Semimonthly Pay: What's the Difference?",
+  "sub": "26 vs 24 paychecks, paycheck size, three-paycheck months and overtime.",
+  "label": "Pay & overtime",
+  "cta": "Read the guide",
+  "icon": "<circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 7v5l3 2\"/>",
+  "link": "https://workhourmath.com/guides/biweekly-vs-semimonthly-pay.html",
+  "board": "Overtime, Salary & Pay Calculators",
+  "title": "Biweekly vs Semimonthly Pay: What's the Difference?",
+  "description": "Both mean getting paid about twice a month, but they're not the same: one gives you 26 paychecks a year and the other 24. Here's what changes for your paycheck, your budget and your overtime. Free and no sign-up — WorkHourMath.",
+  "order": 4,
+  "cat": "pay",
+  "keywords": "biweekly vs semimonthly pay, pay, overtime, hourly workers, payroll",
+  "publish": "2026-11-06T15:00:00"
+ }
+]

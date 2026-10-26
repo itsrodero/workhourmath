@@ -103,6 +103,13 @@ Domain workhourmath.com (Namecheap, bought 2026-10-12), hosted on GitHub Pages f
   - CSV uploaded (Settings > Import content > Upload .csv): "Carga exitosa". The 24 pins go out from 2026-10-21.
   - Switch profiles from the avatar menu (top right); both profiles share one Pinterest login.
 
+## Pinterest round 2 (2026-10-26)
+- 25 pins from 2026-10-29 to 11-06, 3 a day:
+  - 3 new chart pins: common shifts, 2027 federal holidays, 2027 semi-monthly periods;
+  - 22 calculators and guides with the dark template `_tools/img/pin2.html` (images in `assets/img/pins/r2/`).
+- Generator: `python _tools/pins.py --round 2 --start DATE`, then `node _tools/pins.mjs --round 2`.
+  CSV: `_tools/pinterest-pins-r2.csv`.
+
 ## Rules to keep
 - No tax / net-pay calculators (YMYL, dominated by ADP/SmartAsset).
 - Law pages cite DOL / state sources, carry an "updated" date and say "not legal advice". Re-check yearly.

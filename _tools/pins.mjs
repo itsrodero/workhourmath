@@ -12,7 +12,8 @@ import { fileURLToPath, pathToFileURL } from 'node:url';
 
 const here = dirname(fileURLToPath(import.meta.url));
 const root = resolve(here, '..');
-const jobs = JSON.parse(readFileSync(join(here, 'pins.json'), 'utf8'));
+const round2 = process.argv.includes('--round') && process.argv[process.argv.indexOf('--round') + 1] === '2';
+const jobs = JSON.parse(readFileSync(join(here, round2 ? 'pins-r2.json' : 'pins.json'), 'utf8'));
 const all = process.argv.includes('--all');
 const todo = jobs.filter((j) => all || !existsSync(join(root, j.out)));
 if (!todo.length) { console.log('All pin images exist.'); process.exit(0); }
