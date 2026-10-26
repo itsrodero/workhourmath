@@ -74,6 +74,16 @@ Domain workhourmath.com (Namecheap, bought 2026-10-12), hosted on GitHub Pages f
   - Linked from the overtime calculator. Pay pages reordered (double time is 2nd).
   - The user's own time now goes mostly to Leafpost (separate chat). WHM cadence raised to ~2 pieces a week.
 
+- 2026-10-26: DE-INDEXING. From 10-23 Google dropped almost the whole site: impressions went from ~400/day to 0–1.
+  URL Inspection shows 27 "Crawled - currently not indexed"; only the home page and guides hub remain. There is no
+  manual action or security issue, and the technical side is fine. Likely a quality/trust decision on a 2-week-old
+  domain that launched with ~30 pages.
+  - Agreed with the user: no new pages for 2–3 weeks, no mass re-requests; improve existing pages with information
+    other sites don't have; watch it every Monday.
+  - First improvement: a generated common-shifts chart on the hours calculator (`[[table_shifts]]`). It covers 36
+    shifts in 12-hour and 24-hour time, with no break, 30-minute and 1-hour breaks, overnight wrap, plus an FAQ on
+    "0900 to 1700". The time card links to it.
+
 ## Pinterest (prepared 2026-10-19)
 - Own business profile, separate from SizeMyProject's. The user creates it the evening of 10-19 (same Pinterest login,
   "add account").

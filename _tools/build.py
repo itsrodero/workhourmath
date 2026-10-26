@@ -408,6 +408,33 @@ def table_holidays(y):
     return table(['Holiday', f'{y} (observed)'], rows)
 
 
+SHIFTS = [('06:00', '14:00'), ('06:00', '14:30'), ('06:00', '18:00'), ('07:00', '15:00'), ('07:00', '15:30'), ('07:00', '16:00'),
+          ('07:00', '17:00'), ('07:00', '19:00'), ('07:30', '16:00'), ('08:00', '16:00'), ('08:00', '16:30'), ('08:00', '17:00'),
+          ('08:00', '18:00'), ('08:30', '17:00'), ('08:30', '17:30'), ('09:00', '15:00'), ('09:00', '17:00'), ('09:00', '17:30'),
+          ('09:00', '18:00'), ('09:30', '18:00'), ('10:00', '18:00'), ('10:00', '19:00'), ('11:00', '19:00'), ('12:00', '20:00'),
+          ('13:00', '21:00'), ('14:00', '22:00'), ('14:00', '23:00'), ('15:00', '23:00'), ('15:00', '23:30'), ('16:00', '00:00'),
+          ('17:00', '01:00'), ('18:00', '06:00'), ('19:00', '07:00'), ('22:00', '06:00'), ('23:00', '07:00'), ('23:00', '07:30')]
+
+
+def table_shifts():
+    """Common shifts: hours with no break, a 30-minute and a 1-hour unpaid break (overnight shifts wrap past midnight)."""
+    def mins(t):
+        h, m = map(int, t.split(':'))
+        return h * 60 + m
+
+    def clock12(t):
+        h, m = map(int, t.split(':'))
+        return f"{(h % 12) or 12}:{m:02d} {'AM' if h < 12 else 'PM'}"
+
+    def fmt(n):
+        return f'{n // 60}:{n % 60:02d} <small>({n / 60:g} h)</small>'
+    rows = []
+    for a, b in SHIFTS:
+        span = (mins(b) - mins(a)) % 1440
+        rows.append((f'{clock12(a)} – {clock12(b)}', f"{a.replace(':', '')}–{b.replace(':', '')}", fmt(span), fmt(span - 30), fmt(span - 60)))
+    return table(['Shift', '24-hour', 'No break', '30-min break', '1-hour break'], rows)
+
+
 def semimonthly_form():
     """Semi-monthly time card (1st–15th or 16th–end): up to 16 dated rows, read by assets/js/calc/semimonthly.js.
     Rows are labelled and shown or hidden by the script, because the dates depend on the month chosen."""
@@ -481,7 +508,8 @@ def table_semimonthly(y):
 def expand_placeholders(body, page, pages):
     body = re.sub(r'\[\[timecard (\d+)\]\]', lambda m: timecard_form(int(m.group(1))), body)
     for name, fn in (('chart_min_dec', chart_min_dec), ('chart_dec_min', chart_dec_min), ('chart_military', chart_military),
-                     ('table_h2s', table_h2s), ('table_s2h', table_s2h), ('table_hours_year', table_hours_year)):
+                     ('table_h2s', table_h2s), ('table_s2h', table_s2h), ('table_hours_year', table_hours_year),
+                     ('table_shifts', table_shifts)):
         if f'[[{name}]]' in body:
             body = body.replace(f'[[{name}]]', fn())
     body = re.sub(r'\[\[table_holidays (\d{4})\]\]', lambda m: table_holidays(int(m.group(1))), body)
